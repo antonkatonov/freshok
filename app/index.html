@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,118 @@
   <title>Фрешок | Интернет магазин фркутов и овощей</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
   <header class="header">
     <div class="container">
-      
+      <div class="header__top">
+        <div class="header__top-info top-info">
+          <a class="top-info__link" href="#">
+            <svg class="top-info__svg" fill="#fff">
+              <use xlink:href="images/sprite.svg#icon-address"></use>
+            </svg>
+
+            <span class="top-info__text">
+              Адрес и время доставки
+            </span>
+          </a>
+
+          <a class="top-info__link" href="#">
+            <svg class="top-info__svg" fill="#fff">
+              <use xlink:href="images/sprite.svg#icon-tel"></use>
+            </svg>
+
+            <span class="top-info__text">
+              Горячая линия
+            </span>
+          </a>
+        </div>
+
+        <ul class="header__top-links top-links">
+          <li class="top-links__item">
+            <a class="top-links__link" href="#">
+              Доставка
+            </a>
+          </li>
+
+          <li class="top-links__item">
+            <a class="top-links__link" href="#">
+              О нас
+            </a>
+          </li>
+
+          <li class="top-links__item">
+            <a class="top-links__link" href="#">
+              Новости
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="header__middle middle-header">
+        <a class="middle-header__logo logo" href="#body">
+          <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
+        </a>
+
+        <nav class="middle-header__menu menu">
+
+          <button class="header__burger" type="menu">
+            <span>каталог продуктов</span>
+            <span class="sr-only">кнопка меню</span>
+          </button>
+
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__link" href="">
+
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="middle-header__search search">
+          <input class="search__field" name="search" type="text" placeholder="Найти в магазине ...">
+          </input>
+
+          <button class="search__btn" type="button">
+            Поиск
+          </button>
+        </div>
+
+        <ul class="middle-header__user-nav user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">
+              <svg class="user-nav__svg" fill="#fff">
+                <use xlink:href="images/sprite.svg#icon-user"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">
+              <svg class="user-nav__svg" fill="#fff">
+                <use xlink:href="images/sprite.svg#icon-heart"></use>
+              </svg>
+              <span class="user-nav__num">12</span>
+            </a>
+          </li>
+
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">
+              <svg class="user-nav__svg" fill="#fff">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="user-nav__num">12</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
-  
+
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

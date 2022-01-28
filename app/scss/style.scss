@@ -3,4 +3,62 @@
 @import 'fonts';
 @import 'global';
 
+.header__top {
+  background-color: $header-footer-clr;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+
+  &-links {
+    display: flex;
+  }
+}
+
+.top-info {
+  display: flex;
+
+  &__link {
+    display: flex;
+  }
+
+  &__svg {
+    height: 22px;
+    width: 32px;
+    margin-right: 12px;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 48px;
+  }
+}
+
+.top-links__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.middle-header {
+  background-color: $main-clr;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-nav {
+  display: flex;
+
+  &__svg {
+    height: 32px;
+    width: 28px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 33px;
+  }
+}
+
+
+
 @import 'media';

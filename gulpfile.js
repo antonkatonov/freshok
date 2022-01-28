@@ -7,7 +7,9 @@ const uglify       = require('gulp-uglify');
 const imagemin     = require('gulp-imagemin');
 const del          = require('del');
 const browserSync  = require('browser-sync').create();
-const svgSprite = require('gulp-svg-sprite');
+const svgSprite    = require('gulp-svg-sprite');
+const cheerio      = require('gulp-cheerio');
+
 
 function browsersync() {
   browserSync.init({
@@ -19,18 +21,28 @@ function browsersync() {
 }
 
 function svgSprites() {
-  return src('app/images/icons/*.svg')
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: '../sprite.svg',
-          },
+  return src('app/images/icons/*.svg') 
+  .pipe(cheerio({
+        run: ($) => {
+            $("[fill]").removeAttr("fill");
+            $("[stroke]").removeAttr("stroke");
+            $("[style]").removeAttr("style");
         },
+        parserOptions: { xmlMode: true },
       })
-    )
-	.pipe(dest('app/images'));
+  )
+	.pipe(
+	      svgSprite({
+	        mode: {
+	          stack: {
+	            sprite: '../sprite.svg', 
+	          },
+	        },
+	      })
+	    )
+	.pipe(dest('app/images')); 
 }
+
 
 function styles() {
   return src('app/scss/style.scss')
