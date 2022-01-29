@@ -11,3 +11,12 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
+.btn  {
+  @extend %opensans-400;
+  font-size: 18px;
+  padding: 12px 24px;
+  background-color: $main-clr;
+  border: 1px solid $main-clr;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}

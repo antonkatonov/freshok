@@ -12,8 +12,9 @@
 <body>
 
   <header class="header">
-    <div class="container">
-      <div class="header__top">
+
+    <div class="header__top">
+      <div class="header__top-container container">
         <div class="header__top-info top-info">
           <a class="top-info__link" href="#">
             <svg class="top-info__svg" fill="#fff">
@@ -31,7 +32,7 @@
             </svg>
 
             <span class="top-info__text">
-              Горячая линия
+              Горячая линия 24/7
             </span>
           </a>
         </div>
@@ -55,19 +56,24 @@
             </a>
           </li>
         </ul>
-
       </div>
+    </div>
 
-      <div class="header__middle middle-header">
-        <a class="middle-header__logo logo" href="#body">
+    <div class="header__middle ">
+      <div class="header__middle-container container">
+        <a class="header__middle-logo logo" href="#body">
           <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
         </a>
 
         <nav class="middle-header__menu menu">
-
-          <button class="header__burger" type="menu">
-            <span>каталог продуктов</span>
-            <span class="sr-only">кнопка меню</span>
+          <button class="menu__wrapp " type="menu">
+            <div class="menu__burger-btn">
+              <span></span>
+            </div>
+            <div class="menu__burger-span">
+              <span class="menu__burger-text">каталог продуктов</span>
+              <span class="sr-only">кнопка меню</span>
+            </div>
           </button>
 
           <ul class="menu__items">
@@ -80,6 +86,7 @@
         </nav>
 
         <div class="middle-header__search search">
+          <span class="search__span"></span>
           <input class="search__field" name="search" type="text" placeholder="Найти в магазине ...">
           </input>
 
@@ -116,7 +123,67 @@
           </li>
         </ul>
       </div>
+
     </div>
+    <div class="header__bottom">
+      <ul class="header__bottom-slider slider">
+        <li class="slider__item" style="background-image: url('images/gabriel-gurrola.jpg')">
+          <div class="slider__container container">
+            <div class="slider__item-wrap">
+              <h1 class="slider__title">
+                СВЕЖАЧОК ВАМ в ХАТУ <span class="slider__title--accent">Скидка -50%</span>
+              </h1>
+              <p class="slider__text">
+                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+              </p>
+              <button class="slider__btn btn" type="button">
+                Купить сейчас
+                <span class="sr-only">кнопка купить сейчас</span>
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li class="slider__item" style="background-image: url('images/stefano-carella.jpg')">
+          <div class="slider__container container">
+            <div class="slider__item-wrap">
+              <h1 class="slider__title">
+                НАКРУТИ СЕБЕ ТОМАТОВ
+                <span class="slider__title--accent">АКЦИЯ: 3 кг по цене 1</span>
+              </h1>
+              <p class="slider__text">
+                Только с 12 по 15 июля скидка на домашние помидорчики
+              </p>
+              <button class="slider__btn btn" type="button">
+                Купить сейчас
+                <span class="sr-only">кнопка купить сейчас</span>
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li class="slider__item" style="background-image: url('images/petra-cigale.jpg')">
+          <div class="slider__container container">
+            <div class="slider__item-wrap">
+              <h1 class="slider__title">
+                Пусть остальные
+                позеленеют от зависти <span class="slider__title--accent">Распродажа зелени</span>
+              </h1>
+              <p class="slider__text">
+                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+              </p>
+              <button class="slider__btn btn" type="button">
+                Купить сейчас
+                <span class="sr-only">кнопка купить сейчас</span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+    </div>
+
   </header>
 
   <script src="js/main.min.js"></script>
