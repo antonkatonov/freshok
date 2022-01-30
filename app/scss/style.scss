@@ -3,7 +3,8 @@
 @import 'fonts';
 @import 'global';
 
-.header__top {
+
+.header-top {
   background-color: $header-footer-clr;
   color: #fff;
   padding: 14px 0;
@@ -12,12 +13,12 @@
   @extend %opensans-700;
   text-transform: uppercase;
 
-  &-container {
+  &__container {
     display: flex;
     justify-content: space-between;
   }
 
-  &-links {
+  &__links {
     display: flex;
   }
 }
@@ -46,18 +47,18 @@
   margin-right: 24px;
 }
 
-.header__middle {
+.header-middle {
   background-color: $main-clr;
   padding: 30px 0;
   @extend %opensans-600;
 
-  &-container {
+  &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &-logo {
+  &__logo {
     margin-right: 24px;
   }
 
@@ -65,18 +66,19 @@
 
 .menu {
   margin-right: 30px;
+  
 
-  &__wrapp {
+  &__wrap {
     background-color: #fff;
     display: flex;
     align-items: center;
-    max-width: 240px;
-    width: 100%;
+    width: 240px;
     height: 50px;
     border-radius: 6px;
     padding: 17px;
     padding-right: 38px;
     position: relative;
+    transition: border-radius 0.3s;
   }
 
   &__burger-btn {
@@ -114,8 +116,13 @@
     top: 8.5px;
   }
 
+  &__burger-text {
+    color: $main-clr;
+  }
+
   &__burger-text::after {
     content: '';
+    display: inline-block;
     background-image: url('../images/sprite.svg#icon-chevron');
     background-repeat: no-repeat;
     background-size: auto auto;
@@ -126,6 +133,39 @@
     top: 23px;
   }
 
+  &__items {
+    position: absolute;
+    background-color: #fff;
+    width: 240px;
+    display: none;
+    z-index: 3;
+  }
+
+  &__item {
+    padding: 15px 24px;
+    transition: border-left 0.1s;
+  }
+
+  &__item:hover {
+    color: #63a60e;
+    border-left: 3px solid #63a60e;
+  }
+}
+
+// уже и в самом свг фил поменял все равно шеврон черный
+
+.menu__burger-text::after {
+  fill: $main-clr;
+  transition: translateX 0.1s, rotate 0,3s;
+}
+
+
+.menu--active .menu__wrap {
+  border-radius: 6px 6px 0 0;
+}
+
+.menu--active .menu__burger-text::after {
+  transform: translateX(-2px) rotate(180deg);
 }
 
 .search {
@@ -229,7 +269,7 @@
     margin-bottom: 12px;
   }
 
-  &__title--accent {
+  &__span {
     color: $accent-clr;
   }
 
@@ -243,6 +283,25 @@
     line-height: 1.3;
     color: #fff;
   }
+
+}
+
+.slick-slide {
+  position: relative;
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 299px;
+}
+
+.slick-prev {
+  left: 60px;
+
+}
+.slick-next {
+  right: 60px;
 }
 
 

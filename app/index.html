@@ -13,9 +13,9 @@
 
   <header class="header">
 
-    <div class="header__top">
-      <div class="header__top-container container">
-        <div class="header__top-info top-info">
+    <div class="header-top">
+      <div class="header-top__container container">
+        <div class="header-top__info top-info">
           <a class="top-info__link" href="#">
             <svg class="top-info__svg" fill="#fff">
               <use xlink:href="images/sprite.svg#icon-address"></use>
@@ -37,7 +37,7 @@
           </a>
         </div>
 
-        <ul class="header__top-links top-links">
+        <ul class="header-top__links top-links">
           <li class="top-links__item">
             <a class="top-links__link" href="#">
               Доставка
@@ -59,19 +59,19 @@
       </div>
     </div>
 
-    <div class="header__middle ">
-      <div class="header__middle-container container">
-        <a class="header__middle-logo logo" href="#body">
+    <div class="header-middle ">
+      <div class="header-middle__container container">
+        <a class="header-middle__logo logo" href="#body">
           <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
         </a>
 
-        <nav class="middle-header__menu menu">
-          <button class="menu__wrapp " type="menu">
+        <nav class="header-middle__menu menu">
+          <button class="menu__wrap" type="menu">
             <div class="menu__burger-btn">
               <span></span>
             </div>
             <div class="menu__burger-span">
-              <span class="menu__burger-text">каталог продуктов</span>
+              <span class="menu__burger-text">Каталог продуктов</span>
               <span class="sr-only">кнопка меню</span>
             </div>
           </button>
@@ -79,13 +79,73 @@
           <ul class="menu__items">
             <li class="menu__item">
               <a class="menu__link" href="">
+                Овощи и фрукты
+              </a>
+            </li>
 
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Бакалея
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Молочные продукты
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Хлеб
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Мясо
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Колбаса
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Рыба
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Алкоголь
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Напитки
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Торты
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="">
+                Чай, кофе
               </a>
             </li>
           </ul>
         </nav>
 
-        <div class="middle-header__search search">
+        <div class="header-middle__search search">
           <span class="search__span"></span>
           <input class="search__field" name="search" type="text" placeholder="Найти в магазине ...">
           </input>
@@ -95,7 +155,7 @@
           </button>
         </div>
 
-        <ul class="middle-header__user-nav user-nav">
+        <ul class="header-middle__user-nav user-nav">
           <li class="user-nav__item">
             <a class="user-nav__link" href="#">
               <svg class="user-nav__svg" fill="#fff">
@@ -125,21 +185,21 @@
       </div>
 
     </div>
-    <div class="header__bottom">
-      <ul class="header__bottom-slider slider">
+    <div class="header-bottom">
+      <ul class="header-bottom__slider slider">
         <li class="slider__item" style="background-image: url('images/gabriel-gurrola.jpg')">
           <div class="slider__container container">
             <div class="slider__item-wrap">
               <h1 class="slider__title">
-                СВЕЖАЧОК ВАМ в ХАТУ <span class="slider__title--accent">Скидка -50%</span>
+                СВЕЖАЧОК ВАМ в ХАТУ <span class="slider__span">Скидка -50%</span>
               </h1>
               <p class="slider__text">
                 Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
               </p>
-              <button class="slider__btn btn" type="button">
+              <a class="slider__btn btn" href="#">
                 Купить сейчас
                 <span class="sr-only">кнопка купить сейчас</span>
-              </button>
+              </a>
             </div>
           </div>
         </li>
@@ -149,7 +209,7 @@
             <div class="slider__item-wrap">
               <h1 class="slider__title">
                 НАКРУТИ СЕБЕ ТОМАТОВ
-                <span class="slider__title--accent">АКЦИЯ: 3 кг по цене 1</span>
+                <span class="slider__span">АКЦИЯ: 3 кг по цене 1</span>
               </h1>
               <p class="slider__text">
                 Только с 12 по 15 июля скидка на домашние помидорчики
@@ -167,7 +227,7 @@
             <div class="slider__item-wrap">
               <h1 class="slider__title">
                 Пусть остальные
-                позеленеют от зависти <span class="slider__title--accent">Распродажа зелени</span>
+                позеленеют от зависти <span class="slider__span">Распродажа зелени</span>
               </h1>
               <p class="slider__text">
                 Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
@@ -180,13 +240,23 @@
           </div>
         </li>
       </ul>
-
-
     </div>
 
   </header>
 
+  <footer class="footer">
+    <div class="footer-top">
+
+    </div>
+
+    <div class="footer-bottom">
+
+    </div>
+
+  </footer>
+
   <script src="js/main.min.js"></script>
+
 </body>
 
 </html>
