@@ -24,7 +24,7 @@ function svgSprites() {
   return src('app/images/icons/*.svg') 
   .pipe(cheerio({
         run: ($) => {
-            $("[fill]").removeAttr("fill");
+            $("[fill]").removeAttr("fill");   
             $("[stroke]").removeAttr("stroke");
             $("[style]").removeAttr("style");
         },
