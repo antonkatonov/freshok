@@ -1,5 +1,5 @@
 body {
-  color: $font-clr;
+  color: $dark-500;
   font-size: 14px;
   line-height: 1.4;
   background-color: #fff;
@@ -18,8 +18,8 @@ body {
   @extend %opensans-400;
   font-size: 18px;
   padding: 12px 24px;
-  background-color: $main-clr;
-  border: 1px solid $main-clr;
+  background-color: $green-900;
+  border: 1px solid $green-900;
   border-radius: 6px;
   letter-spacing: 0.03em;
 }
