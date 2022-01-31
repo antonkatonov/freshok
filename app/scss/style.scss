@@ -5,7 +5,9 @@
 @import 'global';
 
 
-.header-top {
+.header {
+  flex: 1 0 auto;
+  &-top {
   background-color: $header-footer-clr;
   color: #fff;
   padding: 14px 0;
@@ -23,6 +25,7 @@
     display: flex;
   }
 }
+
 
 .top-info {
   display: flex;
@@ -67,7 +70,6 @@
 
 .menu {
   margin-right: 30px;
-  
 
   &__wrap {
     background-color: #fff;
@@ -79,7 +81,8 @@
     padding: 17px;
     padding-right: 38px;
     position: relative;
-    transition: border-radius 0.3s;
+    transition: border-radius 0.3s,
+    background-color 0.3s;
   }
 
   &__burger-btn {
@@ -88,51 +91,51 @@
     height: 17px;
     margin-right: 19px;
     position: relative;
-  }
+    transition: background-color 0.3s;
+    &::before,
+    &::after {
+      content: '';
+      background-color: $main-clr;
+      width: 25px;
+      height: 1px;
+      position: absolute;
+      left: 0;
+    }
+    &::before {
+      top: 0;
+    }
 
-  &__burger-btn::before,
-  &__burger-btn::after {
-    content: '';
-    background-color: $main-clr;
-    width: 25px;
-    height: 1px;
-    position: absolute;
-    left: 0;
-  }
+    &::after {
+      bottom: 0;
+    }
+    & span {
+      background-color: $main-clr;
+      width: 20px;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 8.5px;
+    }
 
-  &__burger-btn::before {
-    top: 0;
-  }
-
-  &__burger-btn::after {
-    bottom: 0;
-  }
-
-  &__burger-btn span {
-    background-color: $main-clr;
-    width: 20px;
-    height: 1px;
-    position: absolute;
-    left: 0;
-    top: 8.5px;
   }
 
   &__burger-text {
     color: $main-clr;
-  }
-
-  &__burger-text::after {
-    content: '';
-    display: inline-block;
-    background-image: url('../images/sprite.svg#icon-chevron');
-    background-repeat: no-repeat;
-    background-size: auto auto;
-    height: 8px;
-    width: 15px;
-    position: absolute;
-    right: 18px;
-    top: 23px;
-
+    &::after {
+      content: '';
+      display: inline-block;
+      background-image: url('../images/sprite.svg#icon-chevron');
+      background-repeat: no-repeat;
+      background-size: auto auto;
+      height: 8px;
+      width: 15px;
+      position: absolute;
+      right: 18px;
+      top: 23px;
+      filter: invert(62%) sepia(64%) saturate(2881%) hue-rotate(48deg) brightness(90%) contrast(89%);
+      transition: translateY 0.1s,
+      rotate .3s;
+    }
   }
 
   &__items {
@@ -146,22 +149,22 @@
   &__item {
     padding: 15px 24px;
     transition: border-left 0.1s;
+    &:hover {
+      color: #63a60e;
+      border-left: 3px solid #63a60e;
+    }
   }
 
-  &__item:hover {
-    color: #63a60e;
-    border-left: 3px solid #63a60e;
-  }
-}
-
-
-.menu__burger-text::after {
-  transition: translateY 0.1s, rotate 0,3s;
 }
 
 
 .menu--active .menu__wrap {
   border-radius: 6px 6px 0 0;
+  background-color: $light-grn-clr;
+}
+.menu--active .menu__burger-btn {
+  border-radius: 6px 6px 0 0;
+  background-color: $light-grn-clr;
 }
 
 .menu--active .menu__burger-text::after {
@@ -217,10 +220,9 @@
 
   &__item {
     position: relative;
-  }
-
-  &__item:not(:last-child) {
+    &:not(:last-child) {
     margin-right: 33px;
+   }
   }
 
   &__num {
@@ -249,13 +251,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  &__item-wrap {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    width: 100%;
-    padding: 24px;
+    &-wrap {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 4px;
+      width: 100%;
+      padding: 24px;
+    }
   }
 
   &__title {
@@ -284,6 +285,7 @@
   }
 
 }
+
 
 .slick-slide {
   position: relative;
@@ -331,8 +333,6 @@
   &-bottom__pay-item:not(:last-child) {
     margin-right: 24px;
   }
-
-
 }
 
 
