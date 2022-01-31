@@ -14,7 +14,8 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
-.btn  {
+
+.btn {
   @extend %opensans-400;
   font-size: 18px;
   padding: 12px 24px;
@@ -22,4 +23,10 @@ body {
   border: 1px solid $green-900;
   border-radius: 6px;
   letter-spacing: 0.03em;
+}
+
+.logo {
+  max-width: 200px;
+  min-width: 100px;
+  width: 100%;
 }

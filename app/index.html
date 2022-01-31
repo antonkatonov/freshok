@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
 
   <header class="header">
     <div class="header-top">
@@ -146,7 +146,7 @@
 
         <div class="header-middle__search search">
           <span class="search__span"></span>
-          <input class="search__field" name="search" type="text" placeholder="Найти в магазине ...">
+          <input class="search__field" name="search" type="text" placeholder="Найти в магазине ..." required>
           </input>
 
           <button class="search__btn" type="button">
@@ -240,34 +240,318 @@
         </li>
       </ul>
     </div>
-
   </header>
 
-  <footer class="footer">
-    <div class="footer-top">
-
-    </div>
-
-    <div class="footer-bottom">
-      <div class="footer-bottom__container container">
-        <div class="footer-bottom__copyright">
-          <p>© 2021 ФРЕШОК</p>
-        </div>
-        <ul class="footer-bottom__pay-info">
-          <li class="footer-bottom__pay-item">
-            <svg class="footer-bottom__pay-svg" fill="#fff">
-              <use xlink:href="images/sprite.svg#icon-visa"></use>
+  <main class="main">
+    <section class="benefits">
+      <div class="benefits__container container">
+        <h3 class="sr-only">
+          Наши приемущества
+        </h3>
+        <ul class="benefits__items">
+          <li class="benefits__item">
+            <svg class="benefits__item-svg" fill="#63A60E">
+              <use xlink:href="images/sprite.svg#icon-scooter"></use>
             </svg>
+            <div class="benefits__item-text">
+              <h4 class="benefits__item-title">Бесплатная доставка</h4>
+              <p class="benefits__item-descr">Для заказов на сумму от 500 ₽</p>
+            </div>
           </li>
 
-          <li class="footer-bottom__pay-item">
-            <svg class="footer-bottom__pay-svg" fill="#fff">
-              <use xlink:href="images/sprite.svg#icon-masterc"></use>
+          <li class="benefits__item">
+            <svg class="benefits__item-svg" fill="#63A60E">
+              <use xlink:href="images/sprite.svg#icon-scooter"></use>
             </svg>
+            <div class="benefits__item-text">
+              <h4 class="benefits__item-title">Возврат товара</h4>
+              <p class="benefits__item-descr">Если товары были испорчены</p>
+            </div>
           </li>
+
+          <li class="benefits__item">
+            <svg class="benefits__item-svg" fill="#63A60E">
+              <use xlink:href="images/sprite.svg#icon-scooter"></use>
+            </svg>
+            <div class="benefits__item-text">
+              <h4 class="benefits__item-title">Поддержка 24/7</h4>
+              <p class="benefits__item-descr">Лучшие операторы</p>
+            </div>
+          </li>
+
         </ul>
       </div>
+    </section>
 
+    <section class="top-products">
+      <div class="top-products__container container">
+
+        <h2 class="title">Топовые товары</h2>
+
+        <ul class="top-products__filters filters">
+          <li class="filters__item">
+            <button class="filters__link" type="button" data-filter="all">
+              Все товары
+            </button>
+          </li>
+
+          <li class="filters__item">
+            <button class="filters__link" type="button" data-filter=".category-landing">
+              Фрукты
+            </button>
+          </li>
+          <li class="filters__item">
+            <button class="filters__link" type="button" data-filter=".category-company">
+              Овощи
+            </button>
+          </li>
+
+          <li class="filters__item">
+            <button class="filters__link" type="button" data-filter=".category-ecommerce">
+              Напитки
+            </button>
+          </li>
+
+          <li class="filters__item">
+            <button class="filters__link" type="button" data-filter=".category-ecommerce">
+              Бакалея
+            </button>
+          </li>
+        </ul>
+
+        <button class="top-products__btn btn" type="button">
+          Показать еще
+        </button>
+
+        <ul class="top-products__list">
+          <li class="top-products__item product">
+            <a class="product__link" href="#">
+              <div class="product-top">
+                <span class="product__banner ">Новинка</span>
+                <svg class="product__wish" fill="#C1C1C1">
+                  <use xlink:href="images/sprite.svg#icon-heart"></use>
+                </svg>
+              </div>
+
+              <img class="product__photo" src="images/products/ananas.png" alt="Фото ананасика">
+
+              <h4 class="product__title">
+                Ананас, 1кг
+              </h4>
+
+              <div class="product__info">
+                <span class="product__coast">
+                  999 ₽
+                </span>
+
+                <div class="product__cart-wrap">
+                  <svg class="product__cart-svg" fill="#fff">
+                    <use xlink:href="images/sprite.svg#icon-cart"></use>
+                  </svg>
+                </div>
+              </div>
+
+
+            </a>
+          </li>
+
+          <li class="top-products__item">
+
+          </li>
+
+          <li class="top-products__item">
+
+          </li>
+
+          <li class="top-products__item">
+
+          </li>
+
+          <li class="top-products__item">
+
+          </li>
+
+          <li class="top-products__item">
+
+          </li>
+
+          <li class="top-products__item">
+
+          </li>
+
+          <li class="top-products__item">
+
+          </li>
+        </ul>
+
+
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <a class="footer__logo logo" href="#body">
+          <img class="footer__logo-img" src="images/logo.svg" alt="логотип Фрешок">
+        </a>
+
+        <div class="footer__items">
+          <div class="footer__subscribe">
+            <span class="footer__subscribe-text">Следите за нашими акциями</span>
+
+            <form class="footer__form" action="#">
+              <input class="footer__form-input" type="email" name="mail" placeholder="email@email.com" required>
+
+              <button class="footer__form-btn" type="submit">
+                Подписаться
+              </button>
+            </form>
+          </div>
+
+          <div class="footer__links">
+            <ul class="footer__links-item links">
+
+              <li class="links__item">
+                <a class="links__link" href="#">
+                  О нас
+                </a>
+              </li>
+
+              <li class="links__item">
+                <a class="links__link" href="#">
+                  Контакты
+                </a>
+              </li>
+
+              <li class="links__item">
+                <a class="links__link" href="#">
+                  Публичная оферта
+                </a>
+              </li>
+            </ul>
+
+            <ul class="footer__links-item links">
+              <li class="links__item">
+                <a class="links__link" href="#">
+                  Оплата и доставка
+                </a>
+              </li>
+
+              <li class="links__item">
+                <a class="links__link" href="#">
+                  Вакансии
+                </a>
+              </li>
+
+              <li class="links__item">
+                <a class="links__link" href="#">
+                  Акции
+                </a>
+              </li>
+            </ul>
+
+            <ul class="footer__links-item links">
+              <li class="links__item">
+                <a class="links__link" href="#">
+                  Отзывы
+                </a>
+              </li>
+
+              <li class="links__item">
+                <a class="links__link" href="#">
+                  Новости
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <address class="footer__contacts contacts">
+            <ul class="contacts__items">
+              <li class="contacts__item">
+                <span class="contacts__item-text">Горячая линия <a href="tel:+7907288365">+7 907 288 365</a>
+                </span>
+              </li>
+
+              <li class="contacts__item">
+                <span class="contacts__item-text">
+                  Санкт-Петербург, ул. Ленина, 1
+                </span>
+              </li>
+            </ul>
+
+            <ul class="contacts__social social">
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" fill="#fff">
+                    <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                  <span class="sr-only">иконка фейсбук</span>
+                </a>
+              </li>
+            
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" fill="#fff">
+                    <use xlink:href="images/sprite.svg#icon-youtube"></use>
+                  </svg>
+                  <span class="sr-only">иконка ютуб</span>
+                </a>
+              </li>
+            
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" fill="#fff">
+                    <use xlink:href="images/sprite.svg#icon-telegram"></use>
+                  </svg>
+                  <span class="sr-only">иконка ntktuhfvv</span>
+                </a>
+              </li>
+
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" fill="#fff">
+                  <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                </svg>
+                <span class="sr-only">иконка инстаграмм</span>
+              </a>
+            </li>
+
+            </ul>
+
+          </address>
+        </div>
+
+
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom__container container">
+          <div class="footer-bottom__copyright">
+            <p>© 2021 ФРЕШОК</p>
+          </div>
+          <ul class="footer-bottom__pay-info">
+            <li class="footer-bottom__pay-item">
+              <svg class="footer-bottom__pay-visa" fill="#fff">
+                <use xlink:href="images/sprite.svg#icon-visa"></use>
+              </svg>
+            </li>
+
+            <li class="footer-bottom__pay-item">
+              <svg class="footer-bottom__pay-mc" fill="#fff">
+                <use xlink:href="images/sprite.svg#icon-masterc"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
   </footer>
