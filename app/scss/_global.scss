@@ -30,3 +30,11 @@ body {
   min-width: 100px;
   width: 100%;
 }
+
+.title {
+  @extend %ruda-600;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $dark-900;
+}

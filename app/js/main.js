@@ -14,6 +14,11 @@ $(function (){
   $('.menu').on('click', function(){
    $('.menu__wrap').removeClass('menu__wrap--active');
  });
+ 
+  $('#num1').on('keyup', function() {
+    $("#res").text($(this).val());
+ })
+
 
 
 });

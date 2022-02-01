@@ -177,7 +177,7 @@
               <svg class="user-nav__svg" fill="#fff">
                 <use xlink:href="images/sprite.svg#icon-cart"></use>
               </svg>
-              <span class="user-nav__num">12</span>
+              <span id="res" class="user-nav__num"></span>
             </a>
           </li>
         </ul>
@@ -283,14 +283,14 @@
       </div>
     </section>
 
-    <section class="top-products">
+    <section class="top-products__">
       <div class="top-products__container container">
 
-        <h2 class="title">Топовые товары</h2>
+        <h2 class="top-products__title title">Топовые товары</h2>
 
         <ul class="top-products__filters filters">
           <li class="filters__item">
-            <button class="filters__link" type="button" data-filter="all">
+            <button class="filters__link " type="button" data-filter="all">
               Все товары
             </button>
           </li>
@@ -319,18 +319,20 @@
           </li>
         </ul>
 
-        <button class="top-products__btn btn" type="button">
-          Показать еще
-        </button>
-
         <ul class="top-products__list">
           <li class="top-products__item product">
             <a class="product__link" href="#">
               <div class="product-top">
-                <span class="product__banner ">Новинка</span>
-                <svg class="product__wish" fill="#C1C1C1">
-                  <use xlink:href="images/sprite.svg#icon-heart"></use>
-                </svg>
+                <div class="products-top__banners">
+                  <span class="product__banner product__banner--green">Новинка</span>
+                  <span class="product__banner product__banner--red">-50%</span>
+                </div>
+
+                <a class="product__wish-link" href="#">
+                  <svg class="product__wish-svg" fill="#C1C1C1">
+                    <use xlink:href="images/sprite.svg#icon-heart"></use>
+                  </svg>
+                </a>
               </div>
 
               <img class="product__photo" src="images/products/ananas.png" alt="Фото ананасика">
@@ -338,11 +340,25 @@
               <h4 class="product__title">
                 Ананас, 1кг
               </h4>
+            </a>
 
-              <div class="product__info">
-                <span class="product__coast">
+            <div class="product__info">
+              <div class="product__coast-wrap">
+                <span class="product__coast-old">
+                  1 999 ₽
+                </span>
+
+                <span class="product__coast-new">
                   999 ₽
                 </span>
+              </div>
+
+              <div class="product__cart">
+                <button class="product__minus" onclick="$('#num1').val((+$('#num1').val() <= $('#num1').prop('min')) ? 1 : +($('#num1').val()) - 1);$('#num1').keyup();">-</button>
+
+                <input class="product__quantity" type="number" id="num1" min="1"  name="quantity" value="1">
+
+                <button class="product__plus" onclick="$('#num1').val( +$('#num1').val() +1);$('#num1').keyup();">+</button>
 
                 <div class="product__cart-wrap">
                   <svg class="product__cart-svg" fill="#fff">
@@ -350,25 +366,189 @@
                   </svg>
                 </div>
               </div>
+            </div>
+          </li>
 
+          <li class="top-products__item product">
+            <a class="product__link" href="#">
+              <div class="product-top">
+                <div class="products-top__banners">
 
+                </div>
+          
+                <a class="product__wish-link" href="#">
+                  <svg class="product__wish-svg" fill="#C1C1C1">
+                    <use xlink:href="images/sprite.svg#icon-heart"></use>
+                  </svg>
+                </a>
+              </div>
+          
+              <img class="product__photo" src="images/products/lemon.png" alt="Фото лимончика">
+          
+              <h4 class="product__title">
+                Лимон, 1кг
+              </h4>
             </a>
+          
+            <div class="product__info">
+              <div class="product__coast-wrap">       
+                <span class="product__coast-new">
+                  199 ₽
+                </span>
+              </div>
+          
+              <div class="product__cart">
+                <button class="product__minus" onclick="$('#num1').val((+$('#num1').val() <= $('#num1').prop('min')) ? 1 : +($('#num1').val()) - 1);$('#num1').keyup();">-</button>
+          
+                <input class="product__quantity" type="number" id="num1" min="1" name="quantity" value="1">
+          
+                <button class="product__plus" onclick="$('#num1').val( +$('#num1').val() +1);$('#num1').keyup();">+</button>
+          
+                <div class="product__cart-wrap">
+                  <svg class="product__cart-svg" fill="#fff">
+                    <use xlink:href="images/sprite.svg#icon-cart"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </li>
 
-          <li class="top-products__item">
-
+          <li class="top-products__item product">
+            <a class="product__link" href="#">
+              <div class="product-top">
+                <div class="products-top__banners">
+                  <span class="product__banner product__banner--orange">Хит</span>
+             
+                </div>
+          
+                <a class="product__wish-link" href="#">
+                  <svg class="product__wish-svg" fill="#C1C1C1">
+                    <use xlink:href="images/sprite.svg#icon-heart"></use>
+                  </svg>
+                </a>
+              </div>
+          
+              <img class="product__photo" src="images/products/pitahaya.png" alt="Фото питахая">
+          
+              <h4 class="product__title">
+                Питахайя красная с белой мякотью, 1шт
+              </h4>
+            </a>
+          
+            <div class="product__info">
+              <div class="product__coast-wrap">
+                <span class="product__coast-new">
+                  1019 ₽
+                </span>
+              </div>
+          
+              <div class="product__cart">
+                <button class="product__minus" onclick="$('#num1').val((+$('#num1').val() <= $('#num1').prop('min')) ? 1 : +($('#num1').val()) - 1);$('#num1').keyup();">-</button>
+          
+                <input class="product__quantity" type="number" id="num1" min="1" name="quantity" value="1">
+          
+                <button class="product__plus" onclick="$('#num1').val( +$('#num1').val() +1);$('#num1').keyup();">+</button>
+          
+                <div class="product__cart-wrap">
+                  <svg class="product__cart-svg" fill="#fff">
+                    <use xlink:href="images/sprite.svg#icon-cart"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </li>
 
-          <li class="top-products__item">
+          <li class="top-products__item product">
+            <a class="product__link" href="#">
+              <div class="product-top">
+                <div class="products-top__banners">
 
+                </div>
+          
+                <a class="product__wish-link" href="#">
+                  <svg class="product__wish-svg" fill="#C1C1C1">
+                    <use xlink:href="images/sprite.svg#icon-heart"></use>
+                  </svg>
+                </a>
+              </div>
+          
+              <img class="product__photo" src="images/products/ketchup.png" alt="Фото питахая">
+          
+              <h4 class="product__title">
+                Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
+              </h4>
+            </a>
+          
+            <div class="product__info">
+              <div class="product__coast-wrap">
+                <span class="product__coast-new">
+                  600 ₽
+                </span>
+              </div>
+          
+              <div class="product__cart">
+                <button class="product__minus" onclick="$('#num1').val((+$('#num1').val() <= $('#num1').prop('min')) ? 1 : +($('#num1').val()) - 1);$('#num1').keyup();">-</button>
+          
+                <input class="product__quantity" type="number" id="num1" min="1" name="quantity" value="1">
+          
+                <button class="product__plus" onclick="$('#num1').val( +$('#num1').val() +1);$('#num1').keyup();">+</button>
+          
+                <div class="product__cart-wrap">
+                  <svg class="product__cart-svg" fill="#fff">
+                    <use xlink:href="images/sprite.svg#icon-cart"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </li>
 
-          <li class="top-products__item">
-
-          </li>
-
-          <li class="top-products__item">
-
+          <li class="top-products__item product">
+            <a class="product__link" href="#">
+              <div class="product-top">
+                <div class="products-top__banners">
+                  <span class="product__banner product__banner--green">Новинка</span>
+                  <span class="product__banner product__banner--red">-50%</span>
+                </div>
+          
+                <a class="product__wish-link" href="#">
+                  <svg class="product__wish-svg" fill="#C1C1C1">
+                    <use xlink:href="images/sprite.svg#icon-heart"></use>
+                  </svg>
+                </a>
+              </div>
+          
+              <img class="product__photo" src="images/products/ananas.png" alt="Фото ананасика">
+          
+              <h4 class="product__title">
+                Ананас, 1кг
+              </h4>
+            </a>
+          
+            <div class="product__info">
+              <div class="product__coast-wrap">
+                <span class="product__coast-old">
+                  1 999 ₽
+                </span>
+          
+                <span class="product__coast-new">
+                  999 ₽
+                </span>
+              </div>
+          
+              <div class="product__cart">
+                <button class="product__minus" onclick="$('#num1').val((+$('#num1').val() <= $('#num1').prop('min')) ? 1 : +($('#num1').val()) - 1);$('#num1').keyup();">-</button>
+          
+                <input class="product__quantity" type="number" id="num1" min="1" name="quantity" value="1">
+          
+                <button class="product__plus" onclick="$('#num1').val( +$('#num1').val() +1);$('#num1').keyup();">+</button>
+          
+                <div class="product__cart-wrap">
+                  <svg class="product__cart-svg" fill="#fff">
+                    <use xlink:href="images/sprite.svg#icon-cart"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </li>
 
           <li class="top-products__item">
@@ -384,11 +564,12 @@
           </li>
         </ul>
 
-
-
+        <div class="top-products__wrap">
+          <button class="top-products__btn btn" type="button">
+            Показать еще
+          </button>
+        </div>
       </div>
-
-
     </section>
 
   </main>
@@ -494,7 +675,7 @@
                   <span class="sr-only">иконка фейсбук</span>
                 </a>
               </li>
-            
+
               <li class="social__item">
                 <a class="social__link" href="#">
                   <svg class="social__icon" fill="#fff">
@@ -503,7 +684,7 @@
                   <span class="sr-only">иконка ютуб</span>
                 </a>
               </li>
-            
+
               <li class="social__item">
                 <a class="social__link" href="#">
                   <svg class="social__icon" fill="#fff">
@@ -513,14 +694,14 @@
                 </a>
               </li>
 
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon" fill="#fff">
-                  <use xlink:href="images/sprite.svg#icon-instagram"></use>
-                </svg>
-                <span class="sr-only">иконка инстаграмм</span>
-              </a>
-            </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" fill="#fff">
+                    <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  <span class="sr-only">иконка инстаграмм</span>
+                </a>
+              </li>
 
             </ul>
 
