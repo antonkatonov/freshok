@@ -9,11 +9,12 @@
   &-top {
     background-color: $dark-800;
     color: #fff;
-    padding: 14px 0;
+    padding: 17px 0 14px;
     font-size: 13px;
     line-height: 18px;
     @extend %opensans-700;
     text-transform: uppercase;
+    letter-spacing: 0.03em;
 
     &__container {
       display: flex;
@@ -52,7 +53,7 @@
 
 .header-middle {
   background-color: $green-900;
-  padding: 30px 0;
+  padding: 26px 0;
   @extend %opensans-600;
 
   &__container {
@@ -259,8 +260,18 @@
   z-index: 4;
   width: 475px;
   transform: translateX(475px);
+  transition: transform .3s;
   display: flex;
   flex-direction: column;
+
+
+  &--active {
+    transform: translateX(0px);
+  }
+
+  &-icon {
+    display: inline-flex;
+  }
 
 
   &__top {
@@ -327,6 +338,7 @@
 
   &__total-wrap {
     display: flex;
+    align-items: center;
   }
 
   &__total-currency {
@@ -394,10 +406,14 @@
   }
 }
 
+.plus-mr {
+  margin-right: 12px;
+}
+
 
 .slider {
   &__container {
-    padding: 142px 0;
+    padding: 142px 15px;
     height: 600px;
   }
 
@@ -410,6 +426,7 @@
       background-color: rgba(255, 255, 255, 0.8);
       border-radius: 4px;
       width: 100%;
+      height: 315px;
       padding: 24px;
     }
   }
@@ -421,7 +438,7 @@
     font-size: 60px;
     line-height: 1.3;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
   }
 
   &__span {
@@ -431,7 +448,7 @@
   &__text {
     @extend %opensans-400;
     font-size: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 44px;
   }
 
   &__btn {
@@ -454,7 +471,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 288px;
+  top: 270px;
   z-index: 2;
 }
 
@@ -473,22 +490,21 @@
 
 .benefits {
   background-color: $silver-100;
-  padding: 48px 0 29px 0;
-
-  &__container {
-    padding: 28px 0;
-
-  }
+  padding: 43px 0 29px 0;
 
   &__items {
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: -50px;
   }
 
   &__item {
     display: flex;
-    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 65px;
+    }
   }
 
   &__item-svg {
@@ -513,7 +529,7 @@
 
 .top-products {
   &__container {
-    padding: 72px 0;
+    padding: 72px 15px;
   }
 
   &__title {
@@ -522,7 +538,7 @@
   }
 
   &__list {
-    margin-bottom: 48px;
+    margin-bottom: 11px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -536,6 +552,7 @@
   &__btn {
     background-color: #fff;
     color: $green-900;
+    padding: 11px 24px;
 
   }
 }
@@ -551,29 +568,32 @@
 
   &__link {
     @extend %opensans-700;
+    font-size: 15px;
     color: $dark-500;
     text-transform: uppercase;
     letter-spacing: 0.03em;
   }
 }
 
-
-
-
 .product {
   border: 1px solid #c1c1c1;
   border-radius: 6px;
-  padding: 18px;
+  padding: 18px 0;
   width: calc(25% - 90px / 4);
   letter-spacing: 0.03em;
   margin-bottom: 30px;
 
   &-top {
     margin-bottom: 7px;
+    padding: 0 12px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     height: 38px;
+
+    &__banners {
+      margin-top: -5px;
+    }
   }
 
   &__banner {
@@ -582,7 +602,7 @@
     color: #fff;
     text-transform: uppercase;
     border-radius: 6px;
-    padding: 3px 6px;
+    padding: 2px 6px;
 
     &:not(:last-child) {
       margin-bottom: 6px;
@@ -609,7 +629,7 @@
   }
 
   &__photo {
-    margin-bottom: 18px;
+    margin-bottom: 13px;
     max-width: 298px;
     width: 100%;
   }
@@ -617,16 +637,19 @@
   &__title {
     @extend %opensans-600;
     color: $dark-900;
-    margin-bottom: 29px;
-    max-width: 265px;
+    margin-bottom: 5px;
+    max-width: 293px;
     width: 100%;
     height: 65px;
+    padding: 0 15px;
   }
 
   &__info {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    height: 32px;
+    padding: 0 15px;
   }
 
   &__coast-wrap {
@@ -719,7 +742,7 @@
 
 .footer {
   background-color: $dark-800;
-  @extend %opensans-300;
+  @extend %opensans-400;
   color: #fff;
 
   &-top {
@@ -735,9 +758,13 @@
     justify-content: space-between;
   }
 
+  &__subscribe {
+    margin-right: 60px;
+  }
+
   &__subscribe-text {
     display: inline-block;
-    margin-bottom: 18px;
+    margin-bottom: 11px;
   }
 
   &__links {
@@ -750,7 +777,7 @@
     height: 40px;
 
     &-input {
-      padding: 12px;
+      padding: 12px 5px 12px 12px;
       border-radius: 6px 0 0 6px;
       background-color: #fff;
     }
@@ -793,7 +820,7 @@
     }
 
     &__pay-info {
-      display: flex
+      display: flex;
     }
 
     &__pay-item:not(:last-child) {
@@ -807,8 +834,6 @@
   color: #4F4F4F;
   line-height: 10;
 }
-
-
 
 .links__item {
   margin-bottom: 18px;

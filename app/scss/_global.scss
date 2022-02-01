@@ -8,6 +8,19 @@ body {
   flex-direction: column;
 }
 
+body.lock {
+  overflow: hidden;
+  &::after {
+      content: '';
+      background-color: rgba(0, 0, 0, 0.15);
+      box-sizing: content-box;
+      height: 100%;
+      width: 100%;
+      z-index: 3;
+      position: absolute;
+  }
+}
+
 .container {
   max-width: 1320px;
   width: 100%;

@@ -15,6 +15,18 @@ $(function (){
    $('.menu__wrap').removeClass('menu__wrap--active');
  });
 
+  $('.cart-icon').on('click', function(){
+    $('.cart').toggleClass('cart--active');
+    $('body').toggleClass ('lock');
+ });
+
+ $('.cart__close').on('click', function(){
+   $('.cart').removeClass('cart--active');
+   $('body').removeClass ('lock');
+ });
+ 
+
+ var mixer = mixitup('.top-products__list');
 
 
 });
