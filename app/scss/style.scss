@@ -30,6 +30,11 @@
 .top-info {
   display: flex;
 
+  &__text--ml {
+    margin-left: -7px;
+  }
+
+
   &__link {
     display: flex;
     transition: opacitu 0.3s,
@@ -74,7 +79,7 @@
 
 .header-middle {
   background-color: $green-900;
-  padding: 26px 0;
+  padding: 24px 0 26px;
   @extend %opensans-600;
 
   &__container {
@@ -230,7 +235,7 @@
   &__btn {
     color: $white;
     background-color: #31352B;
-    padding: 15px 52px;
+    padding: 15px 54px;
     border-radius: 0 6px 6px 0;
     text-transform: uppercase;
     outline: transparent;
@@ -667,7 +672,7 @@
   }
 
   &__list {
-    margin-bottom: 11px;
+    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -743,7 +748,7 @@
   padding: 18px 0;
   width: calc(25% - 90px / 4);
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
 
   &-top {
@@ -755,7 +760,7 @@
     height: 38px;
 
     &__banners {
-      margin-top: -5px;
+      margin-top: -7px;
     }
   }
 
@@ -768,7 +773,7 @@
     padding: 3px 6px;
 
     &:not(:last-child) {
-      margin-bottom: 6px;
+      margin-bottom: 2px;
     }
   }
 
@@ -779,6 +784,7 @@
 
   &__banner--red {
     background-color: $red-900;
+    padding: 2px 6px;
   }
 
   &__banner--orange {
@@ -792,7 +798,8 @@
     justify-content: center;
     align-items: center;
     width: 44px;
-    margin-top: -8px;
+    margin-top: -7px;
+    margin-right: -8px;
     border-radius: 3px;
     transition: box-shadow 0.3s;
 
@@ -876,7 +883,7 @@
     justify-content: space-between;
     align-items: flex-end;
     height: 32px;
-    padding: 0 15px;
+    padding: 0 15px 0 22px;
   }
 
   &__coast-wrap {
@@ -1104,7 +1111,7 @@
     width: 32px;
     height: 32px;
     transition:
-    opacity 0.3s;
+      opacity 0.3s;
   }
 }
 
