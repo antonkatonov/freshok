@@ -1,326 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=npm i sass --save-dev, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фрешок | Интернет магазин фркутов и овощей</title>
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" sizes="512x512">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body id="body">
-
+<body>
   <header class="header">
-    <div class="header-top">
-      <div class="header-top__container container">
-        <div class="header-top__info top-info">
-          <a class="top-info__link" href="#">
-            <svg class="top-info__svg" fill="#fff">
-              <use xlink:href="images/sprite.svg#icon-address"></use>
-            </svg>
-
-            <span class="top-info__text">
-              Адрес и время доставки
-            </span>
-          </a>
-
-          <a class="top-info__link" href="#">
-            <svg class="top-info__svg" fill="#fff">
-              <use xlink:href="images/sprite.svg#icon-tel"></use>
-            </svg>
-
-            <span class="top-info__text top-info__text--ml">
-              Горячая линия 24/7
-            </span>
-          </a>
-        </div>
-
-        <ul class="header-top__links top-links">
-          <li class="top-links__item">
-            <a class="top-links__link" href="#">
-              Доставка
-            </a>
-          </li>
-
-          <li class="top-links__item">
-            <a class="top-links__link" href="#">
-              О нас
-            </a>
-          </li>
-
-          <li class="top-links__item">
-            <a class="top-links__link" href="#">
-              Новости
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="header-middle ">
-      <div class="header-middle__container container">
-        <a class="header-middle__logo logo" href="#body">
-          <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок" width="200" height="60">
-        </a>
-
-        <nav class="header-middle__menu menu">
-          <button class="menu__wrap" type="button">
-            <div class="menu__burger-btn">
-              <span></span>
-            </div>
-            <div class="menu__burger-span">
-              <span class="menu__burger-text">Каталог продуктов</span>
-              <span class="sr-only">кнопка меню</span>
-            </div>
-          </button>
-
-          <ul class="menu__items">
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Овощи и фрукты
+    <nav class="header__nav">
+      <div class="header__top header-top">
+        <div class="header-top__container container">
+          <ul class="header-top__list">
+            <li class="header-top__item header-top__item--delivery">
+              <a class="header-top__link header-top__link--delivery" href="#">
+                Адрес и время доставки
               </a>
             </li>
 
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Бакалея
-              </a>
-            </li>
-
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Молочные продукты
-              </a>
-            </li>
-
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Хлеб
-              </a>
-            </li>
-
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Мясо
-              </a>
-            </li>
-
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Колбаса
-              </a>
-            </li>
-
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Рыба
-              </a>
-            </li>
-
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Алкоголь
-              </a>
-            </li>
-
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Напитки
-              </a>
-            </li>
-
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Торты
-              </a>
-            </li>
-
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Чай, кофе
+            <li class="header-top__item">
+              <a class="header-top__link header-top__link--hotline" href="#">
+                Горячая линия 24/7
               </a>
             </li>
           </ul>
-        </nav>
 
-        <div class="header-middle__search search">
-          <span class="search__span"></span>
-          <input class="search__field" name="search" type="text" placeholder="Найти в магазине ..." required>
+          <ul class="header-top__list">
+            <li class="header-top__item">
+              <a class="header-top__link" href="#">
+                Доставка
+              </a>
+            </li>
 
-          <button class="search__btn" type="button">
-            Поиск
-          </button>
+            <li class="header-top__item">
+              <a class="header-top__link" href="#">
+                О нас
+              </a>
+            </li>
+
+            <li class="header-top__item">
+              <a class="header-top__link" href="#">
+                Новости
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <ul class="header-middle__user-nav user-nav">
-          <li class="user-nav__item">
-            <a class="user-nav__link" href="#">
-              <svg class="user-nav__svg" fill="#fff">
-                <use xlink:href="images/sprite.svg#icon-user"></use>
-              </svg>
-              <span class="sr-only">иконка логина</span>
-            </a>
-          </li>
+      <div class="header__bottom header-bottom ">
+        <div class="header-bottom__container container">
+          <a class="header-bottom__logo logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок" width="200" height="60">
+          </a>
 
-          <li class="user-nav__item">
-            <a class="user-nav__link" href="#">
-              <svg class="user-nav__svg" fill="#fff">
-                <use xlink:href="images/sprite.svg#icon-heart"></use>
-              </svg>
-              <span class="user-nav__num">12</span>
-              <span class="sr-only">иконка понравившегося товара</span>
-            </a>
-          </li>
-
-          <li class="user-nav__item">
-            <a class="user-nav__link cart-icon" href="#">
-              <svg class="user-nav__svg" fill="#fff">
-                <use xlink:href="images/sprite.svg#icon-cart"></use>
-              </svg>
-              <span class="user-nav__num">12</span>
-              <span class="sr-only">иконка корзины</span>
-            </a>
-          </li>
-        </ul>
-
-        <div class="header-middle__cart cart">
-          <div class="cart__top">
-            <div class="cart__top-wrap">
-              <h3 class="cart__title">
-                Корзина
-              </h3>
-
-              <button class="cart__refresh-btn" type="reset">
-                очистить корзину
-              </button>
-            </div>
-
-            <button class="cart__close" type="button">
-              <svg class="cart__close-svg" fill="#31352B">
-                <use xlink:href="images/sprite.svg#icon-close"></use>
-              </svg>
+          <div class="header-bottom__catalog catalog">
+            <button class="catalog__btn" type="button">
+              Каталог продуктов
             </button>
+
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Овощи и фрукты
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Бакалея
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Молочные продукты
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Хлеб
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Мясо
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Колбаса
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Рыба
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Алкоголь
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Напитки
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Торты
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Чай, кофе
+                </a>
+              </li>
+            </ul>
           </div>
-          <ul class="cart__list">
-            <li class="cart__item">
-              <div class="cart__info-wrap">
-                <img class="cart__photo" src="images/products/ananas-mini.png" alt="Фото ананасика" width="60" height="60">
-                <div class="cart__descr">
-                  <a class="cart__title-link" href="#">
-                    <h4 class="cart__title-text">Ананас, 1 кг</h4>
-                  </a>
-                  <span class="cart__span">999</span><span class="cart__currency">₽</span>
-                </div>
-              </div>
 
-              <div class="cart__total-wrap">
-                <button class="cart__plus-minus" onclick="$('#num9').val((+$('#num9').val() <= $('#num9').prop('min')) ? 1 : +($('#num9').val()) - 1);$('#num9').keyup();">-</button>
+          <form class="header-bottom__form form-search">
+            <label class="sr-only" for="search">Поиск товара по сайту</label>
+            <input class="form-search__field" id="search" name="search" type="search" placeholder="Найти в магазине ..." required>
 
-                <input class="cart__quantity" type="number" id="num9" min="1" name="quantity" value="1">
+            <button class="form-search__btn" type="submit">Поиск</button>
+          </form>
 
-                <button class="cart__plus-minus plus-mr" onclick="$('#num9').val( +$('#num9').val() +1);$('#num9').keyup();">+</button>
-
-                <span class="cart__total-coast">1998</span><span class="cart__total-currency">₽</span>
-              </div>
+          <ul class="header-bottom__user-nav user-nav">
+            <li class="user-nav__item">
+              <a class="user-nav__link user-nav__link--login" href="#">
+                <span class="sr-only">перейти в личный кабинет</span>
+              </a>
             </li>
 
-            <li class="cart__item">
-              <div class="cart__info-wrap">
-                <img class="cart__photo" src="images/products/pitahaya-mini.png" alt="Фото питахайи" width="60" height="60">
-                <div class="cart__descr">
-                  <a class="cart__title-link" href="#">
-                    <h4 class="cart__title-text">Питахайя красная с белой мякотью, 1шт</h4>
-                  </a>
-                  <span class="cart__span">1019</span><span class="cart__currency">₽</span>
-                </div>
-              </div>
-
-              <div class="cart__total-wrap">
-                <button class="cart__plus-minus" onclick="$('#num10').val((+$('#num10').val() <= $('#num10').prop('min')) ? 1 : +($('#num10').val()) - 1);$('#num10').keyup();">-</button>
-
-                <input class="cart__quantity" type="number" id="num10" min="1" name="quantity" value="1">
-
-                <button class="cart__plus-minus plus-mr" onclick="$('#num10').val( +$('#num10').val() +1);$('#num10').keyup();">+</button>
-
-                <span class="cart__total-coast">2038</span><span class="cart__total-currency">₽</span>
-              </div>
+            <li class="user-nav__item">
+              <a class="user-nav__link user-nav__link--liked" href="#">
+                <span class="user-nav__num">12</span>
+                <span class="sr-only">посмотреть понравившийся товар</span>
+              </a>
             </li>
 
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--cart" type="button">
+
+                <span class="user-nav__num">12</span>
+                <span class="sr-only">перейти в корзину товаров</span>
+              </button>
+
+              <div class="user-nav__item-cart cart-box">
+                <div class="cart-box__header">
+                  <div class="cart-box__header-inner">
+                    <span class="cart-box__title">
+                      Корзина
+                    </span>
+
+                    <button class="cart-box__clear" type="button">
+                      очистить корзину
+                    </button>
+                  </div>
+
+
+                  <button class="cart-box__close-btn" type="button">
+                    <span class="sr-only">Закрыть корзину</span>
+                  </button>
+                </div>
+
+                <ul class="cart-box__list">
+                  <li class="cart-box__item">
+                    <a class="cart-box__img-box" href="#">
+                      <img class="cart-box__img" src="images/products/ananas-mini.png" alt="Фото ананасика" width="60" height="60">
+                    </a>
+                  
+                    <div class="cart-box__inner">
+                      <div class="cart-box__info">
+                        <h3 class="cart-box__title-product">
+                          <a class="cart-box__link" href="#">
+                            Ананас, 1кг
+                          </a>
+                        </h3>
+                  
+                        <span class="cart-box__coast">1019</span><span class="cart-box__currency">₽</span>
+                      </div>
+                  
+                      <div class="cart-box__bottom-inner">
+                        <div class="cart-box__total-wrap">
+                          <button class="cart-box__plus-minus" onclick="$('#num10').val((+$('#num10').val() <= $('#num10').prop('min')) ? 1 : +($('#num10').val()) - 1);$('#num10').keyup();">-<span class="sr-only">кнопка минус</span></button>
+                  
+                          <label class="sr-only" for="num10">Общее количество товара</label>
+                          <input class="cart-box__quantity" type="number" id="num10" min="1" name="quantity" value="1">
+                  
+                          <button class="cart-box__plus-minus plus-mr" onclick="$('#num10').val( +$('#num10').val() +1);$('#num10').keyup();">+<span class="sr-only">кнопка плюс</span></button>
+                        </div>
+                        <span class="cart-box__total-coast">1199</span><span class="cart-box__total-currency">₽</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="cart-box__item">
+                    <a class="cart-box__img-box" href="#">
+                      <img class="cart-box__img" src="images/products/pitahaya-mini.png" alt="Фото питахаи" width="60" height="60">
+                    </a>
+                  
+                    <div class="cart-box__inner">
+                      <div class="cart-box__info">
+                        <h3 class="cart-box__title-product">
+                          <a class="cart-box__link" href="#">
+                            Питахайя красная с белой мякотью, 1шт
+                          </a>
+                        </h3>
+                  
+                        <span class="cart-box__coast">1019</span><span class="cart-box__currency">₽</span>
+                      </div>
+                  
+                      <div class="cart-box__bottom-inner">
+                        <div class="cart-box__total-wrap">
+                          <button class="cart-box__plus-minus" onclick="$('#num10').val((+$('#num10').val() <= $('#num10').prop('min')) ? 1 : +($('#num10').val()) - 1);$('#num10').keyup();">-<span class="sr-only">кнопка минус</span></button>
+                  
+                          <label class="sr-only" for="num10">Общее количество товара</label>
+                          <input class="cart-box__quantity" type="number" id="num10" min="1" name="quantity" value="1">
+                  
+                          <button class="cart-box__plus-minus plus-mr" onclick="$('#num10').val( +$('#num10').val() +1);$('#num10').keyup();">+<span class="sr-only">кнопка плюс</span></button>
+                        </div>
+                        <span class="cart-box__total-coast">2038</span><span class="cart-box__total-currency">₽</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="cart-box__bottom">
+                  <div class="cart-box__bottom-info">
+                    <span class="cart-box__bottom-text">Товаров на сумму</span>
+                    <span class="cart-box__bottom-coast">2038</span><span class="cart-box__currancy" >₽</span>
+                  </div>
+                  <a class="cart-box__bottom-btn" href="#">Оформить заказ</a>
+                </div>
+            </li>
           </ul>
-          <div class="cart__footer">
-            <span class="cart__footer-text">Товаров на сумму</span>
-
-            <div class="cart__footer-wrap">
-              <span class="cart__footer-coast">2038</span><span class="cart__footer-currency">₽</span>
-            </div>
-          </div>
-
-          <div class="cart__btn">
-            <button class="cart__btn-issue" type="button">Оформить заказ</button>
-          </div>
         </div>
       </div>
-
-    </div>
-    <div class="header-bottom">
-      <ul class="header-bottom__slider slider">
-        <li class="slider__item" style="background-image: url('images/slider/gabriel-gurrola.jpg')">
-          <div class="slider__container container">
-            <div class="slider__item-wrap">
-              <h1 class="slider__title">
-                СВЕЖАЧОК ВАМ в ХАТУ <span class="slider__span">Скидка -50%</span>
-              </h1>
-              <p class="slider__text">
-                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-              </p>
-              <a class="slider__btn btn btn-sg" href="#">
-                Купить сейчас
-                <span class="sr-only">кнопка купить сейчас</span>
-              </a>
-            </div>
-          </div>
-        </li>
-
-        <li class="slider__item" style="background-image: url('images/slider/stefano-carella.jpg')">
-          <div class="slider__container container">
-            <div class="slider__item-wrap">
-              <h1 class="slider__title">
-                НАКРУТИ СЕБЕ ТОМАТОВ
-                <span class="slider__span">АКЦИЯ: 3 кг по цене 1</span>
-              </h1>
-              <p class="slider__text">
-                Только с 12 по 15 июля скидка на домашние помидорчики
-              </p>
-              <a class="slider__btn btn" href="#">
-                Купить сейчас
-                <span class="sr-only">кнопка купить сейчас</span>
-              </a>
-            </div>
-          </div>
-        </li>
-
-        <li class="slider__item" style="background-image: url('images/slider/petra-cigale.jpg')">
-          <div class="slider__container container">
-            <div class="slider__item-wrap">
-              <h1 class="slider__title">
-                Пусть остальные
-                позеленеют от зависти <span class="slider__span">Распродажа зелени</span>
-              </h1>
-              <p class="slider__text">
-                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-              </p>
-              <a class="slider__btn btn" href="#">
-                Купить сейчас
-              </a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+    </nav>
   </header>
+
+  <section class="slider-section">
+    <ul class="slider-section__slider promotion-slider">
+      <li class="promotion-slider__item" style="background-image: url('images/slider/gabriel-gurrola.jpg')">
+
+        <div class="promotion-slider__container container">
+          <div class="promotion-slider__item-wrap">
+            <h1 class="promotion-slider__title">
+              СВЕЖАЧОК ВАМ в ХАТУ <span class="promotion-slider__span">Скидка -50%</span>
+            </h1>
+            <p class="promotion-slider__text">
+              Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+            </p>
+            <a class="promotion-slider__btn btn btn-sg" href="#">
+              Купить сейчас
+              <span class="sr-only">кнопка купить сейчас</span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="promotion-slider__item" style="background-image: url('images/slider/stefano-carella.jpg')">
+        <div class="promotion-slider__container container">
+          <div class="promotion-slider__item-wrap">
+            <h1 class="promotion-slider__title">
+              НАКРУТИ СЕБЕ ТОМАТОВ
+              <span class="promotion-slider__span">АКЦИЯ: 3 кг по цене 1</span>
+            </h1>
+            <p class="promotion-slider__text">
+              Только с 12 по 15 июля скидка на домашние помидорчики
+            </p>
+            <a class="promotion-slider__btn btn" href="#">
+              Купить сейчас
+              <span class="sr-only">кнопка купить сейчас</span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="promotion-slider__item" style="background-image: url('images/slider/petra-cigale.jpg')">
+        <div class="promotion-slider__container container">
+          <div class="promotion-slider__item-wrap">
+            <h1 class="promotion-slider__title">
+              Пусть остальные
+              позеленеют от зависти <span class="promotion-slider__span">Распродажа зелени</span>
+            </h1>
+            <p class="promotion-slider__text">
+              Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+            </p>
+            <a class="promotion-slider__btn btn" href="#">
+              Купить сейчас
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
 
   <main class="main">
     <section class="benefits">
@@ -610,7 +599,7 @@
             <a class="product__link" href="#">
               <div class="product__wrap">
                 <img class="product__photo" src="images/products/ketchup.png" alt="Фото кетчупа" width="298" height="215">
-              
+
                 <div class="product__lupa">
                   <svg class="product__lupa-svg" fill="#63A60E">
                     <use xlink:href="images/sprite.svg#icon-search"></use>
@@ -675,7 +664,7 @@
             <a class="product__link" href="#">
               <div class="product__wrap">
                 <img class="product__photo" src="images/products/morkovka.png" alt="Фото мокровки" width="298" height="215">
-              
+
                 <div class="product__lupa">
                   <svg class="product__lupa-svg" fill="#63A60E">
                     <use xlink:href="images/sprite.svg#icon-search"></use>
@@ -737,7 +726,7 @@
             <a class="product__link" href="#">
               <div class="product__wrap">
                 <img class="product__photo" src="images/products/pivo.png" alt="Фото напитка" width="298" height="215">
-              
+
                 <div class="product__lupa">
                   <svg class="product__lupa-svg" fill="#63A60E">
                     <use xlink:href="images/sprite.svg#icon-search"></use>
@@ -800,10 +789,10 @@
               </a>
             </div>
 
-            <a class="product__link" href="#">  
+            <a class="product__link" href="#">
               <div class="product__wrap">
                 <img class="product__photo" src="images/products/coffe.png" alt="Фото кофе с коноплей" width="298" height="215">
-              
+
                 <div class="product__lupa">
                   <svg class="product__lupa-svg" fill="#63A60E">
                     <use xlink:href="images/sprite.svg#icon-search"></use>
@@ -865,7 +854,7 @@
             <a class="product__link" href="#">
               <div class="product__wrap">
                 <img class="product__photo" src="images/products/perec.png" alt="Фото перца" width="298" height="215">
-              
+
                 <div class="product__lupa">
                   <svg class="product__lupa-svg" fill="#63A60E">
                     <use xlink:href="images/sprite.svg#icon-search"></use>

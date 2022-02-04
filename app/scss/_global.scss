@@ -1,11 +1,13 @@
 body {
   color: $dark-500;
+  @extend %opensans-400;
   font-size: 14px;
   line-height: 1.4;
   background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  letter-spacing: 0.03em;
 }
 
 body.lock {
@@ -33,10 +35,11 @@ body.lock {
   @extend %opensans-400;
   font-size: 18px;
   padding: 12px 24px;
+  color: $white;
   background-color: $green-900;
   border: 1px solid $green-900;
   border-radius: 6px;
-  letter-spacing: 0.03em;
+ 
 
 }
 

@@ -1,29 +1,25 @@
 $(function (){
 
-  $('.slider').slick({
+  $('.promotion-slider').slick({
     infinite: false,
     prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/icon-left-arrow.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="images/icons/icons-right-arrow.svg" alt=""></button>',
     
   });
 
-  $('.menu').on('click', function(){
-    $('.menu').toggleClass('menu--active');
-    $('.menu__items').fadeToggle();
+  $('.catalog').on('click', function(){
+    $('.catalog').toggleClass('catalog--active');
+    $('.catalog__list').fadeToggle();
  });
 
 
-  $('.menu').on('click', function(){
-   $('.menu__wrap').removeClass('menu__wrap--active');
- });
-
-  $('.cart-icon').on('click', function(){
-    $('.cart').toggleClass('cart--active');
+  $('.user-nav__link--cart').on('click', function(){
+    $('.cart-box').toggleClass('cart-box--active');
     $('body').toggleClass ('lock');
  });
 
- $('.cart__close').on('click', function(){
-   $('.cart').removeClass('cart--active');
+ $('.cart-box__close-btn').on('click', function(){
+   $('.cart-box').removeClass('cart-box--active');
    $('body').removeClass ('lock');
  });
  
