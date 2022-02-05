@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <div class="header__bottom header-bottom ">
+      <div class="header__bottom header-bottom">
         <div class="header-bottom__container container">
           <a class="header-bottom__logo logo" href="#">
             <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок" width="200" height="60">
@@ -183,7 +183,11 @@
                     <a class="cart-box__img-box" href="#">
                       <img class="cart-box__img" src="images/products/ananas-mini.png" alt="Фото ананасика" width="60" height="60">
                     </a>
-                  
+
+                    <button class="cart-box__item-del" type="button">
+                      <span class="sr-only">удалить товар</span>
+                    </button>
+
                     <div class="cart-box__inner">
                       <div class="cart-box__info">
                         <h3 class="cart-box__title-product">
@@ -191,17 +195,17 @@
                             Ананас, 1кг
                           </a>
                         </h3>
-                  
+
                         <span class="cart-box__coast">1019</span><span class="cart-box__currency">₽</span>
                       </div>
-                  
+
                       <div class="cart-box__bottom-inner">
                         <div class="cart-box__total-wrap">
                           <button class="cart-box__plus-minus" onclick="$('#num10').val((+$('#num10').val() <= $('#num10').prop('min')) ? 1 : +($('#num10').val()) - 1);$('#num10').keyup();">-<span class="sr-only">кнопка минус</span></button>
-                  
+
                           <label class="sr-only" for="num10">Общее количество товара</label>
                           <input class="cart-box__quantity" type="number" id="num10" min="1" name="quantity" value="1">
-                  
+
                           <button class="cart-box__plus-minus plus-mr" onclick="$('#num10').val( +$('#num10').val() +1);$('#num10').keyup();">+<span class="sr-only">кнопка плюс</span></button>
                         </div>
                         <span class="cart-box__total-coast">1199</span><span class="cart-box__total-currency">₽</span>
@@ -213,7 +217,11 @@
                     <a class="cart-box__img-box" href="#">
                       <img class="cart-box__img" src="images/products/pitahaya-mini.png" alt="Фото питахаи" width="60" height="60">
                     </a>
-                  
+
+                    <button class="cart-box__item-del" type="button">
+                      <span class="sr-only">удалить товар</span>
+                    </button>
+
                     <div class="cart-box__inner">
                       <div class="cart-box__info">
                         <h3 class="cart-box__title-product">
@@ -221,18 +229,18 @@
                             Питахайя красная с белой мякотью, 1шт
                           </a>
                         </h3>
-                  
+
                         <span class="cart-box__coast">1019</span><span class="cart-box__currency">₽</span>
                       </div>
-                  
+
                       <div class="cart-box__bottom-inner">
                         <div class="cart-box__total-wrap">
-                          <button class="cart-box__plus-minus" onclick="$('#num10').val((+$('#num10').val() <= $('#num10').prop('min')) ? 1 : +($('#num10').val()) - 1);$('#num10').keyup();">-<span class="sr-only">кнопка минус</span></button>
-                  
+                          <button class="cart-box__plus-minus" onclick="$('#num11').val((+$('#num11').val() <= $('#num11').prop('min')) ? 1 : +($('#num11').val()) - 1);$('#num11').keyup();">-<span class="sr-only">кнопка минус</span></button>
+
                           <label class="sr-only" for="num10">Общее количество товара</label>
-                          <input class="cart-box__quantity" type="number" id="num10" min="1" name="quantity" value="1">
-                  
-                          <button class="cart-box__plus-minus plus-mr" onclick="$('#num10').val( +$('#num10').val() +1);$('#num10').keyup();">+<span class="sr-only">кнопка плюс</span></button>
+                          <input class="cart-box__quantity" type="number" id="num11" min="1" name="quantity" value="1">
+
+                          <button class="cart-box__plus-minus plus-mr" onclick="$('#num11').val( +$('#num11').val() +1);$('#num11').keyup();">+<span class="sr-only">кнопка плюс</span></button>
                         </div>
                         <span class="cart-box__total-coast">2038</span><span class="cart-box__total-currency">₽</span>
                       </div>
@@ -243,7 +251,7 @@
                 <div class="cart-box__bottom">
                   <div class="cart-box__bottom-info">
                     <span class="cart-box__bottom-text">Товаров на сумму</span>
-                    <span class="cart-box__bottom-coast">2038</span><span class="cart-box__currancy" >₽</span>
+                    <span class="cart-box__bottom-coast">2038</span><span class="cart-box__currancy">₽</span>
                   </div>
                   <a class="cart-box__bottom-btn" href="#">Оформить заказ</a>
                 </div>
@@ -254,112 +262,113 @@
     </nav>
   </header>
 
-  <section class="slider-section">
-    <ul class="slider-section__slider promotion-slider">
-      <li class="promotion-slider__item" style="background-image: url('images/slider/gabriel-gurrola.jpg')">
-
-        <div class="promotion-slider__container container">
-          <div class="promotion-slider__item-wrap">
-            <h1 class="promotion-slider__title">
-              СВЕЖАЧОК ВАМ в ХАТУ <span class="promotion-slider__span">Скидка -50%</span>
-            </h1>
-            <p class="promotion-slider__text">
-              Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-            </p>
-            <a class="promotion-slider__btn btn btn-sg" href="#">
-              Купить сейчас
-              <span class="sr-only">кнопка купить сейчас</span>
-            </a>
-          </div>
-        </div>
-      </li>
-
-      <li class="promotion-slider__item" style="background-image: url('images/slider/stefano-carella.jpg')">
-        <div class="promotion-slider__container container">
-          <div class="promotion-slider__item-wrap">
-            <h1 class="promotion-slider__title">
-              НАКРУТИ СЕБЕ ТОМАТОВ
-              <span class="promotion-slider__span">АКЦИЯ: 3 кг по цене 1</span>
-            </h1>
-            <p class="promotion-slider__text">
-              Только с 12 по 15 июля скидка на домашние помидорчики
-            </p>
-            <a class="promotion-slider__btn btn" href="#">
-              Купить сейчас
-              <span class="sr-only">кнопка купить сейчас</span>
-            </a>
-          </div>
-        </div>
-      </li>
-
-      <li class="promotion-slider__item" style="background-image: url('images/slider/petra-cigale.jpg')">
-        <div class="promotion-slider__container container">
-          <div class="promotion-slider__item-wrap">
-            <h1 class="promotion-slider__title">
-              Пусть остальные
-              позеленеют от зависти <span class="promotion-slider__span">Распродажа зелени</span>
-            </h1>
-            <p class="promotion-slider__text">
-              Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-            </p>
-            <a class="promotion-slider__btn btn" href="#">
-              Купить сейчас
-            </a>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </section>
-
   <main class="main">
+    <h1 class="sr-only">
+      Фрешок - лучший супермаркет овощей и фруктов
+    </h1>
+
+    <section class="slider-section">
+      <h2 class="sr-only">Акции и скидки</h2>
+
+      <ul class="slider-section__list promotion-slider">
+        <li class="promotion-slider__item" style="background-image: url('images/slider/gabriel-gurrola.jpg')">
+
+          <div class="promotion-slider__container container">
+            <div class="promotion-slider__item-wrap">
+              <h3 class="promotion-slider__title">
+                СВЕЖАЧОК ВАМ в ХАТУ <span class="promotion-slider__span">Скидка -50%</span>
+              </h3>
+
+              <p class="promotion-slider__text">
+                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+              </p>
+
+              <a class="promotion-slider__btn btn" href="#">
+                Купить сейчас
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="promotion-slider__item" style="background-image: url('images/slider/stefano-carella.jpg')">
+          <div class="promotion-slider__container container">
+            <div class="promotion-slider__item-wrap">
+              <h3 class="promotion-slider__title">
+                НАКРУТИ СЕБЕ ТОМАТОВ
+                <span class="promotion-slider__span">АКЦИЯ: 3 кг по цене 1</span>
+              </h3>
+
+              <p class="promotion-slider__text">
+                Только с 12 по 15 июля скидка на домашние помидорчики
+              </p>
+
+              <a class="promotion-slider__btn btn" href="#">
+                Купить сейчас
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="promotion-slider__item" style="background-image: url('images/slider/petra-cigale.jpg')">
+          <div class="promotion-slider__container container">
+            <div class="promotion-slider__item-wrap">
+              <h3 class="promotion-slider__title">
+                Пусть остальные
+                позеленеют от зависти <span class="promotion-slider__span">Распродажа зелени</span>
+              </h3>
+
+              <p class="promotion-slider__text">
+                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+              </p>
+
+              <a class="promotion-slider__btn btn" href="#">
+                Купить сейчас
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
     <section class="benefits">
       <div class="benefits__container container">
-        <h3 class="sr-only">
-          Наши приемущества
-        </h3>
+        <h2 class="sr-only">Наши приемущества</h2>
+
         <ul class="benefits__items">
-          <li class="benefits__item">
-            <svg class="benefits__item-svg" fill="#63A60E">
-              <use xlink:href="images/sprite.svg#icon-scooter"></use>
-            </svg>
-            <div class="benefits__item-text">
-              <h4 class="benefits__item-title">Бесплатная доставка</h4>
-              <p class="benefits__item-descr">Для заказов на сумму от 500 ₽</p>
+          <li class="benefits__item benefits__item--scooter">
+            <div class="benefits__text">
+              <h3 class="benefits__title">Бесплатная доставка</h3>
+
+              <p class="benefits__descr">Для заказов на сумму от 500 ₽</p>
             </div>
           </li>
 
-          <li class="benefits__item">
-            <svg class="benefits__item-svg" fill="#63A60E">
-              <use xlink:href="images/sprite.svg#icon-return"></use>
-            </svg>
-            <div class="benefits__item-text">
-              <h4 class="benefits__item-title">Возврат товара</h4>
-              <p class="benefits__item-descr">Если товары были испорчены</p>
+          <li class="benefits__item benefits__item--return">
+            <div class="benefits__text">
+              <h3 class="benefits__title">Возврат товара</h3>
+
+              <p class="benefits__descr">Если товары были испорчены</p>
             </div>
           </li>
 
-          <li class="benefits__item">
-            <svg class="benefits__item-svg" fill="#63A60E">
-              <use xlink:href="images/sprite.svg#icon-24hours"></use>
-            </svg>
-            <div class="benefits__item-text">
-              <h4 class="benefits__item-title">Поддержка 24/7</h4>
-              <p class="benefits__item-descr">Лучшие операторы</p>
+          <li class="benefits__item benefits__item--24hours">
+            <div class="benefits__text">
+              <h3 class="benefits__title">Поддержка 24/7</h3>
+
+              <p class="benefits__descr">Лучшие операторы</p>
             </div>
           </li>
-
         </ul>
       </div>
     </section>
 
     <section class="top-products">
       <div class="top-products__container container">
-
         <h2 class="top-products__title title">Топовые товары</h2>
 
         <ul class="top-products__filters filters">
           <li class="filters__item">
-            <button class="filters__link " type="button" data-filter="all">
+            <button class="filters__link" type="button" data-filter="all">
               Все товары
             </button>
           </li>
@@ -390,75 +399,59 @@
         </ul>
 
         <ul class="top-products__list">
-          <li class="top-products__item product mix category-fructs">
+          <li class="top-products__item mix category-fructs">
+            <article class="top-products__cart product-card">
+              <!-- сделал обертку дял топа, чтоб при добавлении третьего бейджа картинка смещалась, а то топ-пединг статичный -->
+              <div class="product-card__top">
+                <ul class="product-card__badges badges">
+                  <li class="badges__item badges__item--new badges__item--on">Новинка</li>
+                  <li class="badges__item badges__item--sale badges__item--on">-50%</li>
+                  <li class="badges__item badges__item--hit">Хит</li>
+                </ul>
 
-            <div class="product-top">
-              <div class="product-top__banners">
-                <span class="product__banner product__banner--green">Новинка</span>
-                <span class="product__banner product__banner--red">-50%</span>
+                <button class="product-card__wish" type="button">
+                  <span class="sr-only">добавить в избранное</span>
+                </button>
               </div>
 
-              <a class="product__wish-link" href="#">
-                <svg class="product__wish-svg" fill="#C1C1C1">
-                  <use xlink:href="images/sprite.svg#icon-heart"></use>
-                </svg>
+              <a class="product-card__image-link" href="#">
+                <img class="product-card__img" src="images/products/ananas.png" alt="Спелый сочный ананас" width="298" height="215">
               </a>
-            </div>
 
-            <a class="product__link" href="#">
-              <div class="product__wrap">
-                <img class="product__photo" src="images/products/ananas.png" alt="Фото ананасика" width="298" height="215">
+              <div class="product-card__info">
+                <h4 class="product-card__title">
+                  <a class="product-card__link" href="#">Ананас, 1кг</a>
+                </h4>
 
-                <div class="product__lupa">
-                  <svg class="product__lupa-svg" fill="#63A60E">
-                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                  </svg>
+                <div class="product-card__bottom">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--old">1 999 ₽</li>
+
+                    <li class="prices__item">999 ₽</li>
+                  </ul>
+
+                  <div class="product-card__quantity quantity">
+                    <button class="quantity__btn btn quantity__btn--minus" onclick="$('#num1').val((+$('#num1').val() <= $('#num1').prop('min')) ? 1 : +($('#num1').val()) - 1);$('#num1').keyup();">
+                      <span class="sr-only">кнопка минус</span>
+                    </button>
+
+                    <label class="quantity__label sr-only" for="num1">Общее количество товара</label>
+                    <input class="quantity__input" type="number" id="num1" min="1" name="quantity" value="1">
+
+                    <button class="quantity__btn  btn quantity__btn--plus" onclick=" $('#num1').val( +$('#num1').val() +1);$('#num1').keyup();">
+                      <span class="sr-only">кнопка плюс</span>
+                    </button>
+                  </div>
+
+                  <button class="product-card__cart btn" type="button">
+                    <span class="sr-only">добавить в корзину</span>
+                  </button>
                 </div>
               </div>
-
-              <h4 class="product__title">
-                Ананас, 1кг
-              </h4>
-            </a>
-
-            <div class="product__info">
-              <div class="product__coast-wrap">
-                <span class="product__coast-old">
-                  1 999 ₽
-                </span>
-
-                <span class="product__coast-new">
-                  999 ₽
-                </span>
-              </div>
-
-              <div class="product__cart">
-                <button class="product__minus product-btn" onclick="$('#num1').val((+$('#num1').val() <= $('#num1').prop('min')) ? 1 : +($('#num1').val()) - 1);$('#num1').keyup();">
-                  <svg class="product__minus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-minus"></use>
-                  </svg>
-                </button>
-
-                <input class="product__quantity" type="number" id="num1" min="1" name="quantity" value="1">
-
-                <button class="product__plus product-btn" onclick=" $('#num1').val( +$('#num1').val() +1);$('#num1').keyup();">
-                  <svg class="product__plus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-
-                <div class="product__cart-wrap btn-sg">
-                  <a class="cart-icon" href="#">
-                    <svg class="product__cart-svg" fill="#fff">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            </article>
           </li>
 
-          <li class="top-products__item product mix category-fructs">
+          <!-- <li class="top-products__item product mix category-fructs">
 
             <div class="product-top">
               <div class="product-top__banners">
@@ -508,7 +501,7 @@
                   </svg>
                 </button>
 
-                <div class="product__cart-wrap btn-sg">
+                <div class="product__cart-wrap">
                   <a class="cart-icon" href="#">
                     <svg class="product__cart-svg" fill="#fff">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -572,7 +565,7 @@
                   </svg>
                 </button>
 
-                <div class="product__cart-wrap btn-sg">
+                <div class="product__cart-wrap">
                   <a class="cart-icon" href="#">
                     <svg class="product__cart-svg" fill="#fff">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -634,7 +627,7 @@
                   </svg>
                 </button>
 
-                <div class="product__cart-wrap btn-sg">
+                <div class="product__cart-wrap">
 
                   <a class="cart-icon" href="#">
                     <svg class="product__cart-svg" fill="#fff">
@@ -699,7 +692,7 @@
                   </svg>
                 </button>
 
-                <div class="product__cart-wrap btn-sg">
+                <div class="product__cart-wrap">
                   <a class="cart-icon" href="#">
                     <svg class="product__cart-svg" fill="#fff">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -765,7 +758,7 @@
                   </svg>
                 </button>
 
-                <div class="product__cart-wrap btn-sg">
+                <div class="product__cart-wrap">
                   <a class="cart-icon" href="#">
                     <svg class="product__cart-svg" fill="#fff">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -827,7 +820,7 @@
                   </svg>
                 </button>
 
-                <div class="product__cart-wrap btn-sg">
+                <div class="product__cart-wrap">
                   <a class="cart-icon" href="#">
                     <svg class="product__cart-svg" fill="#fff">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -889,7 +882,7 @@
                   </svg>
                 </button>
 
-                <div class="product__cart-wrap btn-sg">
+                <div class="product__cart-wrap">
                   <a class="cart-icon" href="#">
                     <svg class="product__cart-svg" fill="#fff">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -898,15 +891,14 @@
                 </div>
               </div>
             </div>
-          </li>
+          </li> -->
 
         </ul>
 
-        <div class="top-products__wrap">
-          <button class="top-products__btn btn" type="button">
-            Показать еще
-          </button>
-        </div>
+
+        <button class="top-products__btn btn" type="button">
+          Показать еще
+        </button>
       </div>
     </section>
 
@@ -927,7 +919,7 @@
             <form class="footer__form" action="#">
               <input class="footer__form-input" type="email" name="mail" placeholder="email@email.com" required>
 
-              <button class="footer__form-btn btn-sg" type="submit">
+              <button class="footer__form-btn" type="submit">
                 Подписаться
               </button>
             </form>

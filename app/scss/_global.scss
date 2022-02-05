@@ -39,8 +39,21 @@ body.lock {
   background-color: $green-900;
   border: 1px solid $green-900;
   border-radius: 6px;
- 
+  transition: box-shadow 0.3s,
+  background-color 0.3s;
+  outline: transparent;
+  &:focus {
+    box-shadow: 0px 0px 0px 4px #E0EDCF;
+  }
 
+  &:hover {
+    background-color: #4D810C;
+  }
+
+  &:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
 }
 
 .logo {
@@ -58,21 +71,18 @@ body.lock {
   color: $dark-900;
 }
 
-.btn-sg {
-  transition: box-shadow 0.3s,
-    background-color 0.3s;
-  outline: transparent;
-
-  &:focus {
-    box-shadow: 0px 0px 0px 4px #E0EDCF;
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  &:hover {
-    background-color: #4D810C;
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
   }
-
-  &:active {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
 }

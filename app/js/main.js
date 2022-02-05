@@ -1,5 +1,21 @@
 $(function (){
 
+
+  // не работало у меня
+  // let i = 0;
+  // $(".quantity__input").each(function () {
+  //   i++;
+  //   $(this).attr("id", "item" + i);
+  // });
+
+  //  let ii = 0;
+  // $(".quantity__label").each(function () {
+  //   i++;
+  //   $(this).attr("for", "item" + ii);
+  // });
+
+
+
   $('.promotion-slider').slick({
     infinite: false,
     prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/icon-left-arrow.svg" alt=""></button>',
