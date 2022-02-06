@@ -905,77 +905,75 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
+    <div class="footer__top">
+      <div class="container">
 
         <a class="footer__logo logo" href="#body">
-          <img class="footer__logo-img" src="images/logo.svg" alt="логотип Фрешок">
+          <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
         </a>
 
-        <div class="footer__items">
-          <div class="footer__subscribe">
-            <span class="footer__subscribe-text">Следите за нашими акциями</span>
+        <div class="footer__inner">
+          <form class="footer__form form-subscribe">
+            <span class="form-subscribe__text">Следите за нашими акциями</span>
 
-            <form class="footer__form" action="#">
-              <input class="footer__form-input" type="email" name="mail" placeholder="email@email.com" required>
+            <div class="form-subscribe__wrap" action="#">
+              <label for="subscribe"><span class="sr-only">ваша почта для подписки</span></label>
+              <input class="form-subscribe__input" id="subscribe" type="email" name="mail" placeholder="email@email.com" required>
 
-              <button class="footer__form-btn" type="submit">
+              <button class="form-subscribe__btn btn" type="submit">
                 Подписаться
               </button>
-            </form>
-          </div>
+            </div>
+          </form>
 
-          <div class="footer__links">
+          <div class="footer__list">
             <ul class="footer__links-item links">
 
-              <li class="links__item">
-                <a class="links__link" href="#">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
                   О нас
                 </a>
               </li>
 
-              <li class="links__item">
-                <a class="links__link" href="#">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
                   Контакты
                 </a>
               </li>
 
-              <li class="links__item">
-                <a class="links__link" href="#">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
                   Публичная оферта
                 </a>
               </li>
-            </ul>
 
-            <ul class="footer__links-item links">
-              <li class="links__item">
-                <a class="links__link" href="#">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
                   Оплата и доставка
                 </a>
               </li>
 
-              <li class="links__item">
-                <a class="links__link" href="#">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
                   Вакансии
                 </a>
               </li>
 
-              <li class="links__item">
-                <a class="links__link" href="#">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
                   Акции
                 </a>
               </li>
-            </ul>
 
-            <ul class="footer__links-item links">
-              <li class="links__item">
-                <a class="links__link" href="#">
+
+              <li class="footer__item">
+                <a class="footer__link" href="#">
                   Отзывы
                 </a>
               </li>
 
-              <li class="links__item">
-                <a class="links__link" href="#">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
                   Новости
                 </a>
               </li>
@@ -985,85 +983,61 @@
           <address class="footer__contacts contacts">
             <ul class="contacts__items">
               <li class="contacts__item">
-                <span class="contacts__item-text">Горячая линия <a href="tel:+7907288365">+7 907 288 365</a>
-                </span>
+                <a class="contacts__link" href="tel:+7907288365">
+                  Горячая линия +7 907 288 365
+                </a>
               </li>
 
               <li class="contacts__item">
-                <span class="contacts__item-text">
+                <a class="contacts__link" href="tel:+7907288365">
                   Санкт-Петербург, ул. Ленина, 1
-                </span>
+                </a>
               </li>
             </ul>
 
             <ul class="contacts__social social">
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <svg class="social__icon" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-facebook"></use>
-                  </svg>
+                <a class="social__link" href="#" style="background-image: url('images/social-icon/icon-facebook.svg')">
                   <span class="sr-only">иконка фейсбук</span>
                 </a>
               </li>
 
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <svg class="social__icon" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-youtube"></use>
-                  </svg>
+                <a class="social__link" href="#" style="background-image: url('images/social-icon/icon-youtube.svg')">
                   <span class="sr-only">иконка ютуб</span>
                 </a>
               </li>
 
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <svg class="social__icon" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-telegram"></use>
-                  </svg>
+                <a class="social__link" href="#" style="background-image: url('images/social-icon/icon-telegram.svg')">
                   <span class="sr-only">иконка телеграмма</span>
                 </a>
               </li>
 
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <svg class="social__icon" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-instagram"></use>
-                  </svg>
+                <a class="social__link" href="#" style="background-image: url('images/social-icon/icon-instagram.svg')">
                   <span class="sr-only">иконка инстаграмм</span>
                 </a>
               </li>
-
             </ul>
-
           </address>
         </div>
 
+        <div class="footer__bottom footer-bottom">
+          <a class="footer-bottom__copy" href="#">© 2021 ФРЕШОК</a>
 
-
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-bottom__container">
-          <div class="footer-bottom__copyright">
-            <p>© 2021 ФРЕШОК</p>
-          </div>
           <ul class="footer-bottom__pay-info">
             <li class="footer-bottom__pay-item">
-              <svg class="footer-bottom__pay-visa" fill="#fff">
-                <use xlink:href="images/sprite.svg#icon-visa"></use>
-              </svg>
+              <img class="footer-bottom__img" src="images/icons/icon-visa.svg" alt="оплата картой виза" width="93" height="29">
             </li>
 
             <li class="footer-bottom__pay-item">
-              <svg class="footer-bottom__pay-mc" fill="#fff">
-                <use xlink:href="images/sprite.svg#icon-masterc"></use>
-              </svg>
+              <img class="footer-bottom__img" src="images/icons/icon-masterc.svg" alt="оплата мастеркард" width="49" height="29">
             </li>
           </ul>
         </div>
       </div>
     </div>
-
   </footer>
 
   <script src="js/main.min.js"></script>

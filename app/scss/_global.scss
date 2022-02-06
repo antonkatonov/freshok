@@ -1,8 +1,9 @@
 body {
-  color: $dark-500;
-  @extend %opensans-400;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
+  color: $dark-500;
   background-color: #fff;
   min-height: 100vh;
   display: flex;
@@ -32,7 +33,6 @@ body.lock {
 }
 
 .btn {
-  @extend %opensans-400;
   font-size: 18px;
   padding: 12px 24px;
   color: $white;
@@ -57,17 +57,25 @@ body.lock {
 }
 
 .logo {
-  max-width: 200px;
-  min-width: 100px;
-  width: 100%;
+  flex: 0 0 200px;
   outline: transparent;
+  transition: box-shadow 0.3s;
+  &__img {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px #E0EDCF;
+  }
 }
 
 .title {
-  @extend %ruda-600;
+  font-family: 'Ruda',
+  sans-serif;
+  font-weight: 600;
   font-size: 32px;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
   color: $dark-900;
 }
 

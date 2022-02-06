@@ -1,7 +1,7 @@
 $(function (){
 
 
-  // не работало у меня
+  // не сработало у меня
   // let i = 0;
   // $(".quantity__input").each(function () {
   //   i++;
