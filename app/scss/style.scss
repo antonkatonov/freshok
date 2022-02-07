@@ -3,6 +3,7 @@
 @import 'common/fonts';
 @import 'common/reset';
 @import 'common/libs';
+@import 'common/mixin';
 @import 'common/global';
 
 // подключение компонентов
@@ -21,15 +22,14 @@
 @import 'header';
 
 // main
-
 @import 'slider-section';
 @import 'benefits';
 @import 'top-products';
 
 
-//catalog
+// catalog
 
-//product-page
+// product-page
 
 // footer
 @import 'footer';
