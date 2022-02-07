@@ -73,32 +73,16 @@ cite {
   font-style: inherit;
 }
 
-blockquote {
-  font-style: italic;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+textarea {
+  resize: vertical;
 }
 
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input:not([type=chekbox]):not([type=radio]),
+textarea,
+select,
+button {
   -webkit-appearance: none;
-}
-
-input[type='number'],
-input[type="number"]:hover,
-input[type="number"]:focus {
+  -moz-appearance: none;
   appearance: none;
-  -moz-appearance: textfield;
 }

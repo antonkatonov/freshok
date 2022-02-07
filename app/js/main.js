@@ -18,8 +18,8 @@ $(function (){
 
   $('.promotion-slider').slick({
     infinite: false,
-    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/icon-left-arrow.svg" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/icons-right-arrow.svg" alt=""></button>',
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/icon-left-arrow.svg"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/icons-right-arrow.svg"></button>',
     
   });
 

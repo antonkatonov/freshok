@@ -1,0 +1,94 @@
+.footer {
+  background-color: $dark-800;
+  color: $white;
+  letter-spacing: normal;
+
+  &__top {
+    padding: 30px 0;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    column-count: 3;
+    column-gap: 75px;
+  }
+
+  &__item {
+    margin-bottom: 18px;
+  }
+}
+
+.form-subscribe {
+  margin-right: 60px;
+
+  &__text {
+    display: inline-block;
+    margin-bottom: 18px;
+    line-height: 1;
+  }
+
+  &__wrap {
+    display: flex;
+    height: 40px;
+  }
+
+  &__input {
+    padding: 12px 5px 12px 12px;
+    border-radius: 6px 0 0 6px;
+    background-color: $white;
+
+    &::placeholder {
+      color: #4F4F4F;
+      line-height: 1;
+    }
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 12px;
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    text-transform: uppercase;
+  }
+}
+
+.contacts {
+  &__link {
+    display: inline-block;
+    margin-bottom: 18px;
+  }
+
+  &__social {
+    margin-left: -4px;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  &__copy {
+    text-transform: uppercase;
+  }
+
+  &__pay-info {
+    display: flex;
+  }
+
+  &__pay-item:not(:last-child) {
+    margin-right: 24px;
+  }
+}

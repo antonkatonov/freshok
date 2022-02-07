@@ -401,7 +401,6 @@
         <ul class="top-products__list">
           <li class="top-products__item mix category-fructs">
             <article class="top-products__cart product-card">
-              <!-- сделал обертку дял топа, чтоб при добавлении третьего бейджа картинка смещалась, а то топ-пединг статичный -->
               <div class="product-card__top">
                 <ul class="product-card__badges badges">
                   <li class="badges__item badges__item--new badges__item--on">Новинка</li>
@@ -414,8 +413,10 @@
                 </button>
               </div>
 
+
               <a class="product-card__image-link" href="#">
                 <img class="product-card__img" src="images/products/ananas.png" alt="Спелый сочный ананас" width="298" height="215">
+                <span class="product-card__img-lupa"></span>
               </a>
 
               <div class="product-card__info">
@@ -451,457 +452,377 @@
             </article>
           </li>
 
-          <!-- <li class="top-products__item product mix category-fructs">
+          <li class="top-products__item mix category-fructs">
+            <article class="top-products__cart product-card">
+              <div class="product-card__top">
+                <ul class="product-card__badges badges">
+                  <li class="badges__item badges__item--new">Новинка</li>
+                  <li class="badges__item badges__item--sale">-50%</li>
+                  <li class="badges__item badges__item--hit">Хит</li>
+                </ul>
 
-            <div class="product-top">
-              <div class="product-top__banners">
+                <button class="product-card__wish" type="button">
+                  <span class="sr-only">добавить в избранное</span>
+                </button>
               </div>
 
-              <a class="product__wish-link" href="#">
-                <svg class="product__wish-svg" fill="#C1C1C1">
-                  <use xlink:href="images/sprite.svg#icon-heart"></use>
-                </svg>
+              <a class="product-card__image-link" href="#">
+                <img class="product-card__img" src="images/products/lemon.png" alt="Желтый спелый лимон" width="298" height="215">
+                <span class="product-card__img-lupa"></span>
               </a>
-            </div>
-            <a class="product__link" href="#">
-              <div class="product__wrap">
-                <img class="product__photo" src="images/products/lemon.png" alt="Фото лимончика" width="298" height="215">
 
-                <div class="product__lupa">
-                  <svg class="product__lupa-svg" fill="#63A60E">
-                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                  </svg>
+              <div class="product-card__info">
+                <h4 class="product-card__title">
+                  <a class="product-card__link" href="#">Лимон, 1кг</a>
+                </h4>
+
+                <div class="product-card__bottom">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--old prices__item--off"></li>
+
+                    <li class="prices__item">199 ₽</li>
+                  </ul>
+
+                  <div class="product-card__quantity quantity">
+                    <button class="quantity__btn btn quantity__btn--minus" onclick="$('#num2').val((+$('#num2').val() <= $('#num2').prop('min')) ? 1 : +($('#num2').val()) - 1);$('#num2').keyup();">
+                      <span class="sr-only">кнопка минус</span>
+                    </button>
+
+                    <label class="quantity__label sr-only" for="num2">Общее количество товара</label>
+                    <input class="quantity__input" type="number" id="num2" min="1" name="quantity" value="1">
+
+                    <button class="quantity__btn  btn quantity__btn--plus" onclick=" $('#num2').val( +$('#num2').val() +1);$('#num2').keyup();">
+                      <span class="sr-only">кнопка плюс</span>
+                    </button>
+                  </div>
+
+                  <button class="product-card__cart btn" type="button">
+                    <span class="sr-only">добавить в корзину</span>
+                  </button>
                 </div>
               </div>
-
-              <h4 class="product__title">
-                Лимон, 1кг
-              </h4>
-            </a>
-
-            <div class="product__info">
-              <div class="product__coast-wrap">
-                <span class="product__coast-new">
-                  199 ₽
-                </span>
-              </div>
-
-              <div class="product__cart">
-                <button class="product__minus product-btn" onclick="$('#num2').val((+$('#num2').val() <= $('#num2').prop('min')) ? 1 : +($('#num2').val()) - 1);$('#num2').keyup();">
-                  <svg class="product__minus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-minus"></use>
-                  </svg>
-                </button>
-
-                <input class="product__quantity" type="number" id="num2" min="1" name="quantity" value="1">
-
-                <button class="product__plus product-btn" onclick=" $('#num2').val( +$('#num2').val() +1);$('#num2').keyup();">
-                  <svg class="product__plus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-
-                <div class="product__cart-wrap">
-                  <a class="cart-icon" href="#">
-                    <svg class="product__cart-svg" fill="#fff">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            </article>
           </li>
 
-          <li class="top-products__item product mix category-fructs">
+          <li class="top-products__item mix category-fructs">
+            <article class="top-products__cart product-card">
+              <div class="product-card__top">
+                <ul class="product-card__badges badges">
+                  <li class="badges__item badges__item--new">Новинка</li>
+                  <li class="badges__item badges__item--sale">-50%</li>
+                  <li class="badges__item badges__item--hit badges__item--on">Хит</li>
+                </ul>
 
-            <div class="product-top">
-              <div class="product-top__banners">
-                <span class="product__banner product__banner--orange">Хит</span>
-
+                <button class="product-card__wish" type="button">
+                  <span class="sr-only">добавить в избранное</span>
+                </button>
               </div>
 
-              <a class="product__wish-link" href="#">
-                <svg class="product__wish-svg" fill="#C1C1C1">
-                  <use xlink:href="images/sprite.svg#icon-heart"></use>
-                </svg>
+              <a class="product-card__image-link" href="#">
+                <img class="product-card__img" src="images/products/pitahaya.png" alt="Спелая свежая питахая" width="298" height="215">
+                <span class="product-card__img-lupa"></span>
               </a>
-            </div>
 
-            <a class="product__link" href="#">
-              <div class="product__wrap">
-                <img class="product__photo" src="images/products/pitahaya.png" alt="Фото питахая" width="298" height="215">
+              <div class="product-card__info">
+                <h4 class="product-card__title">
+                  <a class="product-card__link" href="#">Питахайя красная с белой мякотью, 1шт</a>
+                </h4>
 
-                <div class="product__lupa">
-                  <svg class="product__lupa-svg" fill="#63A60E">
-                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                  </svg>
+                <div class="product-card__bottom">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--old prices__item--off"></li>
+
+                    <li class="prices__item">1019 ₽</li>
+                  </ul>
+
+                  <div class="product-card__quantity quantity">
+                    <button class="quantity__btn btn quantity__btn--minus" onclick="$('#num3').val((+$('#num3').val() <= $('#num3').prop('min')) ? 1 : +($('#num3').val()) - 1);$('#num3').keyup();">
+                      <span class="sr-only">кнопка минус</span>
+                    </button>
+
+                    <label class="quantity__label sr-only" for="num3">Общее количество товара</label>
+                    <input class="quantity__input" type="number" id="num3" min="1" name="quantity" value="1">
+
+                    <button class="quantity__btn  btn quantity__btn--plus" onclick=" $('#num3').val( +$('#num3').val() +1);$('#num3').keyup();">
+                      <span class="sr-only">кнопка плюс</span>
+                    </button>
+                  </div>
+
+                  <button class="product-card__cart btn" type="button">
+                    <span class="sr-only">добавить в корзину</span>
+                  </button>
                 </div>
               </div>
-
-              <h4 class="product__title">
-                Питахайя красная с белой мякотью, 1шт
-              </h4>
-            </a>
-
-            <div class="product__info">
-              <div class="product__coast-wrap">
-                <span class="product__coast-new">
-                  1019 ₽
-                </span>
-              </div>
-
-              <div class="product__cart">
-                <button class="product__minus product-btn" onclick="$('#num3').val((+$('#num3').val() <= $('#num3').prop('min')) ? 1 : +($('#num3').val()) - 1);$('#num3').keyup();">
-                  <svg class="product__minus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-minus"></use>
-                  </svg>
-                </button>
-
-                <input class="product__quantity" type="number" id="num3" min="1" name="quantity" value="1">
-
-                <button class="product__plus product-btn" onclick=" $('#num3').val( +$('#num3').val() +1);$('#num3').keyup();">
-                  <svg class="product__plus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-
-                <div class="product__cart-wrap">
-                  <a class="cart-icon" href="#">
-                    <svg class="product__cart-svg" fill="#fff">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            </article>
           </li>
 
-          <li class="top-products__item product mix category-bak">
-            <div class="product-top">
-              <div class="product-top__banners">
+          <li class="top-products__item mix category-bak">
+            <article class="top-products__cart product-card">
+              <div class="product-card__top">
+                <ul class="product-card__badges badges">
+                  <li class="badges__item badges__item--new">Новинка</li>
+                  <li class="badges__item badges__item--sale">-50%</li>
+                  <li class="badges__item badges__item--hit">Хит</li>
+                </ul>
 
+                <button class="product-card__wish" type="button">
+                  <span class="sr-only">добавить в избранное</span>
+                </button>
               </div>
 
-              <a class="product__wish-link" href="#">
-                <svg class="product__wish-svg" fill="#C1C1C1">
-                  <use xlink:href="images/sprite.svg#icon-heart"></use>
-                </svg>
+              <a class="product-card__image-link" href="#">
+                <img class="product-card__img" src="images/products/ketchup.png" alt="Кутчуп из свежих томатов" width="298" height="215">
+                <span class="product-card__img-lupa"></span>
               </a>
-            </div>
 
-            <a class="product__link" href="#">
-              <div class="product__wrap">
-                <img class="product__photo" src="images/products/ketchup.png" alt="Фото кетчупа" width="298" height="215">
+              <div class="product-card__info">
+                <h4 class="product-card__title">
+                  <a class="product-card__link" href="#">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</a>
+                </h4>
 
-                <div class="product__lupa">
-                  <svg class="product__lupa-svg" fill="#63A60E">
-                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                  </svg>
+                <div class="product-card__bottom">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--old prices__item--off"></li>
+
+                    <li class="prices__item">1019 ₽</li>
+                  </ul>
+
+                  <div class="product-card__quantity quantity">
+                    <button class="quantity__btn btn quantity__btn--minus" onclick="$('#num4').val((+$('#num4').val() <= $('#num4').prop('min')) ? 1 : +($('#num4').val()) - 1);$('#num4').keyup();">
+                      <span class="sr-only">кнопка минус</span>
+                    </button>
+
+                    <label class="quantity__label sr-only" for="num4">Общее количество товара</label>
+                    <input class="quantity__input" type="number" id="num4" min="1" name="quantity" value="1">
+
+                    <button class="quantity__btn  btn quantity__btn--plus" onclick=" $('#num4').val( +$('#num4').val() +1);$('#num4').keyup();">
+                      <span class="sr-only">кнопка плюс</span>
+                    </button>
+                  </div>
+
+                  <button class="product-card__cart btn" type="button">
+                    <span class="sr-only">добавить в корзину</span>
+                  </button>
                 </div>
               </div>
-
-              <h4 class="product__title">
-                Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
-              </h4>
-            </a>
-
-            <div class="product__info">
-              <div class="product__coast-wrap">
-                <span class="product__coast-new">
-                  600 ₽
-                </span>
-              </div>
-
-              <div class="product__cart">
-                <button class="product__minus product-btn" onclick="$('#num4').val((+$('#num4').val() <= $('#num4').prop('min')) ? 1 : +($('#num4').val()) - 1);$('#num4').keyup();">
-                  <svg class="product__minus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-minus"></use>
-                  </svg>
-                </button>
-
-                <input class="product__quantity" type="number" id="num4" min="1" name="quantity" value="1">
-
-                <button class="product__plus product-btn" onclick=" $('#num4').val( +$('#num4').val() +1);$('#num4').keyup();">
-                  <svg class="product__plus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-
-                <div class="product__cart-wrap">
-
-                  <a class="cart-icon" href="#">
-                    <svg class="product__cart-svg" fill="#fff">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            </article>
           </li>
 
-          <li class="top-products__item product mix category-veg">
+          <li class="top-products__item mix category-veg">
+            <article class="top-products__cart product-card">
+              <div class="product-card__top">
+                <ul class="product-card__badges badges">
+                  <li class="badges__item badges__item--new">Новинка</li>
+                  <li class="badges__item badges__item--sale">-50%</li>
+                  <li class="badges__item badges__item--hit badges__item--on">Хит</li>
+                </ul>
 
-            <div class="product-top">
-              <div class="product-top__banners">
-                <span class="product__banner product__banner--orange">Хит</span>
-
+                <button class="product-card__wish" type="button">
+                  <span class="sr-only">добавить в избранное</span>
+                </button>
               </div>
 
-              <a class="product__wish-link" href="#">
-                <svg class="product__wish-svg" fill="#C1C1C1">
-                  <use xlink:href="images/sprite.svg#icon-heart"></use>
-                </svg>
+              <a class="product-card__image-link" href="#">
+                <img class="product-card__img" src="images/products/morkovka.png" alt="Купить домашнюю морковку" width="298" height="215">
+                <span class="product-card__img-lupa"></span>
               </a>
-            </div>
 
-            <a class="product__link" href="#">
-              <div class="product__wrap">
-                <img class="product__photo" src="images/products/morkovka.png" alt="Фото мокровки" width="298" height="215">
+              <div class="product-card__info">
+                <h4 class="product-card__title">
+                  <a class="product-card__link" href="#">Морковь молодая с бабушкиной грядки, 1кг</a>
+                </h4>
 
-                <div class="product__lupa">
-                  <svg class="product__lupa-svg" fill="#63A60E">
-                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                  </svg>
+                <div class="product-card__bottom">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--old prices__item--off"></li>
+
+                    <li class="prices__item">49 ₽</li>
+                  </ul>
+
+                  <div class="product-card__quantity quantity">
+                    <button class="quantity__btn btn quantity__btn--minus" onclick="$('#num5').val((+$('#num5').val() <= $('#num5').prop('min')) ? 1 : +($('#num5').val()) - 1);$('#num5').keyup();">
+                      <span class="sr-only">кнопка минус</span>
+                    </button>
+
+                    <label class="quantity__label sr-only" for="num5">Общее количество товара</label>
+                    <input class="quantity__input" type="number" id="num5" min="1" name="quantity" value="1">
+
+                    <button class="quantity__btn  btn quantity__btn--plus" onclick=" $('#num5').val( +$('#num5').val() +1);$('#num5').keyup();">
+                      <span class="sr-only">кнопка плюс</span>
+                    </button>
+                  </div>
+
+                  <button class="product-card__cart btn" type="button">
+                    <span class="sr-only">добавить в корзину</span>
+                  </button>
                 </div>
               </div>
-
-              <h4 class="product__title">
-                Морковь молодая с бабушкиной грядки, 1кг
-              </h4>
-            </a>
-
-            <div class="product__info">
-              <div class="product__coast-wrap">
-                <span class="product__coast-new">
-                  999 ₽
-                </span>
-              </div>
-
-              <div class="product__cart">
-                <button class="product__minus product-btn" onclick="$('#num5').val((+$('#num5').val() <= $('#num5').prop('min')) ? 1 : +($('#num5').val()) - 1);$('#num5').keyup();">
-                  <svg class="product__minus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-minus"></use>
-                  </svg>
-                </button>
-
-                <input class="product__quantity" type="number" id="num5" min="1" name="quantity" value="1">
-
-                <button class="product__plus product-btn" onclick=" $('#num5').val( +$('#num5').val() +1);$('#num5').keyup();">
-                  <svg class="product__plus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-
-                <div class="product__cart-wrap">
-                  <a class="cart-icon" href="#">
-                    <svg class="product__cart-svg" fill="#fff">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            </article>
           </li>
 
-          <li class="top-products__item product mix category-drink">
-            <div class="product-top">
-              <div class="product-top__banners">
-                <span class="product__banner product__banner--red">-30%</span>
+          <li class="top-products__item mix category-drink">
+            <article class="top-products__cart product-card">
+              <div class="product-card__top">
+                <ul class="product-card__badges badges">
+                  <li class="badges__item badges__item--new">Новинка</li>
+                  <li class="badges__item badges__item--sale badges__item--on">-50%</li>
+                  <li class="badges__item badges__item--hit">Хит</li>
+                </ul>
+
+                <button class="product-card__wish" type="button">
+                  <span class="sr-only">добавить в избранное</span>
+                </button>
               </div>
 
-              <a class="product__wish-link" href="#">
-                <svg class="product__wish-svg" fill="#C1C1C1">
-                  <use xlink:href="images/sprite.svg#icon-heart"></use>
-                </svg>
+              <a class="product-card__image-link" href="#">
+                <img class="product-card__img" src="images/products/pivo.png" alt="Безалкогольный напиток с соком" width="298" height="215">
+                <span class="product-card__img-lupa"></span>
               </a>
-            </div>
 
-            <a class="product__link" href="#">
-              <div class="product__wrap">
-                <img class="product__photo" src="images/products/pivo.png" alt="Фото напитка" width="298" height="215">
+              <div class="product-card__info">
+                <h4 class="product-card__title">
+                  <a class="product-card__link" href="#">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный</a>
+                </h4>
 
-                <div class="product__lupa">
-                  <svg class="product__lupa-svg" fill="#63A60E">
-                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                  </svg>
+                <div class="product-card__bottom">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--old">299 ₽</li>
+
+                    <li class="prices__item">199 ₽</li>
+                  </ul>
+
+                  <div class="product-card__quantity quantity">
+                    <button class="quantity__btn btn quantity__btn--minus" onclick="$('#num6').val((+$('#num6').val() <= $('#num6').prop('min')) ? 1 : +($('#num6').val()) - 1);$('#num6').keyup();">
+                      <span class="sr-only">кнопка минус</span>
+                    </button>
+
+                    <label class="quantity__label sr-only" for="num6">Общее количество товара</label>
+                    <input class="quantity__input" type="number" id="num6" min="1" name="quantity" value="1">
+
+                    <button class="quantity__btn  btn quantity__btn--plus" onclick=" $('#num6').val( +$('#num6').val() +1);$('#num6').keyup();">
+                      <span class="sr-only">кнопка плюс</span>
+                    </button>
+                  </div>
+
+                  <button class="product-card__cart btn" type="button">
+                    <span class="sr-only">добавить в корзину</span>
+                  </button>
                 </div>
               </div>
-
-              <h4 class="product__title">
-                Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
-              </h4>
-            </a>
-
-            <div class="product__info">
-              <div class="product__coast-wrap">
-                <span class="product__coast-old">
-                  1 999 ₽
-                </span>
-
-                <span class="product__coast-new">
-                  999 ₽
-                </span>
-              </div>
-
-              <div class="product__cart">
-                <button class="product__minus product-btn" onclick="$('#num6').val((+$('#num6').val() <= $('#num6').prop('min')) ? 1 : +($('#num6').val()) - 1);$('#num6').keyup();">
-                  <svg class="product__minus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-minus"></use>
-                  </svg>
-                </button>
-
-                <input class="product__quantity" type="number" id="num6" min="1" name="quantity" value="1">
-
-                <button class="product__plus product-btn" onclick=" $('#num6').val( +$('#num6').val() +1);$('#num6').keyup();">
-                  <svg class="product__plus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-
-                <div class="product__cart-wrap">
-                  <a class="cart-icon" href="#">
-                    <svg class="product__cart-svg" fill="#fff">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            </article>
           </li>
 
-          <li class="top-products__item product mix category-bak">
-            <div class="product-top">
-              <div class="product-top__banners">
-                <span class="product__banner product__banner--green">Новинка</span>
+
+          <li class="top-products__item mix category-drink">
+            <article class="top-products__cart product-card">
+              <div class="product-card__top">
+                <ul class="product-card__badges badges">
+                  <li class="badges__item badges__item--new badges__item--on">Новинка</li>
+                  <li class="badges__item badges__item--sale">-50%</li>
+                  <li class="badges__item badges__item--hit">Хит</li>
+                </ul>
+
+                <button class="product-card__wish" type="button">
+                  <span class="sr-only">добавить в избранное</span>
+                </button>
               </div>
 
-              <a class="product__wish-link" href="#">
-                <svg class="product__wish-svg" fill="#C1C1C1">
-                  <use xlink:href="images/sprite.svg#icon-heart"></use>
-                </svg>
+              <a class="product-card__image-link" href="#">
+                <img class="product-card__img" src="images/products/coffe.png" alt="Кофе с коноплей" width="298" height="215">
+                <span class="product-card__img-lupa"></span>
               </a>
-            </div>
 
-            <a class="product__link" href="#">
-              <div class="product__wrap">
-                <img class="product__photo" src="images/products/coffe.png" alt="Фото кофе с коноплей" width="298" height="215">
+              <div class="product-card__info">
+                <h4 class="product-card__title">
+                  <a class="product-card__link" href="#">Кофе с коноплей органический Caffé Salomoni 250г</a>
+                </h4>
 
-                <div class="product__lupa">
-                  <svg class="product__lupa-svg" fill="#63A60E">
-                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                  </svg>
+                <div class="product-card__bottom">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--old prices__item--off"></li>
+
+                    <li class="prices__item">877 ₽</li>
+                  </ul>
+
+                  <div class="product-card__quantity quantity">
+                    <button class="quantity__btn btn quantity__btn--minus" onclick="$('#num7').val((+$('#num7').val() <= $('#num7').prop('min')) ? 1 : +($('#num7').val()) - 1);$('#num7').keyup();">
+                      <span class="sr-only">кнопка минус</span>
+                    </button>
+
+                    <label class="quantity__label sr-only" for="num7">Общее количество товара</label>
+                    <input class="quantity__input" type="number" id="num7" min="1" name="quantity" value="1">
+
+                    <button class="quantity__btn  btn quantity__btn--plus" onclick=" $('#num7').val( +$('#num7').val() +1);$('#num7').keyup();">
+                      <span class="sr-only">кнопка плюс</span>
+                    </button>
+                  </div>
+
+                  <button class="product-card__cart btn" type="button">
+                    <span class="sr-only">добавить в корзину</span>
+                  </button>
                 </div>
               </div>
-
-              <h4 class="product__title">
-                Кофе с коноплей органический Caffé Salomoni 250г
-              </h4>
-            </a>
-
-            <div class="product__info">
-              <div class="product__coast-wrap">
-                <span class="product__coast-new">
-                  877 ₽
-                </span>
-              </div>
-
-              <div class="product__cart">
-                <button class="product__minus product-btn" onclick="$('#num7').val((+$('#num7').val() <= $('#num7').prop('min')) ? 1 : +($('#num7').val()) - 1);$('#num7').keyup();">
-                  <svg class="product__minus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-minus"></use>
-                  </svg>
-                </button>
-
-                <input class="product__quantity" type="number" id="num7" min="1" name="quantity" value="1">
-
-                <button class="product__plus product-btn" onclick=" $('#num7').val( +$('#num7').val() +1);$('#num7').keyup();">
-                  <svg class="product__plus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-
-                <div class="product__cart-wrap">
-                  <a class="cart-icon" href="#">
-                    <svg class="product__cart-svg" fill="#fff">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            </article>
           </li>
 
-          <li class="top-products__item product mix category-veg">
-            <div class="product-top">
-              <div class="product-top__banners">
-                <span class="product__banner product__banner--green">Новинка</span>
+          <li class="top-products__item mix category-veg">
+            <article class="top-products__cart product-card">
+              <div class="product-card__top">
+                <ul class="product-card__badges badges">
+                  <li class="badges__item badges__item--new badges__item--on">Новинка</li>
+                  <li class="badges__item badges__item--sale">-50%</li>
+                  <li class="badges__item badges__item--hit">Хит</li>
+                </ul>
+
+                <button class="product-card__wish" type="button">
+                  <span class="sr-only">добавить в избранное</span>
+                </button>
               </div>
 
-              <a class="product__wish-link" href="#">
-                <svg class="product__wish-svg" fill="#C1C1C1">
-                  <use xlink:href="images/sprite.svg#icon-heart"></use>
-                </svg>
+              <a class="product-card__image-link" href="#">
+                <img class="product-card__img" src="images/products/perec.png" alt="Перец оранжевый спелый" width="298" height="215">
+                <span class="product-card__img-lupa"></span>
               </a>
-            </div>
 
-            <a class="product__link" href="#">
-              <div class="product__wrap">
-                <img class="product__photo" src="images/products/perec.png" alt="Фото перца" width="298" height="215">
+              <div class="product-card__info">
+                <h4 class="product-card__title">
+                  <a class="product-card__link" href="#">Перец оранжевый, 1кг</a>
+                </h4>
 
-                <div class="product__lupa">
-                  <svg class="product__lupa-svg" fill="#63A60E">
-                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                  </svg>
+                <div class="product-card__bottom">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--old prices__item--off"></li>
+
+                    <li class="prices__item">349 ₽</li>
+                  </ul>
+
+                  <div class="product-card__quantity quantity">
+                    <button class="quantity__btn btn quantity__btn--minus" onclick="$('#num8').val((+$('#num8').val() <= $('#num8').prop('min')) ? 1 : +($('#num8').val()) - 1);$('#num8').keyup();">
+                      <span class="sr-only">кнопка минус</span>
+                    </button>
+
+                    <label class="quantity__label sr-only" for="num8">Общее количество товара</label>
+                    <input class="quantity__input" type="number" id="num8" min="1" name="quantity" value="1">
+
+                    <button class="quantity__btn  btn quantity__btn--plus" onclick=" $('#num8').val( +$('#num8').val() +1);$('#num8').keyup();">
+                      <span class="sr-only">кнопка плюс</span>
+                    </button>
+                  </div>
+
+                  <button class="product-card__cart btn" type="button">
+                    <span class="sr-only">добавить в корзину</span>
+                  </button>
                 </div>
               </div>
-
-              <h4 class="product__title">
-                Перец оранжевый, 1кг
-              </h4>
-            </a>
-
-            <div class="product__info">
-              <div class="product__coast-wrap">
-                <span class="product__coast-new">
-                  349 ₽
-                </span>
-              </div>
-
-              <div class="product__cart">
-                <button class="product__minus product-btn" onclick="$('#num8').val((+$('#num8').val() <= $('#num8').prop('min')) ? 1 : +($('#num8').val()) - 1);$('#num8').keyup();">
-                  <svg class="product__minus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-minus"></use>
-                  </svg>
-                </button>
-
-                <input class="product__quantity" type="number" id="num8" min="1" name="quantity" value="1">
-
-                <button class="product__plus product-btn" onclick=" $('#num8').val( +$('#num8').val() +1);$('#num8').keyup();">
-                  <svg class="product__plus-svg product-svg" fill="#fff">
-                    <use xlink:href="images/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-
-                <div class="product__cart-wrap">
-                  <a class="cart-icon" href="#">
-                    <svg class="product__cart-svg" fill="#fff">
-                      <use xlink:href="images/sprite.svg#icon-cart"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li> -->
-
+            </article>
+          </li>
         </ul>
-
 
         <button class="top-products__btn btn" type="button">
           Показать еще
         </button>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">

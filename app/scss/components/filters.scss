@@ -1,0 +1,38 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 15px;
+    color: $dark-500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 3px solid transparent;
+    border-radius: 3px;
+    outline: transparent;
+    transition: color 0.3s,
+      border-color 0.3s,
+      box-shadow 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 3px #E0EDCF;
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+  }
+}
+
+.mixitup-control-active {
+  border-color: rgba(99, 166, 14, 0.2);
+  box-shadow: none;
+  outline: transparent;
+}
