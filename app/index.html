@@ -840,23 +840,81 @@
           <li class="banners__item" style="background-image: url('images/banners/veg.jpg')">
             <span class="banners__span">СЕЗОННАЯ РАСПРОДАЖА</span>
             <h3 class="banners__title">ОВОЩЕПАД
-            ДО -50%</h3>
+              ДО -50%</h3>
             <a class="banners__link" href="#">ПЕРЕЙТИ К ПОКУПКАМ</a>
           </li>
 
           <li class="banners__item" style="background-image: url('images/banners/bread.jpg">
             <span class="banners__span">НЯМ-НЯМ</span>
             <h3 class="banners__title">СВЕЖИЙ
-            ХЛЕБЧИК</h3>
+              ХЛЕБЧИК</h3>
             <a class="banners__link" href="#">ПЕРЕЙТИ К ПОКУПКАМ</a>
           </li>
         </ul>
-
       </div>
-
     </section>
 
+    <section class="stock-product">
+      <div class="stock-product__container container">
+        <h2 class="stock-product__title title">Акции</h2>
 
+        <ul class="stock-product__filters filters">
+          <li class="filters__item">
+            <button class="filters__link" type="button" data-filter="all">
+              Все товары
+            </button>
+          </li>
+
+          <li class="filters__item">
+            <button class="filters__link" type="button" data-filter=".category-new">
+              Новинки
+            </button>
+          </li>
+
+          <li class="filters__item">
+            <button class="filters__link" type="button" data-filter=".category-hits">
+              Хиты
+            </button>
+          </li>
+        </ul>
+
+        <ul class="stock-product__list">
+          <li class="stock-product__item">
+
+            <ul class="stock-product__badges badges">
+              <li class="badges__item badges__item--new badges__item--on">Новинка</li>
+              <li class="badges__item badges__item--sale">-50%</li>
+              <li class="badges__item badges__item--hit">Хит</li>
+            </ul>
+
+            <a class="stock-product__image-link"  href="#">
+              <img class="stock-product__img" src="images/promotions/ananas-100x100.jpg" alt="Ананас лучшая цена" width="100" height="100">
+            </a>
+
+            <div class="stock-product__info">
+              <h4 class="stock-product__title">
+                <a class="stock-product__statuslink" href="#">Ананас, 1кг</a>
+              </h4>
+
+              <ul class="stock-product__status status">
+                <li class="status__item status__item--on">В НАЛИЧИИ</li>
+                <li class="status__item">ЗАКАНЧИВАЕТСЯ</li>
+                <li class="status__item">НЕТ В НАЛИЧИИ</li>
+              </ul>
+
+              <div class="stock-product__bottom">
+                <ul class="stock-product__prices prices">
+                  <li class="prices__item">999 ₽</li>
+                  <li class="prices__item prices__item--old">1 999 ₽</li>
+                </ul>      
+
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
   </main>
 
   <footer class="footer">
