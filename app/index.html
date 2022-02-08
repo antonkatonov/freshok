@@ -363,7 +363,7 @@
     </section>
 
     <section class="top-products">
-      <div class="top-products__container container">
+      <div class="top-products__container container" data-ref="container-1">
         <h2 class="top-products__title title">Топовые товары</h2>
 
         <ul class="top-products__filters filters">
@@ -854,11 +854,11 @@
       </div>
     </section>
 
-    <section class="stock-product">
-      <div class="stock-product__container container">
-        <h2 class="stock-product__title title">Акции</h2>
+    <section class="stock-products">
+      <div class="stock-products__container container" data-ref="container-2">
+        <h2 class="stock-products__title title">Акции</h2>
 
-        <ul class="stock-product__filters filters">
+        <ul class="stock-products__filters filters">
           <li class="filters__item">
             <button class="filters__link" type="button" data-filter="all">
               Все товары
@@ -878,50 +878,287 @@
           </li>
         </ul>
 
-        <ul class="stock-product__list">
-          <li class="stock-product__item">
-
-            <ul class="stock-product__badges badges">
+        <ul class="stock-products__list">
+          <li class="stock-products__item stock-item mix category-new">
+            <ul class="stock-item__badges badges">
               <li class="badges__item badges__item--new badges__item--on">Новинка</li>
               <li class="badges__item badges__item--sale">-50%</li>
               <li class="badges__item badges__item--hit">Хит</li>
             </ul>
 
-            <a class="stock-product__image-link"  href="#">
-              <img class="stock-product__img" src="images/promotions/ananas-100x100.jpg" alt="Ананас лучшая цена" width="100" height="100">
+            <a class="stock-item__image-link" href="#">
+              <img class="stock-item__img" src="images/promotions/ananas-100x100.jpg" alt="Ананас лучшая цена" width="100" height="100">
             </a>
 
-            <div class="stock-product__info">
-              <h4 class="stock-product__title">
-                <a class="stock-product__statuslink" href="#">Ананас, 1кг</a>
+            <div class="stock-item__info">
+              <h4 class="stock-item__title">
+                <a class="stock-item__link" href="#">Ананас, 1кг</a>
               </h4>
 
-              <ul class="stock-product__status status">
-                <li class="status__item status__item--on">В НАЛИЧИИ</li>
-                <li class="status__item">ЗАКАНЧИВАЕТСЯ</li>
-                <li class="status__item">НЕТ В НАЛИЧИИ</li>
+              <ul class="stock-item__status status">
+                <li class="status__item status__item--stock status__item--on">В НАЛИЧИИ</li>
+                <li class="status__item status__item--ends">ЗАКАНЧИВАЕТСЯ</li>
+                <li class="status__item status__item--empty">НЕТ В НАЛИЧИИ</li>
               </ul>
 
-              <div class="stock-product__bottom">
-                <ul class="stock-product__prices prices">
-                  <li class="prices__item">999 ₽</li>
+              <div class="stock-item__bottom">
+                <ul class="stock-item__prices prices">
+                  <li class="prices__item">999<span>₽</span></li>
                   <li class="prices__item prices__item--old">1 999 ₽</li>
-                </ul>      
+                </ul>
+                <span class="stock-item__rating">4.5</span>
+                <div class="stock-item__stars" data-rateyo-rating="5"></div>
+              </div>
+            </div>
+          </li>
 
+          <li class="stock-products__item stock-item mix category-new">
+            <ul class="stock-item__badges badges">
+              <li class="badges__item badges__item--new badges__item--on">Новинка</li>
+              <li class="badges__item badges__item--sale">-50%</li>
+              <li class="badges__item badges__item--hit">Хит</li>
+            </ul>
+
+            <a class="stock-item__image-link" href="#">
+              <img class="stock-item__img" src="images/promotions/coffee.jpg" alt="Кофе по лучшей цене" width="100" height="100">
+            </a>
+
+            <div class="stock-item__info">
+              <h4 class="stock-item__title">
+                <a class="stock-item__link" href="#">Кофе с коноплей органический Caffé Salomoni 250г</a>
+              </h4>
+
+              <ul class="stock-item__status status">
+                <li class="status__item status__item--stock">В НАЛИЧИИ</li>
+                <li class="status__item status__item--ends status__item--on">ЗАКАНЧИВАЕТСЯ</li>
+                <li class="status__item status__item--empty">НЕТ В НАЛИЧИИ</li>
+              </ul>
+
+              <div class="stock-item__bottom">
+                <ul class="stock-item__prices prices">
+                  <li class="prices__item">777<span>₽</span></li>
+                  <li class="prices__item prices__item--old">877 ₽</li>
+                </ul>
+                <span class="stock-item__rating">4.9</span>
+                <div class="stock-item__stars" data-rateyo-rating="5"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="stock-products__item stock-item mix category-new">
+            <ul class="stock-item__badges badges">
+              <li class="badges__item badges__item--new badges__item--on">Новинка</li>
+              <li class="badges__item badges__item--sale">-50%</li>
+              <li class="badges__item badges__item--hit">Хит</li>
+            </ul>
+
+            <a class="stock-item__image-link" href="#">
+              <img class="stock-item__img" src="images/promotions/strawberry.jpg" alt="Свежая спелая клубника" width="100" height="100">
+            </a>
+
+            <div class="stock-item__info">
+              <h4 class="stock-item__title">
+                <a class="stock-item__link" href="#">Клубника, 1 кг</a>
+              </h4>
+
+              <ul class="stock-item__status status">
+                <li class="status__item status__item--stock">В НАЛИЧИИ</li>
+                <li class="status__item status__item--ends">ЗАКАНЧИВАЕТСЯ</li>
+                <li class="status__item status__item--empty status__item--on">НЕТ В НАЛИЧИИ</li>
+              </ul>
+
+              <div class="stock-item__bottom">
+                <ul class="stock-item__prices prices">
+                  <li class="prices__item">440<span>₽</span></li>
+                  <li class="prices__item prices__item--old">600 ₽</li>
+                </ul>
+                <span class="stock-item__rating">5.0</span>
+                <div class="stock-item__stars" data-rateyo-rating="5"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="stock-products__item stock-item mix category-new">
+            <ul class="stock-item__badges badges">
+              <li class="badges__item badges__item--new badges__item--on">Новинка</li>
+              <li class="badges__item badges__item--sale">-50%</li>
+              <li class="badges__item badges__item--hit">Хит</li>
+            </ul>
+
+            <a class="stock-item__image-link" href="#">
+              <img class="stock-item__img" src="images/promotions/mango.jpg" alt="Свежая спелая клубника" width="100" height="100">
+            </a>
+
+            <div class="stock-item__info">
+              <h4 class="stock-item__title">
+                <a class="stock-item__link" href="#">Манго, 1 шт</a>
+              </h4>
+
+              <ul class="stock-item__status status">
+                <li class="status__item status__item--stock status__item--on">В НАЛИЧИИ</li>
+                <li class="status__item status__item--ends">ЗАКАНЧИВАЕТСЯ</li>
+                <li class="status__item status__item--empty">НЕТ В НАЛИЧИИ</li>
+              </ul>
+
+              <div class="stock-item__bottom">
+                <ul class="stock-item__prices prices">
+                  <li class="prices__item">660<span>₽</span></li>
+                  <li class="prices__item prices__item--old">960 ₽</li>
+                </ul>
+                <span class="stock-item__rating">5.0</span>
+                <div class="stock-item__stars" data-rateyo-rating="5"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="stock-products__item stock-item mix category-new">
+            <ul class="stock-item__badges badges">
+              <li class="badges__item badges__item--new badges__item--on">Новинка</li>
+              <li class="badges__item badges__item--sale">-50%</li>
+              <li class="badges__item badges__item--hit">Хит</li>
+            </ul>
+
+            <a class="stock-item__image-link" href="#">
+              <img class="stock-item__img" src="images/promotions/fish.jpg" alt="Свежая красная рыба" width="100" height="100">
+            </a>
+
+            <div class="stock-item__info">
+              <h4 class="stock-item__title">
+                <a class="stock-item__link" href="#">Лосось, 1 кг</a>
+              </h4>
+
+              <ul class="stock-item__status status">
+                <li class="status__item status__item--stock status__item--on">В НАЛИЧИИ</li>
+                <li class="status__item status__item--ends">ЗАКАНЧИВАЕТСЯ</li>
+                <li class="status__item status__item--empty">НЕТ В НАЛИЧИИ</li>
+              </ul>
+
+              <div class="stock-item__bottom">
+                <ul class="stock-item__prices prices">
+                  <li class="prices__item">999<span>₽</span></li>
+                  <li class="prices__item prices__item--old">1199 ₽</li>
+                </ul>
+                <span class="stock-item__rating">4.5</span>
+                <div class="stock-item__stars" data-rateyo-rating="5"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="stock-products__item stock-item mix category-hits">
+            <ul class="stock-item__badges badges">
+              <li class="badges__item badges__item--new">Новинка</li>
+              <li class="badges__item badges__item--sale">-50%</li>
+              <li class="badges__item badges__item--hit badges__item--on">Хит</li>
+            </ul>
+
+            <a class="stock-item__image-link" href="#">
+              <img class="stock-item__img" src="images/promotions/juice.jpg" alt="Купить овощной сок" width="100" height="100">
+            </a>
+
+            <div class="stock-item__info">
+              <h4 class="stock-item__title">
+                <a class="stock-item__link" href="#">Сок Granini овощной 100%, 0.5л</a>
+              </h4>
+
+              <ul class="stock-item__status status">
+                <li class="status__item status__item--stock">В НАЛИЧИИ</li>
+                <li class="status__item status__item--ends status__item--on">ЗАКАНЧИВАЕТСЯ</li>
+                <li class="status__item status__item--empty">НЕТ В НАЛИЧИИ</li>
+              </ul>
+
+              <div class="stock-item__bottom">
+                <ul class="stock-item__prices prices">
+                  <li class="prices__item">180<span>₽</span></li>
+                  <li class="prices__item prices__item--old">230 ₽</li>
+                </ul>
+                <span class="stock-item__rating">4.9</span>
+                <div class="stock-item__stars" data-rateyo-rating="5"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="stock-products__item stock-item mix category-hits">
+            <ul class="stock-item__badges badges">
+              <li class="badges__item badges__item--new">Новинка</li>
+              <li class="badges__item badges__item--sale">-50%</li>
+              <li class="badges__item badges__item--hit badges__item--on">Хит</li>
+            </ul>
+
+            <a class="stock-item__image-link" href="#">
+              <img class="stock-item__img" src="images/promotions/basket.jpg" alt="Купить овощной сок" width="100" height="100">
+            </a>
+
+            <div class="stock-item__info">
+              <h4 class="stock-item__title">
+                <a class="stock-item__link" href="#">Фруктовая корзина, 1 шт</a>
+              </h4>
+
+              <ul class="stock-item__status status">
+                <li class="status__item status__item--stock status__item--on">В НАЛИЧИИ</li>
+                <li class="status__item status__item--ends">ЗАКАНЧИВАЕТСЯ</li>
+                <li class="status__item status__item--empty">НЕТ В НАЛИЧИИ</li>
+              </ul>
+
+              <div class="stock-item__bottom">
+                <ul class="stock-item__prices prices">
+                  <li class="prices__item">3990<span>₽</span></li>
+                  <li class="prices__item prices__item--old">5990 ₽</li>
+                </ul>
+                <span class="stock-item__rating">4.8</span>
+                <div class="stock-item__stars" data-rateyo-rating="5"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="stock-products__item stock-item mix category-hits">
+            <ul class="stock-item__badges badges">
+              <li class="badges__item badges__item--new">Новинка</li>
+              <li class="badges__item badges__item--sale">-50%</li>
+              <li class="badges__item badges__item--hit badges__item--on">Хит</li>
+            </ul>
+
+            <a class="stock-item__image-link" href="#">
+              <img class="stock-item__img" src="images/promotions/meet.jpg" alt="Лучшая свинная мякоть на районе" width="100" height="100">
+            </a>
+
+            <div class="stock-item__info">
+              <h4 class="stock-item__title">
+                <a class="stock-item__link" href="#">Свинина мякоть, 1 кг</a>
+              </h4>
+
+              <ul class="stock-item__status status">
+                <li class="status__item status__item--stock status__item--on">В НАЛИЧИИ</li>
+                <li class="status__item status__item--ends">ЗАКАНЧИВАЕТСЯ</li>
+                <li class="status__item status__item--empty">НЕТ В НАЛИЧИИ</li>
+              </ul>
+
+              <div class="stock-item__bottom">
+                <ul class="stock-item__prices prices">
+                  <li class="prices__item">499<span>₽</span></li>
+                  <li class="prices__item prices__item--old">599 ₽</li>
+                </ul>
+                <span class="stock-item__rating">4.6</span>
+                <div class="stock-item__stars" data-rateyo-rating="5"></div>
               </div>
             </div>
           </li>
         </ul>
+
+        <button class="stock-products__btn btn" type="button">
+          Показать еще
+        </button>
+
+
       </div>
     </section>
-    
+
   </main>
 
   <footer class="footer">
     <div class="footer__top">
       <div class="container">
 
-        <a class="footer__logo logo" href="#body">
+        <a class="footer__logo logo" href="#">
           <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
         </a>
 

@@ -3,9 +3,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 48px;
+  letter-spacing: 0.03em;
 
   &__item:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 26px;
   }
 
   &__link {
@@ -34,4 +35,5 @@
   border-color: rgba(99, 166, 14, 0.2);
   box-shadow: none;
   outline: transparent;
+  letter-spacing: 0.03em;
 }
