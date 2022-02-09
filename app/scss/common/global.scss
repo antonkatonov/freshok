@@ -75,6 +75,9 @@ body.lock {
   flex: 0 0 200px;
   outline: transparent;
   transition: box-shadow 0.3s;
+  display: block;
+  width: fit-content;
+  
   &__img {
     width: 100%;
     max-width: 200px;

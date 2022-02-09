@@ -1,0 +1,15 @@
+.partners {
+
+  &__container {
+    padding: 70px 15px;
+  }
+
+  &__img {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

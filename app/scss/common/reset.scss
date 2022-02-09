@@ -61,6 +61,7 @@ select {
 
 button {
   cursor: pointer;
+  letter-spacing: 0.03em;
 }
 
 a {
@@ -77,7 +78,11 @@ textarea {
   resize: vertical;
 }
 
+
+
 input:not([type=chekbox]):not([type=radio]),
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
 textarea,
 select,
 button {
