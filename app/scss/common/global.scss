@@ -25,6 +25,10 @@ body.lock {
   }
 }
 
+.main {
+  flex: 1 0 auto;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -52,13 +56,13 @@ body.lock {
   background-color: $green-900;
   border: 1px solid $green-900;
   border-radius: 6px;
-  transition: box-shadow 0.3s,
-  background-color 0.3s;
+  transition: background-color 0.3s;
   outline: transparent;
   letter-spacing: 0.03em;
   line-height: 1.3;
+
   &:focus {
-    box-shadow: 0px 0px 0px 4px #E0EDCF;
+    box-shadow: 0 0 0 4px #E0EDCF;
   }
 
   &:hover {
@@ -66,9 +70,8 @@ body.lock {
   }
 
   &:active {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
   }
-  
 }
 
 .logo {
@@ -84,7 +87,7 @@ body.lock {
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 4px #E0EDCF;
+    box-shadow: 0 0 0 4px #E0EDCF;
   }
 }
 

@@ -1,23 +1,9 @@
 $(function (){
 
-
-  // не сработало у меня
-  // let i = 0;
-  // $(".quantity__input").each(function () {
-  //   i++;
-  //   $(this).attr("id", "item" + i);
-  // });
-
-  //  let ii = 0;
-  // $(".quantity__label").each(function () {
-  //   i++;
-  //   $(this).attr("for", "item" + ii);
-  // });
-
-  $('.promotion-slider').slick({
+  $('.promotion-slider__list').slick({
     infinite: false,
-    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/icon-left-arrow.svg"></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/icons-right-arrow.svg"></button>',
+    prevArrow: $('.promotion-slider__btn--prew'),
+    nextArrow: $('.promotion-slider__btn--next'),
   });
 
   $('.partners__list').slick({
@@ -33,6 +19,7 @@ $(function (){
     $('.catalog').toggleClass('catalog--active');
     $('.catalog__list').fadeToggle();
  });
+
 
   $('.user-nav__link--cart').on('click', function(){
     $('.cart-box').toggleClass('cart-box--active');

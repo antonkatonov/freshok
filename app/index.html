@@ -17,13 +17,13 @@
       <div class="header__top header-top">
         <div class="header-top__container container">
           <ul class="header-top__list">
-            <li class="header-top__item header-top__item--delivery">
+            <li class="header-top__item header-top__item--left">
               <a class="header-top__link header-top__link--delivery" href="#">
                 Адрес и время доставки
               </a>
             </li>
 
-            <li class="header-top__item">
+            <li class="header-top__item header-top__item--left">
               <a class="header-top__link header-top__link--hotline" href="#">
                 Горячая линия 24/7
               </a>
@@ -52,13 +52,13 @@
         </div>
       </div>
 
-      <div class="header__bottom header-bottom">
-        <div class="header-bottom__container container">
-          <a class="header-bottom__logo logo" href="#">
+      <div class="header__bottom">
+        <div class="header__container container">
+          <a class="header__logo logo" href="#">
             <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок" width="200" height="60">
           </a>
 
-          <div class="header-bottom__catalog catalog">
+          <div class="header__catalog catalog">
             <button class="catalog__btn" type="button">
               Каталог продуктов
             </button>
@@ -132,14 +132,14 @@
             </ul>
           </div>
 
-          <form class="header-bottom__form form-search">
+          <form class="header__form form-search">
             <label class="sr-only" for="search">Поиск товара по сайту</label>
             <input class="form-search__field" id="search" name="search" type="search" placeholder="Найти в магазине ..." required>
 
             <button class="form-search__btn" type="submit">Поиск</button>
           </form>
 
-          <ul class="header-bottom__user-nav user-nav">
+          <ul class="header__user-nav user-nav">
             <li class="user-nav__item">
               <a class="user-nav__link user-nav__link--login" href="#">
                 <span class="sr-only">перейти в личный кабинет</span>
@@ -184,10 +184,6 @@
                       <img class="cart-box__img" src="images/products/ananas-mini.png" alt="Фото ананасика" width="60" height="60">
                     </a>
 
-                    <button class="cart-box__item-del" type="button">
-                      <span class="sr-only">удалить товар</span>
-                    </button>
-
                     <div class="cart-box__inner">
                       <div class="cart-box__info">
                         <h3 class="cart-box__title-product">
@@ -211,16 +207,16 @@
                         <span class="cart-box__total-coast">1199</span><span class="cart-box__total-currency">₽</span>
                       </div>
                     </div>
+
+                    <button class="cart-box__item-del" type="button">
+                      <span class="sr-only">удалить товар</span>
+                    </button>
                   </li>
 
                   <li class="cart-box__item">
                     <a class="cart-box__img-box" href="#">
                       <img class="cart-box__img" src="images/products/pitahaya-mini.png" alt="Фото питахаи" width="60" height="60">
                     </a>
-
-                    <button class="cart-box__item-del" type="button">
-                      <span class="sr-only">удалить товар</span>
-                    </button>
 
                     <div class="cart-box__inner">
                       <div class="cart-box__info">
@@ -245,6 +241,10 @@
                         <span class="cart-box__total-coast">2038</span><span class="cart-box__total-currency">₽</span>
                       </div>
                     </div>
+
+                    <button class="cart-box__item-del" type="button">
+                      <span class="sr-only">удалить товар</span>
+                    </button>
                   </li>
                 </ul>
 
@@ -267,14 +267,20 @@
       Фрешок - лучший супермаркет овощей и фруктов
     </h1>
 
-    <section class="slider-section">
+    <section class="promotion-slider">
       <h2 class="sr-only">Акции и скидки</h2>
 
-      <ul class="slider-section__list promotion-slider">
+      <!-- кнопку вынес за пределы слайда, а то слик с ума сходит с ней в ul -->
+
+      <button class="promotion-slider__btn promotion-slider__btn--prew" type="button">
+        <span class="sr-only">Кнопка предидущего слайда</span>
+      </button>
+
+      <ul class="promotion-slider__list">
         <li class="promotion-slider__item" style="background-image: url('images/slider/gabriel-gurrola.jpg')">
 
           <div class="promotion-slider__container container">
-            <div class="promotion-slider__item-wrap">
+            <div class="promotion-slider__wrapper">
               <h3 class="promotion-slider__title">
                 СВЕЖАЧОК ВАМ в ХАТУ <span class="promotion-slider__span">Скидка -50%</span>
               </h3>
@@ -283,7 +289,7 @@
                 Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
               </p>
 
-              <a class="promotion-slider__btn btn" href="#">
+              <a class="promotion-slider__link btn" href="#">
                 Купить сейчас
               </a>
             </div>
@@ -292,7 +298,7 @@
 
         <li class="promotion-slider__item" style="background-image: url('images/slider/stefano-carella.jpg')">
           <div class="promotion-slider__container container">
-            <div class="promotion-slider__item-wrap">
+            <div class="promotion-slider__wrapper">
               <h3 class="promotion-slider__title">
                 НАКРУТИ СЕБЕ ТОМАТОВ
                 <span class="promotion-slider__span">АКЦИЯ: 3 кг по цене 1</span>
@@ -302,7 +308,7 @@
                 Только с 12 по 15 июля скидка на домашние помидорчики
               </p>
 
-              <a class="promotion-slider__btn btn" href="#">
+              <a class="promotion-slider__link btn" href="#">
                 Купить сейчас
               </a>
             </div>
@@ -311,7 +317,7 @@
 
         <li class="promotion-slider__item" style="background-image: url('images/slider/petra-cigale.jpg')">
           <div class="promotion-slider__container container">
-            <div class="promotion-slider__item-wrap">
+            <div class="promotion-slider__wrapper">
               <h3 class="promotion-slider__title">
                 Пусть остальные
                 позеленеют от зависти <span class="promotion-slider__span">Распродажа зелени</span>
@@ -321,13 +327,17 @@
                 Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
               </p>
 
-              <a class="promotion-slider__btn btn" href="#">
+              <a class="promotion-slider__link btn" href="#">
                 Купить сейчас
               </a>
             </div>
           </div>
         </li>
+
       </ul>
+      <button class="promotion-slider__btn promotion-slider__btn--next" type="button">
+        <span class="sr-only">Кнопка следующего слайда</span>
+      </button>
     </section>
 
     <section class="benefits">
@@ -465,8 +475,6 @@
                   <span class="sr-only">добавить в избранное</span>
                 </button>
               </div>
-
-              <!-- хотя скорей всего хоть и лупа, все равно на страницу товара должно переходить, ну пусть будет фансибокс) -->
 
               <a class="product-card__image-link" data-fancybox="images" href="images/products/lemon.png" data-width="596" data-height="430">
                 <img class="product-card__img" src="images/products/lemon.png" alt="Желтый спелый лимон" width="298" height="215">
@@ -1235,8 +1243,8 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__top">
-      <div class="container">
+    <div class="container">
+      <div class="footer__top">
 
         <a class="footer__logo logo" href="#">
           <img class="logo__img" src="images/logo.svg" alt="логотип Фрешок">
@@ -1351,20 +1359,20 @@
             </ul>
           </address>
         </div>
+      </div>
 
-        <div class="footer__bottom footer-bottom">
-          <a class="footer-bottom__copy" href="#">© 2021 ФРЕШОК</a>
+      <div class="footer__bottom footer-bottom">
+        <a class="footer-bottom__copy" href="#">© 2021 ФРЕШОК</a>
 
-          <ul class="footer-bottom__pay-info">
-            <li class="footer-bottom__pay-item">
-              <img class="footer-bottom__img" src="images/icons/icon-visa.svg" alt="оплата картой виза" width="93" height="29">
-            </li>
+        <ul class="footer-bottom__pay-info">
+          <li class="footer-bottom__pay-item">
+            <img class="footer-bottom__img" src="images/icons/icon-visa.svg" alt="оплата картой виза" width="93" height="29">
+          </li>
 
-            <li class="footer-bottom__pay-item">
-              <img class="footer-bottom__img" src="images/icons/icon-masterc.svg" alt="оплата мастеркард" width="49" height="29">
-            </li>
-          </ul>
-        </div>
+          <li class="footer-bottom__pay-item">
+            <img class="footer-bottom__img" src="images/icons/icon-masterc.svg" alt="оплата мастеркард" width="49" height="29">
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
@@ -1372,4 +1380,5 @@
   <script src="js/main.min.js"></script>
 
 </body>
+
 </html>

@@ -22,15 +22,15 @@ function browsersync() {
 
 function svgSprites() {
   return src('app/images/icons/*.svg') 
-  .pipe(cheerio({
-        run: ($) => {
-            $("[fill]").removeAttr("fill");   
-            $("[stroke]").removeAttr("stroke");
-            $("[style]").removeAttr("style");
-        },
-        parserOptions: { xmlMode: true },
-      })
-  )
+  // .pipe(cheerio({
+  //       run: ($) => {
+  //           $("[fill]").removeAttr("fill");   
+  //           $("[stroke]").removeAttr("stroke");
+  //           $("[style]").removeAttr("style");
+  //       },
+  //       parserOptions: { xmlMode: true },
+  //     })
+  // )
 	.pipe(
 	      svgSprite({
 	        mode: {
