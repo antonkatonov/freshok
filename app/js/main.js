@@ -16,7 +16,7 @@ $(function (){
   });
 
   $('.catalog').on('click', function(){
-    $('.catalog').toggleClass('catalog--active');
+    $('.catalog__btn').toggleClass('catalog__btn--active');
     $('.catalog__list').fadeToggle();
  });
 

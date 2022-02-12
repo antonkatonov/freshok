@@ -15,3 +15,12 @@
     -webkit-box-orient: vertical;
   }
 }
+
+
+// медиа запросы
+
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}

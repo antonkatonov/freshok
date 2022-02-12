@@ -57,11 +57,11 @@ select {
   padding: 0;
   background-color: transparent;
   border: none;
+  letter-spacing: inherit;
 }
 
 button {
   cursor: pointer;
-  letter-spacing: 0.03em;
 }
 
 a {
@@ -81,6 +81,8 @@ textarea {
 
 
 input:not([type=chekbox]):not([type=radio]),
+
+// если убрать с троку с инпутом с номером, то появляются стрелки в карточке товара в инпуте
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button,
 textarea,
@@ -90,3 +92,4 @@ button {
   -moz-appearance: none;
   appearance: none;
 }
+

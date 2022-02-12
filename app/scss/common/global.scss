@@ -9,19 +9,19 @@ body {
   display: flex;
   flex-direction: column;
   letter-spacing: 0.03em;
-}
 
-body.lock {
-  overflow: hidden;
+  &.lock{
+    overflow: hidden;
 
-  &::after {
-    content: '';
-    background-color: rgba(0, 0, 0, 0.15);
-    box-sizing: content-box;
-    height: 100%;
-    width: 100%;
-    z-index: 3;
-    position: absolute;
+    &::after {
+      content: '';
+      background-color: rgba(0, 0, 0, 0.15);
+      box-sizing: content-box;
+      height: 100%;
+      width: 100%;
+      z-index: 3;
+      position: absolute;
+    }
   }
 }
 
@@ -58,8 +58,8 @@ body.lock {
   border-radius: 6px;
   transition: background-color 0.3s;
   outline: transparent;
-  letter-spacing: 0.03em;
   line-height: 1.3;
+  letter-spacing: 0.03em;
 
   &:focus {
     box-shadow: 0 0 0 4px #E0EDCF;

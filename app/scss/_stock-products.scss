@@ -1,6 +1,7 @@
 .stock-products {
   background-color: #F5F5F5;
   
+
   &__container {
     padding: 72px 15px;
   }
@@ -16,13 +17,17 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 27px 30px;
-    margin-bottom: 45px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 47px;
   }
 
-  & .filters__item:not(:last-child) {
-    margin-right: 30px;
+  .filters {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
 
   &__btn {

@@ -18,28 +18,31 @@
     margin-bottom: 30px;
   }
 
-  &__list {
+  &__links {
     column-count: 3;
     column-gap: 75px;
-    list-style:none;
+    list-style: none;
+    margin-top: -4px;
   }
 
   &__item {
-    margin-bottom: 18px;
-    -webkit-column-break-inside:avoid;
-    -moz-column-break-inside:avoid;
-    -moz-page-break-inside:avoid;
-    page-break-inside:avoid;
-    break-inside:avoid-column;
+    margin-bottom: 16px;
+  }
+
+  // не нашел в интернете решения что не разрывало оутлайн, везде писало про свойство break , но я его применить не смог. Сделал марджинами
+
+  &__link {
+    display: inline-block;
+    margin-top: 4px;
   }
 }
 
 .form-subscribe {
-  margin-right: 60px;
+  margin-right: 67px;
 
   &__text {
-    display: inline-block;
-    margin-bottom: 18px;
+    display: block;
+    margin-bottom: 20px;
     line-height: 1;
   }
 
@@ -65,18 +68,21 @@
     padding: 12px 14px;
     border-radius: 0 6px 6px 0;
     text-transform: uppercase;
+    letter-spacing: normal;
   }
 }
 
 .contacts {
+
   &__link {
     display: inline-block;
     margin-bottom: 18px;
   }
 
   &__social {
-    margin-left: -4px;
+    margin-left: -2px;
   }
+
 }
 
 .footer-bottom {
@@ -94,7 +100,9 @@
     display: flex;
   }
 
-  &__pay-item:not(:last-child) {
-    margin-right: 24px;
+  &__pay-item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
   }
 }

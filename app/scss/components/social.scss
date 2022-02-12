@@ -2,8 +2,9 @@
   display: flex;
 
   &__item {
-    margin-right: 12px;
-
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
   }
 
   &__link {
@@ -18,7 +19,7 @@
     outline-color: transparent;
 
     &:focus {
-      box-shadow: 0px 0px 0px 3px #E0EDCF;
+      box-shadow: 0 0 0 3px #E0EDCF;
       outline-color: #E0EDCF;
     }
 

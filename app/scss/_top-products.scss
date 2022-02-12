@@ -1,6 +1,6 @@
 .top-products {
   &__container {
-    padding: 71px 15px;
+    padding: 71px 15px 69px;
   }
 
   &__title {
@@ -9,10 +9,10 @@
   }
 
   &__list {
-    margin-bottom: 17px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin-bottom: 46px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 30px;
   }
 
   &__btn {

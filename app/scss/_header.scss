@@ -1,3 +1,80 @@
+.header-top {
+  background-color: $dark-800;
+  color: $white;
+  padding: 17px 0 11px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    &--left {
+      &:not(:last-child) {
+        margin-right: 43px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    border-radius: 3px;
+    transition: opacity 0.3s,
+      color 0.3s;
+    outline: transparent;
+
+    &:focus {
+      box-shadow: 0 0 0 3px #EFF6E7;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      color: $green-200;
+    }
+
+    &--hotline {
+      &::before {
+        background-image: url('../images/sprite.svg#icon-tel');
+        content: '';
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 22px;
+        width: 32px;
+        margin-right: 6px;
+      }
+    }
+
+    &--delivery {
+      &::before {
+        background-image: url('../images/sprite.svg#icon-address');
+        content: '';
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 22px;
+        width: 32px;
+        margin-right: 14px;
+      }
+    }
+  }
+}
+
 .header {
 
   &__bottom {
@@ -18,87 +95,6 @@
 }
 
 
-
-.header-top {
-  background-color: $dark-800;
-  color: $white;
-  padding: 17px 0 11px;
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__list {
-    display: flex;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 24px;
-  }
-
-  &__link {
-    display: flex;
-    border-radius: 3px;
-    transition: opacity 0.3s,
-      color 0.3s;
-    outline: transparent;
-
-    &:focus {
-      box-shadow: 0px 0px 0px 3px #EFF6E7;
-    }
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:active {
-      color: $green-200;
-    }
-  }
-}
-
-.header-top__link--hotline::before,
-.header-top__link--delivery::before {
-  content: '';
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 22px;
-  width: 32px;
-  margin-right: 12px;
-}
-
-.header-top__link--delivery::before {
-  background-image: url('../images/sprite.svg#icon-address');
-}
-
-.header-top__link--hotline::before {
-  background-image: url('../images/sprite.svg#icon-tel');
-  margin-right: 4px;
-}
-
-.header-top .header-top__item--delivery {
-  margin-right: 48px;
-}
-
-
-.top-links__link {
-  outline: transparent;
-  transition: box-shadow 0.3s;
-
-  &:focus {
-    box-shadow: 0 0 0 3px #EFF6E7;
-    border-radius: 3px;
-  }
-}
-
-
-
 .catalog {
   margin-right: 30px;
   position: relative;
@@ -106,12 +102,12 @@
   &__btn {
     background-color: $white;
     display: inline-block;
-    width: 240px;
     padding: 15px 38px 15px 61px;
     color: $green-900;
     border-radius: 6px;
     transition: border-radius 0.3s, background-color 0.3s;
     white-space: nowrap;
+
 
     &::before {
       content: '';
@@ -143,12 +139,22 @@
     &:hover {
       background-color: $green-200;
     }
+
+
+    &--active {
+      border-radius: 6px 6px 0 0;
+      background-color: $green-200;
+
+      &::after {
+        transform: translatex(-1px) rotate(180deg);
+      }
+    }
   }
 
   &__list {
     position: absolute;
     background-color: $white;
-    width: 240px;
+    width: 100%;
     display: none;
     z-index: 3;
   }
@@ -173,17 +179,6 @@
   }
 }
 
-.catalog--active {
-  .catalog__btn {
-    border-radius: 6px 6px 0 0;
-    background-color: $green-200;
-
-    &::after {
-      transform: translatex(-1px) rotate(180deg);
-    }
-  }
-}
-
 .form-search {
   display: flex;
   margin-right: 47px;
@@ -191,7 +186,7 @@
   width: 100%;
   position: relative;
 
-  ::before {
+  &::before {
     content: '';
     background-image: url('../images/sprite.svg#icon-search');
     background-repeat: no-repeat;
@@ -208,8 +203,6 @@
     border-radius: 6px 0 0 6px;
     background-color: $white;
     padding: 15px 51px;
-    max-width: 420px;
-    min-width: 300px;
     width: 100%;
   }
 
@@ -281,21 +274,23 @@
       position: absolute;
     }
 
-  }
+    &--login {
+      &::after {
+        background-image: url('../images/sprite.svg#icon-user');
+      }
+    }
 
-  &__link--login::after {
-    background-image: url('../images/sprite.svg#icon-user');
+    &--liked {
+      &::after {
+        background-image: url('../images/sprite.svg#icon-heart');
+      }
+    }
 
-  }
-
-  &__link--liked::after {
-    background-image: url('../images/sprite.svg#icon-heart');
-
-  }
-
-  &__link--cart::after {
-    background-image: url('../images/sprite.svg#icon-cart');
-
+    &--cart {
+      &::after {
+        background-image: url('../images/sprite.svg#icon-cart');
+      }
+    }
   }
 
   &__num {
@@ -303,9 +298,10 @@
     font-size: 10px;
     color: $red-900;
     border-radius: 9px;
-    padding: 0 3.7px;
+    padding: 0 4px;
     text-align: center;
     line-height: 18px;
+    min-width: 18px;
     position: absolute;
     top: 5px;
     right: 29px;
@@ -321,14 +317,15 @@
   top: 0;
   bottom: 0;
   z-index: 4;
-  width: 475px;
-  transform: translateX(475px);
-  transition: transform .3s;
+  max-width: 475px;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.3s;
   display: flex;
   flex-direction: column;
 
   &--active {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 
   &__header {
@@ -406,9 +403,22 @@
     position: relative;
   }
 
-  &__img-box {
+  &__img-link {
     display: inline-block;
     margin-right: 32px;
+    max-width: 60px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 14.06%;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   &__item-del {
@@ -445,10 +455,8 @@
     flex-grow: 1;
   }
 
-  &__info {
-    .cart-box__currency {
-      font-size: 12px;
-    }
+  &__currency {
+    font-size: 12px;
   }
 
   &__coast {
@@ -462,7 +470,6 @@
     font-weight: 600;
     color: $dark-900;
     margin-bottom: 5px;
-    height: 40px;
   }
 
 
@@ -476,8 +483,10 @@
       color: $dark-500;
     }
 
-    .cart-box__total-currency {
-      font-size: 14px;
+    .cart-box {
+      &__total-currency {
+        font-size: 14px;
+      }
     }
   }
 

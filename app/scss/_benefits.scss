@@ -22,16 +22,22 @@
       width: 50px;
     }
 
-    &--scooter::before {
-      background-image: url('../images/sprite.svg#icon-scooter');
+    &--scooter {
+      &::before {
+        background-image: url('../images/sprite.svg#icon-scooter');
+      }
     }
 
-    &--return::before {
-      background-image: url('../images/sprite.svg#icon-return');
+    &--return {
+      &::before {
+        background-image: url('../images/sprite.svg#icon-return');
+      }
     }
 
-    &--24hours::before {
-      background-image: url('../images/sprite.svg#icon-24hours');
+    &--24hours {
+      &::before {
+        background-image: url('../images/sprite.svg#icon-24hours');
+      }
     }
 
     &:not(:last-child) {
