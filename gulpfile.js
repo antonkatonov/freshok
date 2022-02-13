@@ -98,7 +98,6 @@ function build() {
 
 function cleanDist() {
   return del ('dist')
-  
 }
 
 function watching() {

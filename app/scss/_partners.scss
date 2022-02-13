@@ -1,9 +1,9 @@
 .partners {
-  
+
   &__container {
-    padding: 70px 15px;
+    padding: 75px 15px 69px;
   }
-  
+
   .slick-track {
     display: flex;
     align-items: center;
@@ -21,6 +21,7 @@
     max-width: 80px;
     width: 100%;
     object-fit: contain;
+    margin: 0 auto;
 
     &:hover {
       opacity: 1;

@@ -10,6 +10,31 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: none;
+
+    @include r($md4) {
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      background-image: url('../images/sprite.svg#icon-topbtn');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 30px;
+      height: 20px;
+      position: absolute;
+    }
   }
 
   &__list {
@@ -30,6 +55,7 @@
 
   &__link {
     display: flex;
+    align-items: center;
     border-radius: 3px;
     transition: opacity 0.3s,
       color 0.3s;
@@ -298,9 +324,9 @@
     font-size: 10px;
     color: $red-900;
     border-radius: 9px;
-    padding: 0 4px;
+    padding: 0 3px;
     text-align: center;
-    line-height: 18px;
+    line-height: 17px;
     min-width: 18px;
     position: absolute;
     top: 5px;
@@ -365,8 +391,8 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      height: 18px;
-      width: 18px;
+      height: 24px;
+      width: 24px;
       position: absolute;
     }
 
