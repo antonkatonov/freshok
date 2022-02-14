@@ -31,6 +31,10 @@
       border-radius: 0 3px 3px 0;
       margin-right: 24px;
 
+      @include r($md1) {
+        margin-right: 0;
+      }
+
       &::after {
         background-image: url('../images/sprite.svg#icon-plus');
       }

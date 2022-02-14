@@ -2,10 +2,21 @@
   background-color: $silver-100;
   padding: 48px 0 29px 0;
 
+  @include r($md1) {
+    padding: 30px 0;
+  }
+
   &__items {
     display: flex;
     justify-content: center;
     margin-left: -50px;
+
+    @include r($md2) {
+      margin-left: 0;
+      display: grid;
+      row-gap: 30px;
+      justify-content: flex-start;
+    }
   }
 
   &__item {
@@ -42,6 +53,14 @@
 
     &:not(:last-child) {
       margin-right: 65px;
+
+      @include r($md1) {
+        margin-right: 25px;
+      }
+
+      @include r($md2) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -55,5 +74,9 @@
   &__text {
     color: $dark-500;
     max-width: 190px;
+
+    @include r($md2) {
+      max-width: 100%;
+    }
   }
 }

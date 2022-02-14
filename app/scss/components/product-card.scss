@@ -21,6 +21,11 @@
     outline: transparent;
     border-radius: 3px;
 
+    @include r($md2) {
+      top: 7px;
+      right: 1px;
+    }
+
     &::after {
       content: '';
       mask-image: url('../images/sprite.svg#icon-favorite');
@@ -31,7 +36,12 @@
       height: 28px;
       width: 32px;
       transition: background-color 0.3s,
-      opacity 0.3s;
+        opacity 0.3s;
+
+      @include r($md2) {
+        height: 21px;
+        width: 24px;
+      }
 
     }
 
@@ -89,8 +99,8 @@
       transition: opacity 0.3s;
     }
 
-   &:hover {
-  
+    &:hover {
+
       &::before,
       &::after {
         opacity: 1;
@@ -110,6 +120,10 @@
 
   &__info {
     padding: 18px;
+
+    @include r($md2) {
+      padding: 12px;
+    }
   }
 
   &__title {
@@ -135,6 +149,19 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include r($md1) {
+      padding-top: 48px;
+    }
+  }
+
+  &__quantity {
+    @include r($md1) {
+      position: absolute;
+      left: 50%;
+      bottom: 56px;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__prices {

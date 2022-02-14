@@ -4,18 +4,32 @@
   &__list {
     display: grid;
     grid-template-columns: 2.13fr 1fr 1fr;
-    grid-column-gap: 30px;
+    gap: 30px;
     min-height: 300px;
+
+    @include r($md2) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+    }
+
+    @include r($md3) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
   }
 
   &__item {
     border-radius: 6px;
-    padding: 73px 32px 76px 32px;
+    padding: 73px 15px 76px 32px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: $dark-500;
     text-transform: uppercase;
+
+    @include r($md2) {
+      padding: 71px 15px 33px;
+    }
 
     &:nth-child(1) {
       color: $white;
@@ -29,6 +43,18 @@
         }
       }
     }
+
+    &:nth-child(3) {
+      @include r($md2) {
+        .banners {
+          &__title {
+            max-width: 200px;
+          }
+        }
+      }
+    }
+
+
   }
 
   &__span {
@@ -38,6 +64,10 @@
     line-height: 1;
     letter-spacing: 0.1em;
     margin-bottom: 16px;
+
+    @include r($md2) {
+      margin-bottom: 13px;
+    }
   }
 
   &__title {
@@ -47,6 +77,12 @@
     max-width: 360px;
     margin-bottom: 10px;
     letter-spacing: normal;
+
+    @include r($md2) {
+      margin-bottom: 74px;
+      font-size: 24px;
+      max-width: 269px;
+    }
   }
 
   &__link {

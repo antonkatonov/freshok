@@ -2,11 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 48px;
   letter-spacing: 0.03em;
 
-  &__item:not(:last-child) {
-    margin-right: 24px;
+  &__item {
+    margin-bottom: 11px;
+
+    @include r($md2) {
+      margin-right: 26px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
   }
 
   &__link {
@@ -20,6 +29,10 @@
     transition: color 0.3s,
       border-color 0.3s,
       box-shadow 0.3s;
+
+    @include r($md2) {
+      font-size: 14px;
+    }
 
     &:focus {
       box-shadow: 0 0 0 3px #E0EDCF;
@@ -36,4 +49,8 @@
   box-shadow: none;
   outline: transparent;
   letter-spacing: 0.03em;
+
+  @include r($md2) {
+   margin-right: 8px;
+  }
 }

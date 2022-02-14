@@ -63,7 +63,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 44px 15px 15px;
+    padding: 8px 44px 7px 15px;
     background-color: $green-900;
     font-weight: 400;
     line-height: 1;
@@ -88,7 +88,6 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      margin-right: 15px;
     }
 
     &--enter {
@@ -97,6 +96,7 @@
         background-image: url('../images/sprite.svg#icon-user');
         width: 24px;
         height: 32px;
+        margin-right: 16px;
       }
     }
 
@@ -106,6 +106,7 @@
         background-color: $white;
         width: 1px;
         height: 18px;
+        margin-right: 20px;
       }
     }
   }
@@ -139,7 +140,7 @@
   }
 
   &__info-item {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
   }
 
   &__info-link {
@@ -190,7 +191,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
   }
 }
