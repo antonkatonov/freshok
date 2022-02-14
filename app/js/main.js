@@ -18,7 +18,22 @@ $(function (){
     slidesToShow: 6,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows: false
+    arrows: false,
+    responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },]
   });
 
   $('.catalog').on('click', function(){

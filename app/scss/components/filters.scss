@@ -9,12 +9,12 @@
   &__item {
     margin-bottom: 11px;
 
-    @include r($md2) {
-      margin-right: 26px;
-    }
-
     &:not(:last-child) {
       margin-right: 24px;
+
+      @include r($md2) {
+        margin-right: 24px;
+      }
     }
   }
 

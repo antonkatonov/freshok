@@ -1,6 +1,10 @@
 .banners {
   padding-bottom: 72px;
 
+  @include r($md2) {
+    padding-bottom: 48px;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: 2.13fr 1fr 1fr;
@@ -53,8 +57,6 @@
         }
       }
     }
-
-
   }
 
   &__span {
