@@ -391,74 +391,82 @@
     </nav>
   </header>
 
-  <!-- <main class="main">
+  <main class="main">
     <h1 class="sr-only">
       Фрешок - лучший супермаркет овощей и фруктов
     </h1>
 
     <section class="promotion-slider">
-      <h2 class="sr-only">Акции и скидки</h2> -->
+      <h2 class="sr-only">Акции и скидки</h2>
 
-  <!-- кнопку вынес за пределы слайда, а то слик с ума сходит с ней в ul -->
+      <!-- кнопку вынес за пределы слайда, а то слик с ума сходит с ней в ul -->
 
-  <!-- <button class="promotion-slider__btn promotion-slider__btn--prew" type="button">
+      <button class="promotion-slider__btn promotion-slider__btn--prew" type="button">
         <span class="sr-only">Кнопка предидущего слайда</span>
       </button>
 
       <ul class="promotion-slider__list">
-        <li class="promotion-slider__item" style="background-image: url('images/slider/gabriel-gurrola.jpg')">
+        <li class="promotion-slider__item">
+          <!-- 
+          без обертки при адаптиве слик слайдер удаляет стили из лишки нашел решение https://qna.habr.com/q/526201 -->
 
-          <div class="promotion-slider__container container">
-            <div class="promotion-slider__wrapper">
-              <h3 class="promotion-slider__title">
-                СВЕЖАЧОК ВАМ в ХАТУ <span class="promotion-slider__span">Скидка -50%</span>
-              </h3>
+          <div class="promotion-slider__background" style="background-image: url('images/slider/gabriel-gurrola.jpg')">
+            <div class="promotion-slider__container container">
+              <div class="promotion-slider__wrapper">
+                <h3 class="promotion-slider__title">
+                  СВЕЖАЧОК ВАМ в ХАТУ <span class="promotion-slider__span">Скидка -50%</span>
+                </h3>
 
-              <p class="promotion-slider__text">
-                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-              </p>
+                <p class="promotion-slider__text">
+                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                </p>
 
-              <a class="promotion-slider__link btn" href="#">
-                Купить сейчас
-              </a>
+                <a class="promotion-slider__link btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
             </div>
           </div>
         </li>
 
-        <li class="promotion-slider__item" style="background-image: url('images/slider/stefano-carella.jpg')">
-          <div class="promotion-slider__container container">
-            <div class="promotion-slider__wrapper">
-              <h3 class="promotion-slider__title">
-                НАКРУТИ СЕБЕ ТОМАТОВ
-                <span class="promotion-slider__span">АКЦИЯ: 3 кг по цене 1</span>
-              </h3>
+        <li class="promotion-slider__item">
+          <div class="promotion-slider__background" style="background-image: url('images/slider/stefano-carella.jpg')">
+            <div class="promotion-slider__container container">
+              <div class="promotion-slider__wrapper">
+                <h3 class="promotion-slider__title">
+                  НАКРУТИ СЕБЕ ТОМАТОВ
+                  <span class="promotion-slider__span">АКЦИЯ: 3 кг по цене 1</span>
+                </h3>
 
-              <p class="promotion-slider__text">
-                Только с 12 по 15 июля скидка на домашние помидорчики
-              </p>
+                <p class="promotion-slider__text">
+                  Только с 12 по 15 июля скидка на домашние помидорчики
+                </p>
 
-              <a class="promotion-slider__link btn" href="#">
-                Купить сейчас
-              </a>
+                <a class="promotion-slider__link btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
             </div>
           </div>
         </li>
 
-        <li class="promotion-slider__item" style="background-image: url('images/slider/petra-cigale.jpg')">
-          <div class="promotion-slider__container container">
-            <div class="promotion-slider__wrapper">
-              <h3 class="promotion-slider__title">
-                Пусть остальные
-                позеленеют от зависти <span class="promotion-slider__span">Распродажа зелени</span>
-              </h3>
+        <li class="promotion-slider__item">
+          <div class="promotion-slider__background" style="background-image: url('images/slider/petra-cigale.jpg')">
+            <div class="promotion-slider__container container">
+              <div class="promotion-slider__wrapper">
+                <h3 class="promotion-slider__title">
+                  Пусть остальные
+                  позеленеют от зависти <span class="promotion-slider__span">Распродажа зелени</span>
+                </h3>
 
-              <p class="promotion-slider__text">
-                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-              </p>
+                <p class="promotion-slider__text promotion-slider__text--smal">
+                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                </p>
 
-              <a class="promotion-slider__link btn" href="#">
-                Купить сейчас
-              </a>
+                <a class="promotion-slider__link btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
             </div>
           </div>
         </li>
@@ -469,7 +477,7 @@
       </button>
     </section>
 
-    <section class="benefits">
+    <!-- <section class="benefits">
       <div class="benefits__container container">
         <h2 class="sr-only">Наши приемущества</h2>
 
@@ -1513,7 +1521,7 @@
     </div>
   </footer> -->
 
-  <script src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script>
 
 </body>
 
