@@ -3,19 +3,43 @@
   color: $white;
   letter-spacing: normal;
 
+  &__container {
+    @include r($md4) {
+      padding: 0 0;
+    }
+  }
+
   &__top {
     padding: 30px 0 0;
+
+    @include r($md4) {
+      padding: 23px 0 0;
+    }
   }
 
   &__logo {
     display: block;
     margin-bottom: 28px;
+
+    @include r($md4) {
+      margin: 0 auto 24px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include r($md2) {
+      flex-wrap: wrap;
+    }
+
+    @include r($md4) {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0px;
+    }
   }
 
   &__links {
@@ -23,6 +47,21 @@
     column-gap: 75px;
     list-style: none;
     margin-top: -4px;
+
+    @include r($md1) {
+      column-count: 2;
+      column-gap: 75px;
+    }
+
+    @include r($md4) {
+      order: 2;
+      display: block;
+      width: 100%;
+      padding: 18px 66px 6px;
+      column-gap: 111px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: nowrap;
+    }
   }
 
   &__item {
@@ -39,6 +78,20 @@
 
 .form-subscribe {
   margin-right: 67px;
+
+  @include r($md3) {
+    margin-bottom: 20px;
+  }
+
+  @include r($md4) {
+    padding: 24px 23px;
+    margin-bottom: 0;
+    order: 3;
+    width: 100%;
+    padding: 23px 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
   &__text {
     display: block;
@@ -73,6 +126,20 @@
 }
 
 .contacts {
+  @include r($md4) {
+    order: 1;
+    align-self: center;
+    margin-bottom: 29px;
+    margin-left: -63px;
+  }
+
+  &__items {
+    @include r($md4) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
 
   &__link {
     display: inline-block;
@@ -81,6 +148,10 @@
 
   &__social {
     margin-left: -2px;
+
+    @include r($md4) {
+      justify-content: center;
+    }
   }
 }
 
@@ -89,14 +160,28 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @include r($md4) {
+    padding: 24px 15px;
+    flex-direction: column;
+  }
 
   &__copy {
     text-transform: uppercase;
+
+    @include r($md4) {
+      order: 2;
+    }
   }
 
   &__pay-info {
     display: flex;
+
+    @include r($md4) {
+      order: 1;
+      margin-bottom: 24px;
+    }
+
   }
 
   &__pay-item {

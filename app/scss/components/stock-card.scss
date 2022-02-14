@@ -46,6 +46,8 @@
     flex-direction: column;
   }
 
+  // обрезает коряво заголовок в моб версии, если увидишь комент покажешь как решить)
+
   &__title {
     @include line-clamp(3);
     font-weight: 600;
