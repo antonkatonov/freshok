@@ -15,6 +15,10 @@
 
   &__title {
     margin-bottom: 12px;
+
+    @include r($md4) {
+      margin-bottom: 9px;
+    }
   }
 
   &__link {
@@ -30,6 +34,11 @@
     margin-right: 10px;
     outline: transparent;
     transition: border-color 0.3s, color 0.3s;
+
+    @include r($md4) {
+      margin-top: 0;
+      letter-spacing: 0.03em;
+    }
 
     &:focus {
       box-shadow: 0 0 0 3px #E0EDCF;
@@ -59,7 +68,7 @@
 
     @include r($md3) {
       grid-template-columns: 1fr;
-      grid-template-rows: 1.1fr 1.04fr 0fr;
+      grid-template-rows: 1.12fr 1.04fr 0fr;
     }
   }
 
@@ -83,7 +92,7 @@
   &__data {
     background-color: $white;
     border-radius: 0 0 4px 4px;
-    padding-top: 14px;
+    padding-top: 17px;
     height: 76px;
     width: 65px;
     position: absolute;
@@ -94,7 +103,7 @@
   }
 
   &__month {
-    display: inline-block;
+    display: block;
     font-weight: 700;
     font-size: 10px;
     letter-spacing: 0.1em;
