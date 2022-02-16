@@ -412,17 +412,181 @@
     </section>
 
     <section class="shop">
-      <div class="shop__container">
-        <h2 class="shop__title">
+      <div class="shop__container container">
+        <h2 class="shop__title title">
           Каталог товаров
         </h2>
 
         <div class="shop__wrapper">
-          <div class="shop__filters">
-            
-          </div>
+          <ul class="shop__filters shop-filter">
+            <li class="shop-filter__item" id="test">
+              <button class="shop-filter__btn" type="button">
+                <h3 class="shop-filter__title">
+                  Категории
+                </h3>
+              </button>
 
-          <div class="shop__contanet">
+              <form class="shop-filter__list" action="#">
+                <label class="shop-filter__label" for="veg">
+                  <input class="shop-filter__input" type="checkbox" id="veg">
+                  <span class="shop-filter__span">Овощи и фрукты</span>
+                </label>
+
+                <label class="shop-filter__label" for="bak">
+                  <input class="shop-filter__input" type="checkbox" id="bak">
+                  <span class="shop-filter__span">Бакалея</span>
+                </label>
+
+                <label class="shop-filter__label" for="milk">
+                  <input class="shop-filter__input" type="checkbox" id="milk">
+                  <span class="shop-filter__span">Молочные продукты</span>
+                </label>
+
+                <label class="shop-filter__label" for="bread">
+                  <input class="shop-filter__input" type="checkbox" id="bread">
+                  <span class="shop-filter__span">Хлеб</span>
+                </label>
+
+                <label class="shop-filter__label" for="meet">
+                  <input class="shop-filter__input" type="checkbox" id="meet">
+                  <span class="shop-filter__span">Мясо</span>
+                </label>
+
+                <label class="shop-filter__label" for="kolb">
+                  <input class="shop-filter__input" type="checkbox" id="kolb">
+                  <span class="shop-filter__span">Колбаса</span>
+                </label>
+
+                <label class="shop-filter__label" for="fish">
+                  <input class="shop-filter__input" type="checkbox" id="fish">
+                  <span class="shop-filter__span">Рыба</span>
+                </label>
+
+                <label class="shop-filter__label" for="alko">
+                  <input class="shop-filter__input" type="checkbox" id="alko">
+                  <span class="shop-filter__span">Алкоголь</span>
+                </label>
+
+                <label class="shop-filter__label" for="alko2">
+                  <input class="shop-filter__input" type="checkbox" id="alko2">
+                  <span class="shop-filter__span">Алкоголь</span>
+                </label>
+
+                <label class="shop-filter__label" for="alko3">
+                  <input class="shop-filter__input" type="checkbox" id="alko3">
+                  <span class="shop-filter__span">Алкоголь</span>
+                </label>
+
+                <label class="shop-filter__label" for="alko4">
+                  <input class="shop-filter__input" type="checkbox" id="alko4">
+                  <span class="shop-filter__span">Алкоголь</span>
+                </label>
+              </form>
+            </li>
+
+            <li class="shop-filter__item">
+              <button class="shop-filter__btn" type="button">
+                <h3 class="shop-filter__title">
+                  Предложения
+                </h3>
+              </button>
+
+              <form class="shop-filter__list" action="#">
+
+                <input class="shop-filter__input shop-checkbox" type="checkbox" id="sell" name="sell">
+                <label class="shop-filter__label" for="sell">Со скидкой</label>
+
+                <input class="shop-filter__input shop-checkbox" type="checkbox" id="new" name="new">
+                <label class="shop-filter__label" for="new">Новинка</label>
+
+                <input class="shop-filter__input shop-checkbox" type="checkbox" id="hit" name="hit">
+                <label class="shop-filter__label" for="hit">Хит</label>
+
+              </form>
+            </li>
+
+            <li class="shop-filter__item">
+              <button class="shop-filter__btn" type="button">
+                <h3 class="shop-filter__title">
+                  Бренд
+                </h3>
+              </button>
+
+              <form class="shop-filter__list" action="#">
+
+                <input class="shop-filter__input shop-checkbox" type="checkbox" id="cola" name="cola">
+                <label class="shop-filter__label" for="cola">CocaCola</label>
+
+                <input class="shop-filter__input shop-checkbox" type="checkbox" id="pepsi" name="pepsi">
+                <label class="shop-filter__label" for="pepsi">Pepsi</label>
+
+                <input class="shop-filter__input shop-checkbox" type="checkbox" id="sprite" name="sprite">
+                <label class="shop-filter__label" for="sprite">Sprite</label>
+
+                <input class="shop-filter__input shop-checkbox" type="checkbox" id="fanta" name="fanta">
+                <label class="shop-filter__label" for="fanta">Fanta</label>
+
+                <input class="shop-filter__input shop-checkbox" type="checkbox" id="redbull" name="redbull">
+                <label class="shop-filter__label" for="redbull">RedBull</label>
+
+                <input class="shop-filter__input shop-checkbox" type="checkbox" id="drpepper" name="drpepper">
+                <label class="shop-filter__label" for="drpepper">Dr Pepper</label>
+              </form>
+            </li>
+
+            <li class="shop-filter__item">
+              <button class="shop-filter__btn" type="button">
+                <h3 class="shop-filter__title">
+                  Цена
+                </h3>
+              </button>
+
+              <form class="shop-filter__list filter-price">
+
+                <div class="filter-price__wrap">
+                  <span class="filter-price__value filter-price__value--from"></span><span class="filter-price__value filter-price__value--to"></span>
+                </div>
+                <input class="filter-price__input" type="text" id="price" data-min="0" data-max="1200" data-from="100" data-to="1000">
+
+                <label class="sr-only" for="price">Указать диапазон цен</label>
+              </form>
+            </li>
+          </ul>
+
+          <div class="shop__content">
+            <ul class="shop__top content-filter">
+              <li class="content-filter__item">
+                <select class="content-filter__list" name="filter__name" id="filter__name">
+
+                  <option value="По названию">По названию</option>
+                  <option value="По цене">По цене</option>
+                  <option value="По популярности">По популярности</option>
+                </select>
+              </li>
+
+              <li class="content-filter__item">
+                <select class="content-filter__list" name="filter__num" id="filter__num">
+
+                  <option value="По 12">По 12</option>
+                  <option value="По 24">По 24</option>
+                  <option value="Все">Все</option>
+                </select>
+              </li>
+
+              <li class="content-filter__item content-filter__item--btn">
+                <button class="content-filter__button content-filter__button--num6" type="button">
+                </button>
+              </li>
+
+              <li class="content-filter__item content-filter__item--btn">
+                <button class="content-filter__button content-filter__button--num9" type="button">
+                </button>
+              </li>
+
+
+            </ul>
+
+
 
           </div>
         </div>
@@ -431,7 +595,37 @@
 
     </section>
 
-
+    <section class="benefits">
+      <div class="benefits__container container">
+        <h2 class="sr-only">Наши приемущества</h2>
+    
+        <ul class="benefits__items">
+          <li class="benefits__item benefits__item--scooter">
+            <div class="benefits__text">
+              <h3 class="benefits__title">Бесплатная доставка</h3>
+    
+              <p class="benefits__descr">Для заказов на сумму от 500 ₽</p>
+            </div>
+          </li>
+    
+          <li class="benefits__item benefits__item--return">
+            <div class="benefits__text">
+              <h3 class="benefits__title">Возврат товара</h3>
+    
+              <p class="benefits__descr">Если товары были испорчены</p>
+            </div>
+          </li>
+    
+          <li class="benefits__item benefits__item--24hours">
+            <div class="benefits__text">
+              <h3 class="benefits__title">Поддержка 24/7</h3>
+    
+              <p class="benefits__descr">Лучшие операторы</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
   </main>
 
@@ -566,7 +760,6 @@
       </div>
     </div>
   </footer>
-
   <script src="js/main.min.js"></script>
 </body>
 

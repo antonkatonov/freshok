@@ -1,5 +1,22 @@
 $(function (){
 
+  $('.filter-price__input').ionRangeSlider( {
+    type: "double",
+
+    onStart: function (data) { 
+      $('.filter-price__value--from').text(data.from);
+      $('.filter-price__value--to').text(data.to);
+    },
+
+     onChange: function (data) {
+       $('.filter-price__value--from').text(data.from);
+       $('.filter-price__value--to').text(data.to);
+      },
+  });
+
+  $('.content-filter__list').styler();
+
+
   $('.promotion-slider__list').slick({
     infinite: false,
     prevArrow: $('.promotion-slider__btn--prew'),
@@ -39,6 +56,11 @@ $(function (){
   $('.catalog').on('click', function(){
     $('.catalog__btn').toggleClass('catalog__btn--active');
     // $('.catalog__list').fadeToggle();
+ });
+
+  $('.shop-filter__btn').on('click', function(){
+    $('.shop-filter__btn').toggleClass('shop-filter__btn--active');
+    $('.shop-filter__list').slideToggle();
  });
 
 
