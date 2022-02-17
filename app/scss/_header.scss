@@ -126,6 +126,7 @@
     background-color: $green-900;
     padding: 24px 0 26px;
     font-weight: 600;
+    position: relative;
 
     @include r($md2) {
       padding: 6px 0;
@@ -142,18 +143,7 @@
     margin-right: 24px;
 
     @include r($md1) {
-      display: none;
-    }
-  }
-
-  &__logo-mini {
-    display: none;
-    flex: 0 0 40px;
-    width: fit-content;
-    margin-right: 20px;
-
-    @include r($md1) {
-      display: block;
+      margin-right: 20px;
     }
   }
 }
@@ -271,15 +261,17 @@
 
   @include r($md2) {
     position: absolute;
-    top: 112px;
     left: 0;
     right: 0;
+    bottom: 0;
+    z-index: 1;
     border: 1px solid $dark-800;
-    display: none;
+    transform: translate(-105%, 100%);
+    transition: transform 0.3s ease;
   }
 
   &--active {
-    display: flex;
+    transform: translate(0, 100%);
   }
 
   &::before {
@@ -385,7 +377,7 @@
     }
 
     &--login {
-      @include r($md2) {
+      @include r($md3) {
         display: none;
       }
     }

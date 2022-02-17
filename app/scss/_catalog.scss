@@ -5,6 +5,11 @@
     line-height: 1.2;
     padding: 48px 0;
     text-transform: inherit;
+
+    @include r($md3) {
+      padding: 29px 0 31px;
+      font-size: 30px;
+    }
   }
 
   &__wrapper {
@@ -16,11 +21,61 @@
   }
 }
 
-
 .shop-filter {
   max-width: 300px;
   width: 100%;
   margin-right: 32px;
+
+  @include r($md1) {
+    max-width: 320px;
+    position: absolute;
+    z-index: 15;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    padding-top: 76px;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 20px;
+    transform: translate(-100%, 0);
+    transition: transform 0.3s;
+  }
+
+
+  // Кнопка закрытия перекрывается каким-то зединдексом, я так понял из селекста, я так и не смог это победить!
+
+  &__close-btn {
+    display: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 16px;
+    right: 16px;
+    position: absolute;
+    z-index: 16;
+
+    &::before {
+      content: '';
+      content: '';
+      background-image: url('../images/sprite.svg#icon-close');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 18px;
+      width: 18px;
+    }
+
+    @include r($md4) {
+      display: block;
+    }
+  }
+
+  &--active {
+    transform: translate(0, 0);
+  }
 
   &__list {
     padding: 18px;
@@ -29,7 +84,7 @@
     border-radius: 0 0 6px 6px;
     max-height: 300px;
     overflow: auto;
-    margin-bottom: 30px;
+    margin-bottom: 38px;
     display: none;
 
     &::-webkit-scrollbar {
@@ -110,8 +165,8 @@
   &:checked+.shop-filter__label {
     &::before {
       background-image: url('../images/sprite.svg#icon-chb-v');
+      z-index: 2;
     }
-
   }
 
   &+.shop-filter__label {
@@ -119,9 +174,9 @@
     align-items: center;
 
     &:hover {
-       &::before {
-         border-color: $dark-500;
-       }
+      &::before {
+        border-color: $dark-500;
+      }
     }
 
     &::before {
@@ -132,7 +187,7 @@
       background: $silver-100;
       border: 1px solid $silver-600;
       border-radius: 3px;
-      margin-right: 15px;
+      margin-right: 11px;
       flex-shrink: 0;
       flex-grow: 0;
       background-repeat: no-repeat;
@@ -144,7 +199,6 @@
 }
 
 .filter-price {
-
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -169,7 +223,6 @@
       box-shadow: 0 0 0 3px #E0EDCF;
     }
 
-
     &::before {
       content: 'от';
       position: absolute;
@@ -189,7 +242,6 @@
     }
   }
 }
-
 
 .irs {
 
@@ -231,10 +283,20 @@
 .content-filter {
   justify-content: flex-end;
   display: flex;
+  margin-bottom: 48px;
+
+  @include r($md1) {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
 
   &__item {
     &:not(:last-child) {
       margin-right: 15px;
+
+      @include r($md3) {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -248,18 +310,16 @@
     justify-content: center;
     align-items: center;
 
-    &:active {
-      &::before {
-        background-color: $green-900;
-      }
+    @include r($md1) {
+      display: none;
     }
 
     &::before {
-    content: '';
-    mask-size: cover;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    background-color: $silver-600;
+      content: '';
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: $silver-600;
     }
 
     &--num9 {
@@ -277,17 +337,38 @@
         height: 35px;
       }
     }
+
+    &--active {
+      &::before {
+        background-color: $green-900;
+      }
+    }
+
+    &--mob {
+      display: none;
+
+      &::before {
+        mask-image: url('../images/sprite.svg#icon-filter');
+        width: 35px;
+        height: 35px;
+        background-color: $green-900;
+        position: absolute;
+      }
+
+      @include r($md1) {
+        display: flex;
+      }
+    }
   }
 }
-
 
 
 .jq-selectbox {
   cursor: pointer;
 
   &:focus {
-      box-shadow: 0 0 0 3px #E0EDCF;
-    }
+    box-shadow: 0 0 0 3px #E0EDCF;
+  }
 
   &__select {
     height: 47px;
@@ -297,6 +378,11 @@
     display: flex;
     align-items: center;
     outline: transparent;
+
+    @include r($md3) {
+      font-size: 12px;
+      padding: 16px 26px 15px 6px;
+    }
   }
 
   &__select-text {
@@ -320,6 +406,8 @@
     border-top: 0;
     border-radius: 0 0 6px 6px;
     width: 100%;
+    z-index: 2;
+    background-color: $white;
 
     li:hover {
       color: $silver-600;
@@ -337,6 +425,232 @@
     &__select {
       border-radius: 3px 3px 0 0;
       border-color: $dark-500;
+    }
+  }
+}
+
+.shop-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px 28px;
+  margin-bottom: 48px;
+
+  @include r($md3) {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 3px;
+    margin-bottom: 24px;
+  }
+
+  .product-card {
+    &__status-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: self-end;
+      margin-bottom: 9px;
+      z-index: 2;
+
+      @include r($md3) {
+        align-items: baseline;
+      }
+
+      span {
+        @include r($md3) {
+          font-size: 10px;
+        }
+
+        &::after {
+          @include r($md3) {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+
+    &__info {
+      padding: 0 18px 18px;
+      margin-top: -12px;
+
+      @include r($md3) {
+        padding: 0 12px 12px;
+        margin-top: -15px;
+      }
+    }
+
+    &__title {
+      @include r($md3) {
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .status__item {
+    @include r($md3) {
+      font-size: 8px;
+    }
+  }
+
+  &--num6 {
+    grid-template-columns: 1fr 1fr;
+    gap: 31px 28px;
+
+    .product-card {
+      height: 100%;
+      flex-direction: row;
+      padding: 6px 18px 13px 0;
+
+      &__wish {
+        top: 55px;
+        right: 13px;
+      }
+
+      &__status-inner {
+        margin-bottom: 12px;
+      }
+
+      &__info {
+        padding: 0;
+        margin-top: 0;
+      }
+
+      &__title {
+        margin-bottom: 17px;
+      }
+
+      &__link {
+        max-width: 178px;
+      }
+
+      &__image-link {
+        padding-bottom: 10.53%;
+        max-width: 200px;
+        margin-right: 14px;
+      }
+
+      .badges {
+        top: 4px;
+        left: 4px;
+      }
+    }
+  }
+
+  .stock-card {
+    &__rating {
+      @include r($md2) {
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+
+
+.shop-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 72px;
+
+  @include r($md3) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+
+  &__btn {
+    @include r($md3) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.shop-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $dark-500;
+
+  &__arrow {
+    background-color: $silver-100;
+    height: 48px;
+    width: 48px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: '';
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      width: 11px;
+      height: 18px;
+      background-color: $dark-500;
+
+    }
+
+    &--next {
+      &::before {
+        mask-image: url('../images/sprite.svg#icon-pag-r');
+      }
+    }
+
+    &--prew {
+      margin-right: 9px;
+
+      &::before {
+        mask-image: url('../images/sprite.svg#icon-pag-l');
+      }
+    }
+
+    &--noactive {
+      &::before {
+        background-color: $silver-600;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    border-color: 1px solid transparent;
+    background-color: $silver-100;
+    margin-right: 5px;
+
+    &--off {
+      @include r($md2) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    transition: border-color 0.3s;
+    outline: transparent;
+    border-radius: 3px;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px #E0EDCF;
+    }
+
+    &:hover {
+      border: 1px solid $silver-600;
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &--active {
+      border: 1px solid $dark-500;
     }
   }
 }

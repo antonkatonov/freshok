@@ -39,6 +39,8 @@
       flex-direction: column;
       width: 100%;
       margin-bottom: 0px;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -84,24 +86,30 @@
   }
 
   @include r($md4) {
-    padding: 24px 23px;
+    padding: 22px 10px;
     margin-bottom: 0;
     order: 3;
     width: 100%;
-    padding: 23px 35px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
   }
 
   &__text {
     display: block;
     margin-bottom: 20px;
     line-height: 1;
+
+    @include r($md4) {}
   }
 
   &__wrap {
     display: flex;
     height: 40px;
+
+    @include r($md4) {
+      justify-content: center;
+    }
   }
 
   &__input {
@@ -130,7 +138,6 @@
     order: 1;
     align-self: center;
     margin-bottom: 29px;
-    margin-left: -63px;
   }
 
   &__items {

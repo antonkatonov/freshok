@@ -4,17 +4,11 @@
   align-items: center;
   flex-wrap: wrap;
   letter-spacing: 0.03em;
+  margin-left: -28px;
 
   &__item {
     margin-bottom: 11px;
-
-    &:not(:last-child) {
-      margin-right: 24px;
-
-      @include r($md2) {
-        margin-right: 24px;
-      }
-    }
+    margin-left: 28px;
   }
 
   &__link {

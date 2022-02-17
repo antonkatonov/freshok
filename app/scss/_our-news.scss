@@ -80,6 +80,7 @@
   }
 
   &__link-wrapper {
+    display: block;
     &:hover {
       .our-news {
         &__item-title {
@@ -122,12 +123,10 @@
 
     @include r($md2) {
       width: 100%;
-      max-height: 200px;
-      height: 100%;
+      height: 200px;
+
     }
   }
-
-  // Решил проблему переполнения закрыв нижнюю часть бордером, не уверен что это правильное решение)
 
   &__item-title {
     @include line-clamp(3);
