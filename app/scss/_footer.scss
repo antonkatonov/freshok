@@ -100,7 +100,9 @@
     margin-bottom: 20px;
     line-height: 1;
 
-    @include r($md4) {}
+    @include r($md4) {
+      margin-left: 34px;
+    }
   }
 
   &__wrap {

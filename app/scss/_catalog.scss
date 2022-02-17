@@ -1,5 +1,4 @@
 .shop {
-
   &__title {
     font-size: 42px;
     line-height: 1.2;
@@ -25,11 +24,20 @@
   max-width: 300px;
   width: 100%;
   margin-right: 32px;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #C4C4C4;
+    height: 60px;
+  }
 
   @include r($md1) {
     max-width: 320px;
     position: absolute;
-    z-index: 15;
+    z-index: 11;
     background-color: #fff;
     left: 0;
     top: 0;
@@ -39,10 +47,8 @@
     padding-right: 20px;
     transform: translate(-100%, 0);
     transition: transform 0.3s;
+    
   }
-
-
-  // Кнопка закрытия перекрывается каким-то зединдексом, я так понял из селекста, я так и не смог это победить!
 
   &__close-btn {
     display: none;
@@ -55,7 +61,6 @@
     top: 16px;
     right: 16px;
     position: absolute;
-    z-index: 16;
 
     &::before {
       content: '';
@@ -69,7 +74,7 @@
     }
 
     @include r($md4) {
-      display: block;
+      display: flex;
     }
   }
 
@@ -416,9 +421,12 @@
     li:not(:last-child) {
       margin-bottom: 15px;
     }
+
+    @include r($md4) {
+      font-size: 10px;
+    }
   }
 }
-
 
 .jq-selectbox.opened {
   .jq-selectbox {
@@ -465,6 +473,12 @@
           }
         }
       }
+    }
+
+    &__image-link {
+       &::before {
+         background-color: transparent;
+       }
     }
 
     &__info {
@@ -543,8 +557,6 @@
   }
 }
 
-
-
 .shop-bottom {
   display: flex;
   justify-content: space-between;
@@ -586,7 +598,6 @@
       width: 11px;
       height: 18px;
       background-color: $dark-500;
-
     }
 
     &--next {
@@ -638,7 +649,7 @@
     border-radius: 3px;
 
     &:focus {
-      box-shadow: 0px 0px 0px 3px #E0EDCF;
+      box-shadow: 0 0 0 3px #E0EDCF;
     }
 
     &:hover {
@@ -646,7 +657,7 @@
     }
 
     &:active {
-      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     &--active {
