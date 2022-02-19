@@ -37,6 +37,15 @@ $(function (){
       },
   });
 
+  $('.product-top__slider').slick({
+  slidesToShow   : 1,
+  infinite       : true,
+  dots           : true,
+  fade           : true,
+  prevArrow: $('.product-top__slider-arrow--prew'),
+  nextArrow: $('.product-top__slider-arrow--next'),
+  });
+
 
   $('.promotion-slider__list').slick({
     infinite: false,
@@ -74,14 +83,6 @@ $(function (){
     },]
   });
 
-  $('.product-top__slider').slick({
-  slidesToShow   : 1,
-  infinite       : true,
-  dots           : true,
-  fade           : true,
-  prevArrow: $('.product-top__slider-arrow--prew'),
-  nextArrow: $('.product-top__slider-arrow--next'),
-  });
 
 
   $('.catalog').on('click', function(){

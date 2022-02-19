@@ -80,10 +80,9 @@ textarea {
 }
 
 
-
 input:not([type=chekbox]):not([type=radio]),
 
-// если убрать с троку с инпутом с номером, то появляются стрелки в карточке товара в инпуте
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button,
 textarea,
