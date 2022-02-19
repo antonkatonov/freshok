@@ -307,8 +307,8 @@
 
                 <ul class="cart-box__list">
                   <li class="cart-box__item">
-                    <a class="product-top__slider-img-link" href="#">
-                      <img class="product-top__slider-img" src="images/products/ananas-mini.png" alt="Фото ананасика" width="60" height="60">
+                    <a class="cart-box__img-link" href="#">
+                      <img class="cart-box__img" src="images/products/ananas-mini.png" alt="Фото ананасика" width="60" height="60">
                     </a>
 
                     <div class="cart-box__inner">
@@ -341,8 +341,8 @@
                   </li>
 
                   <li class="cart-box__item">
-                    <a class="product-top__slider-img-link" href="#">
-                      <img class="product-top__slider-img" src="images/products/pitahaya-mini.png" alt="Фото питахаи" width="60" height="60">
+                    <a class="cart-box__img-link" href="#">
+                      <img class="cart-box__img" src="images/products/pitahaya-mini.png" alt="Фото питахаи" width="60" height="60">
                     </a>
 
                     <div class="cart-box__inner">
@@ -390,7 +390,7 @@
   </header>
 
   <main class="main">
-    <section class="breadcrumbs">
+    <div class="breadcrumbs">
       <div class="breadcrumbs__container container">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
@@ -412,32 +412,76 @@
           </li>
         </ul>
       </div>
-    </section>
+    </div>
 
     <section class="product">
       <div class="product__container container">
         <div class="product__top product-top">
           <div class="product-top__inner">
+            <div class="product-top__slider-inner">
 
-            <ul class="product-top__slider">
-              <li class="product-top__slider-item">
-                <a class="cart-box__slider-link" href="#">
-                  <img class="product-top__slider-img" src="images/products/pitahaya-420.jpg" alt="Фото питахаи" width="420" height="420">
-                </a>
-              </li>
+              <div class="product-top__slider-popap popap">
+                <ul class="product-top__slider">
+                  <li class="product-top__slider-item">
+                    <a class="cart-box__slider-link" href="#">
+                      <img class="product-top__slider-img" src="images/products/pitahaya-750.jpg" alt="Фото питахаи" width="750" height="750">
+                    </a>
+                  </li>
 
-              <li class="product-top__slider-item">
-                <a class="cart-box__slider-link" href="#">
-                  <img class="product-top__slider-img" src="images/products/pitahaya-420-2.jpg" alt="Фото питахаи" width="420" height="420">
-                </a>
-              </li>
+                  <li class="product-top__slider-item">
+                    <a class="cart-box__slider-link" href="#">
+                      <img class="product-top__slider-img" src="images/products/pitahaya-750-2.jpg" alt="Фото питахаи" width="750" height="750">
+                    </a>
+                  </li>
 
-              <li class="product-top__slider-item">
-                <a class="cart-box__slider-link" href="#">
-                  <img class="product-top__slider-img" src="images/products/pitahaya-420-3.jpg" alt="Фото питахаи" width="420" height="420">
-                </a>
-              </li>
-            </ul>
+                  <li class="product-top__slider-item">
+                    <a class="cart-box__slider-link" href="#">
+                      <img class="product-top__slider-img" src="images/products/pitahaya-750-3.jpg" alt="Фото питахаи" width="750" height="750">
+                    </a>
+                  </li>
+                </ul>
+
+                <button class="popap__close-btn" type="button">
+                  <span class="sr-only">Закрыть окно</span>
+                </button>
+
+                <button class="product-top__slider-arrow product-top__slider-arrow--prew" type="button">
+                  <span class="sr-only">Кнопка предидущего слайда</span>
+                </button>
+
+                <button class="product-top__slider-arrow product-top__slider-arrow--next" type="button">
+                  <span class="sr-only">Кнопка следующего слайда</span>
+                </button>
+              </div>
+
+              <ul class="product-top__slider product-top__slider--nodots">
+                <li class="product-top__slider-item">
+                  <a class="cart-box__slider-link" href="#">
+                    <img class="product-top__slider-img" src="images/products/pitahaya-420.jpg" alt="Фото питахаи" width="420" height="420">
+                  </a>
+                </li>
+
+                <li class="product-top__slider-item">
+                  <a class="cart-box__slider-link" href="#">
+                    <img class="product-top__slider-img" src="images/products/pitahaya-420-2.jpg" alt="Фото питахаи" width="420" height="420">
+                  </a>
+                </li>
+
+                <li class="product-top__slider-item">
+                  <a class="cart-box__slider-link" href="#">
+                    <img class="product-top__slider-img" src="images/products/pitahaya-420-3.jpg" alt="Фото питахаи" width="420" height="420">
+                  </a>
+                </li>
+              </ul>
+
+              <button class="product-top__slider-arrow product-top__slider-arrow--prew" type="button">
+                <span class="sr-only">Кнопка предидущего слайда</span>
+              </button>
+
+              <button class="product-top__slider-arrow product-top__slider-arrow--next" type="button">
+                <span class="sr-only">Кнопка следующего слайда</span>
+              </button>
+            </div>
 
             <div class="product-top__content">
               <h1 class="product-top__title">
@@ -445,9 +489,9 @@
               </h1>
 
               <ul class="product-top__badges badges">
-                <li class="badges__item badges__item--new badges__item--on">Новинка</li>
-                <li class="badges__item badges__item--sale badges__item--on">-50%</li>
-                <li class="badges__item badges__item--hit">Хит</li>
+                <li class="badges__item badges__item--new">Новинка</li>
+                <li class="badges__item badges__item--sale">-50%</li>
+                <li class="badges__item badges__item--hit badges__item--on">Хит</li>
               </ul>
 
               <div class="product-top__meta">
@@ -462,8 +506,8 @@
               </div>
 
               <ul class="product-top__prices prices">
-                <li class="prices__item prices__item--old">999 ₽</li>
-                <li class="prices__item ">1 999 ₽</li>
+                <li class="prices__item prices__item--old">299 ₽</li>
+                <li class="prices__item ">199 ₽</li>
               </ul>
 
               <div class="product-top__control">
@@ -478,6 +522,10 @@
                   <button class="quantity__btn  btn quantity__btn--plus" onclick=" $('#num1').val( +$('#num1').val() +1);$('#num1').keyup();">
                     <span class="sr-only">кнопка плюс</span>
                   </button>
+
+                  <button class="product-top__wish" type="button">
+                    <span class="sr-only">добавить в избранное</span>
+                  </button>
                 </div>
 
                 <button class="product-top__cart btn" type="button">
@@ -490,25 +538,130 @@
               </span>
 
               <p class="product-top__info-text">
-                Минимальная сумма заказа - 100 руб.
-                Время доставки заказа - 60-120 мин.
-                Оплата осуществляется только банковской картой.
-                Окончательная сумма заказа формируется после сбора товаров.
+                Минимальная сумма заказа - 100 руб.<br>
+                Время доставки заказа - 60-120 мин.<br>
+                Оплата осуществляется только банковской картой.<br>
+                Окончательная сумма заказа формируется после сбора товаров.<br>
               </p>
 
               <a class="product-top__info-link" href="#">Подробнее</a>
             </div>
+          </div>
 
-            
+          <div class="product__features">
 
           </div>
 
         </div>
 
+        <div class="product__tabs product-tabs">
+          <ul class="product-tabs__buttons">
+            <li class="product-tabs__buttons-item">
+             <h3 class="product-tabs__title">
+               <a class="product-tabs__buttons-link product-tabs__buttons-link--active" href="#tab1">ОПИСАНИЕ</a>
+              </h3>
+            </li>
+
+            <li class="product-tabs__buttons-item">
+              <h3 class="product-tabs__title">
+                <a class="product-tabs__buttons-link" href="#tab2">ХАРАКТЕРИСТИКИ</a>
+              </h3>
+            </li>
+
+            <li class="product-tabs__buttons-item">
+              <h3 class="product-tabs__title">
+                <a class="product-tabs__buttons-link" href="#tab3">ОТЗЫВЫ (2)</a>
+              </h3>
+            </li>
+          </ul>
+
+          <ul class="product-tabs__content">
+            <li class="product-tabs__content-item product-tabs__content-item--active" id="tab1">
+              <p>
+                Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ. Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При
+                употреблении
+                питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.
+              </p>
+
+              <p>Витамины: С, Е, РР, витамины группы В</p>
+
+              <p>Микроэлементы: железо, калий, кальций, магний, фосфор</p>
+
+              <p>Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
+            </li>
+
+            <li class="product-tabs__content-item" id="tab2">
+              <span>Вес: </span>250-350 г;
+              <span>Калорийность (на 100г): </span>50 ккал;
+              <span>Условия хранения:</span>температура от +3 до +8;
+              <span>Другие названия: </span>Драконов фрукт, Глаз дракона;
+              <span>Страна происхождения: </span>Вьетнам;
+              <span>Срок хранения: </span>до 5 дней.
+            </li>
+
+            <li class="product-tabs__content-item" id="tab3">
+              <ul class="product-tabs__comments comments">
+                <li class="comments__item">
+                  <div class="comments__item-top">
+                    <img class="comments__item-photo" src="images/account.jpg" alt="Аватар автора" width="70" height="70">
+
+                    <div class="comments__info">
+                      <span class="comments__avtor">
+                        Андрей
+                      </span>
+
+                      <span class="comments__data">
+                        10.06.2021
+                      </span>
+                    </div>
+                    <div class="comments__rating"></div>
+                  </div>
+
+                  <p class="comments__text">
+                    Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+                  </p>
+                </li>
+
+                <li class="comments__item">
+                  <div class="comments__item-top">
+                    <img class="comments__item-photo" src="images/account.jpg" alt="Аватар автора" width="70" height="70">
+
+                    <div class="comments__info">
+                      <span class="comments__avtor">
+                        Екатерина Белая
+                      </span>
+
+                      <span class="comments__data">
+                        7.06.2021
+                      </span>
+                    </div>
+                    <div class="comments__rating" data-rateyo-rating="5"></div>
+                  </div>
+
+                  <p class="comments__text">
+                    Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет. Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать экзотические фрукты.
+                  </p>
+                </li>
+              </ul>
+
+              <form class="product-tabs__form product-form" action="#">
+                <h4 class="product-form__title">
+                  ОСТАВИТЬ ОТЗЫВ
+                </h4>
+
+                <span class="product-form__span">Ваша оценка *</span><div class="product-form__rating" data-rateyo-read-only="false" data-rateyo-rating="0" data-rateyo-normal-fill="#C1C1C1"></div>
+              
+                <div class="product-form__inner">
+                  <label class="product-form__label" for="rewiev">Ваш отзыв *</label>
+                  <textarea class="form__field form__field--textarea" id="rewiev" name="rewiev" placeholder="Введите текст отзыва" type="text" required>
+                </div>
+
+              </form>
+            </li>
+          </ul>
 
 
-
-
+        </div>
 
       </div>
     </section>
@@ -544,7 +697,6 @@
         </ul>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">

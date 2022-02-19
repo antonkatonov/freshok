@@ -159,6 +159,13 @@
       }
     }
   }
+
+  .slick-arrow,
+  .slick-disabled {
+    @include r(1600) {
+      display: none !important;
+    }
+  }
 }
 
 .slick-disabled {
@@ -191,15 +198,5 @@
 
   .slick-active {
     background-color: $green-900;
-  }
-}
-
-
-// слик парень который при смещении добавляет дисплей блок кнопкам, не мог их победить 
-
-.slick-arrow,
-.slick-disabled {
-  @include r(1600) {
-    display: none !important;
   }
 }
