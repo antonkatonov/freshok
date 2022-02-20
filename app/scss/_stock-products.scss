@@ -68,6 +68,10 @@
     line-height: 1;
     margin-bottom: 4px;
 
+    @include r($md4) {
+      font-size: 8px;
+    }
+
     &--stock {
       color: $green-900;
     }

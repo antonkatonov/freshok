@@ -7,7 +7,7 @@
 
     @include r($md2) {
       flex-direction: column;
-      padding: 30px 0 58px;
+      padding: 30px 0 0px;
       margin-bottom: 6px;
     }
   }
@@ -24,12 +24,13 @@
     @include r($md1) {
       padding: 30px 45px;
       max-width: 550px;
-      margin-right: 0;
+
     }
 
     @include r($md2) {
       max-width: 100%;
       padding: 0;
+      margin-right: 0;
     }
   }
 
@@ -66,6 +67,13 @@
     right: 96px;
     z-index: 20;
     border-radius: 15px;
+
+    @include r($md2) {
+      top: 32px;
+      bottom: 32px;
+      left: 0;
+      right: 0;
+    }
   }
 
   &__slider-arrow {
@@ -112,6 +120,10 @@
 
   &__content {
     padding: 22px 0 33px;
+
+    @include r($md2) {
+      padding: 22px 0 23px;
+    }
   }
 
   &__title {
@@ -144,6 +156,11 @@
     left: 0;
     margin-bottom: 18px;
 
+    @include r($md2) {
+      top: 6px;
+      left: 4px;
+    }
+
     &__item {
       font-size: 18px;
       padding: 6px 9px;
@@ -152,6 +169,7 @@
       @include r($md2) {
         font-size: 16px;
         margin-right: 3px;
+
       }
     }
   }
@@ -188,6 +206,7 @@
     @include r($md2) {
       flex-basis: 40%;
       height: 0;
+      font-size: 10px;
     }
   }
 
@@ -229,13 +248,12 @@
 
     @include r($md2) {
       flex-direction: row;
+      margin-bottom: 13px;
     }
 
     .quantity {
       @include r($md1) {
-        @include r($md1) {
-          margin-bottom: 20px;
-        }
+        margin-bottom: 20px;
       }
 
       &__btn {
@@ -311,6 +329,7 @@
 
     @include r($md2) {
       right: 0;
+      left: auto;
     }
 
     &::after {
@@ -353,7 +372,12 @@
     color: $dark-900;
     display: inline-block;
     margin-bottom: 18px;
+
+    @include r($md2) {
+      text-transform: none;
+    }
   }
+
 
   &__info-text {
     padding: 18px 0;
@@ -430,15 +454,30 @@
   }
 
   .product-top {
+
+    &__slider {
+      @include r($md2) {
+        margin-top: 50%;
+      }
+    }
+
     &__slider-arrow {
       top: 50%;
 
       &--prew {
         left: 60px;
+
+        @include r($md2) {
+          left: 0;
+        }
       }
 
       &--next {
         right: 60px;
+
+        @include r($md2) {
+          right: 0;
+        }
       }
     }
   }
@@ -447,15 +486,37 @@
 .product-tabs {
   padding: 16px 300px 72px;
 
+  @include r($md1) {
+    padding: 16px 150px 50px;
+  }
+
+  @include r($md2) {
+    padding: 12px 0px 56px;
+  }
+
   &__buttons {
     display: flex;
     justify-content: center;
     margin-bottom: 48px;
+
+    @include r($md2) {
+      margin-bottom: 37px;
+    }
   }
+
 
   &__buttons-item {
     &:not(:last-child) {
       margin-right: 145px;
+
+      @include r($md4) {
+        margin-right: 100px;
+      }
+
+      @include r($md2) {
+        margin-right: 36px;
+
+      }
     }
   }
 
@@ -467,6 +528,11 @@
     color: $dark-900;
     text-transform: uppercase;
     position: relative;
+    white-space: nowrap;
+
+    @include r($md4) {
+      font-size: 14px;
+    }
 
     &--active {
       color: $green-900;
@@ -500,10 +566,28 @@
       }
     }
   }
+
+  &__span {
+    display: inline-block;
+    font-family: 'Ruda', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 48px;
+
+    @include r($md2) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .comments {
   margin-bottom: 72px;
+
+  @include r($md2) {
+    margin-bottom: 45px;
+  }
 
   &__item {
     &:not(:last-child) {
@@ -558,6 +642,10 @@
     font-size: 18px;
     line-height: 1.2;
     margin-bottom: 48px;
+
+    @include r($md2) {
+      margin-bottom: 29px;
+    }
   }
 
   &__rating {
@@ -574,6 +662,10 @@
 
   &__inner {
     display: flex;
+
+    @include r($md2) {
+      flex-direction: column;
+    }
   }
 
   &__label {
@@ -584,10 +676,19 @@
     font-size: 16px;
     line-height: 1.3;
 
+    @include r($md2) {
+      margin-right: 0;
+      margin-bottom: 18px;
+    }
+
     span {
       display: inline-block;
       margin-bottom: 12px;
       color: $dark-900;
+
+      @include r($md2) {
+        margin-right: 4px;
+      }
     }
   }
 
@@ -596,6 +697,13 @@
 
     &>label {
       margin-bottom: 24px;
+
+      &:last-child {
+
+       @include r($md2) {
+         margin-bottom: 0;
+       }
+      }
     }
   }
 
@@ -623,6 +731,10 @@
 .shop-label {
   margin-bottom: 24px;
 
+  @include r($md2) {
+    margin-top: -5px;
+  }
+
   &::before {
     align-self: flex-start;
   }
@@ -634,6 +746,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 48px;
+
+    @include r($md2) {
+      margin-bottom: 29px;
+    }
   }
 
   &__title {
@@ -643,11 +759,21 @@
     line-height: 1.2;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @include r($md4) {
+      max-width: 250px;
+      font-size: 24px;
+    }
   }
 
   &__cart {
     height: 410px;
     width: 300px;
+
+    @include r($md3) {
+      height: 344px;
+      width: 170px;
+    }
   }
 
   .product-card {
@@ -660,6 +786,42 @@
       justify-content: space-between;
       margin-bottom: 9px;
     }
+
+    &__info {
+      @include r($md2) {
+        padding: 0px 12px 12px;
+        margin-top: -6px;
+        z-index: 3;
+      }
+    }
+
+    &__rating {
+      @include r($md2) {
+        margin-right: 15px;
+        margin-top: 5px;
+      }
+
+      &::after {
+        content: '';
+        background-image: url('../images/sprite.svg#icon-star');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        margin-left: 5px;
+
+        @include r($md2) {
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      @include r($md2) {
+        font-size: 10px;
+      }
+    }
   }
 
   &__buttons {
@@ -667,6 +829,10 @@
   }
 
   &__button {
+    @include r($md3) {
+      display: none;
+    }
+
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -708,11 +874,15 @@
 
   &__list {
     margin-bottom: 46px;
+    position: relative;
   }
 
   &__item {
-
     margin-right: 30px;
+  }
 
+  .slick-dots {
+    position: absolute;
+    bottom: -35px;
   }
 }
