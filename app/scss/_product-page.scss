@@ -27,7 +27,6 @@
     margin: 0 auto;
   }
 
-
   &__slider-popap {
     background-color: white;
     position: fixed;
@@ -464,7 +463,7 @@
   &__data {
     width: 100%;
 
-    &>label {
+    & > label {
       margin-bottom: 24px;
     }
   }

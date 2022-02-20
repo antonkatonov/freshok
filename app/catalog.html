@@ -392,7 +392,7 @@
   <main class="main">
     <h1 class="sr-only">Покупка онлайн овощей и фруктов</h1>
 
-    <section class="breadcrumbs">
+    <div class="breadcrumbs">
       <div class="breadcrumbs__container container">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
@@ -401,13 +401,13 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">
+            <span class="breadcrumbs__link">
               Каталог товаров
-            </a>
+            </span>
           </li>
         </ul>
       </div>
-    </section>
+    </div>
 
     <section class="shop">
       <div class="shop__container container">
@@ -424,62 +424,80 @@
                 </h3>
               </button>
 
-              <form class="shop-filter__list" action="#">
-                <label class="shop-filter__label" for="veg">
-                  <input class="shop-filter__input" type="checkbox" id="veg">
-                  <span class="shop-filter__span">Овощи и фрукты</span>
-                </label>
+              <ul class="shop-filter__list">
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Овощи и фрукты
+                  </a>
+                </li>
 
-                <label class="shop-filter__label" for="bak">
-                  <input class="shop-filter__input" type="checkbox" id="bak">
-                  <span class="shop-filter__span">Бакалея</span>
-                </label>
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Бакалея
+                  </a>
+                </li>
 
-                <label class="shop-filter__label" for="milk">
-                  <input class="shop-filter__input" type="checkbox" id="milk">
-                  <span class="shop-filter__span">Молочные продукты</span>
-                </label>
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Хлеб
+                  </a>
+                </li>
 
-                <label class="shop-filter__label" for="bread">
-                  <input class="shop-filter__input" type="checkbox" id="bread">
-                  <span class="shop-filter__span">Хлеб</span>
-                </label>
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Мясо
+                  </a>
+                </li>
 
-                <label class="shop-filter__label" for="meet">
-                  <input class="shop-filter__input" type="checkbox" id="meet">
-                  <span class="shop-filter__span">Мясо</span>
-                </label>
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Колбаса
+                  </a>
+                </li>
 
-                <label class="shop-filter__label" for="kolb">
-                  <input class="shop-filter__input" type="checkbox" id="kolb">
-                  <span class="shop-filter__span">Колбаса</span>
-                </label>
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Рыба
+                  </a>
+                </li>
 
-                <label class="shop-filter__label" for="fish">
-                  <input class="shop-filter__input" type="checkbox" id="fish">
-                  <span class="shop-filter__span">Рыба</span>
-                </label>
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Алкоголь
+                  </a>
+                </li>
 
-                <label class="shop-filter__label" for="alko">
-                  <input class="shop-filter__input" type="checkbox" id="alko">
-                  <span class="shop-filter__span">Алкоголь</span>
-                </label>
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Алкоголь
+                  </a>
+                </li>
 
-                <label class="shop-filter__label" for="alko2">
-                  <input class="shop-filter__input" type="checkbox" id="alko2">
-                  <span class="shop-filter__span">Алкоголь</span>
-                </label>
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Алкоголь
+                  </a>
+                </li>
 
-                <label class="shop-filter__label" for="alko3">
-                  <input class="shop-filter__input" type="checkbox" id="alko3">
-                  <span class="shop-filter__span">Алкоголь</span>
-                </label>
 
-                <label class="shop-filter__label" for="alko4">
-                  <input class="shop-filter__input" type="checkbox" id="alko4">
-                  <span class="shop-filter__span">Алкоголь</span>
-                </label>
-              </form>
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Алкоголь
+                  </a>
+                </li>
+
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Алкоголь
+                  </a>
+                </li>
+
+                <li class="shop-filter__list-item">
+                  <a class="shop-filter__link" href="#">
+                    Алкоголь
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <li class="shop-filter__item">
@@ -489,18 +507,26 @@
                 </h3>
               </button>
 
-              <form class="shop-filter__list" action="#">
+              <ul class="shop-filter__list">
 
-                <input class="shop-filter__input shop-checkbox" type="checkbox" id="sell" name="sell">
-                <label class="shop-filter__label" for="sell">Со скидкой</label>
+                <li class="shop-filter__list-item">
+                  <input class="shop-filter__input shop-checkbox" type="checkbox" id="sell" name="sell">
 
-                <input class="shop-filter__input shop-checkbox" type="checkbox" id="new" name="new">
-                <label class="shop-filter__label" for="new">Новинка</label>
+                  <label class="shop-filter__label" for="sell">Со скидкой</label>
+                </li>
 
-                <input class="shop-filter__input shop-checkbox" type="checkbox" id="hit" name="hit">
-                <label class="shop-filter__label" for="hit">Хит</label>
+                <li class="shop-filter__list-item">
+                  <input class="shop-filter__input shop-checkbox" type="checkbox" id="new" name="new">
 
-              </form>
+                  <label class="shop-filter__label" for="new">Новинка</label>
+                </li>
+
+                <li class="shop-filter__list-item">
+                  <input class="shop-filter__input shop-checkbox" type="checkbox" id="hit" name="hit">
+
+                  <label class="shop-filter__label" for="hit">Хит</label>
+                </li>
+              </ul>
             </li>
 
             <li class="shop-filter__item">
@@ -510,26 +536,43 @@
                 </h3>
               </button>
 
-              <form class="shop-filter__list" action="#">
+              <ul class="shop-filter__list">
+                <li class="shop-filter__list-item">
+                  <input class="shop-filter__input shop-checkbox" type="checkbox" id="cola" name="cola">
 
-                <input class="shop-filter__input shop-checkbox" type="checkbox" id="cola" name="cola">
-                <label class="shop-filter__label" for="cola">CocaCola</label>
+                  <label class="shop-filter__label" for="cola">CocaCola</label>
+                </li>
 
-                <input class="shop-filter__input shop-checkbox" type="checkbox" id="pepsi" name="pepsi">
-                <label class="shop-filter__label" for="pepsi">Pepsi</label>
+                <li class="shop-filter__list-item">
+                  <input class="shop-filter__input shop-checkbox" type="checkbox" id="pepsi" name="pepsi">
 
-                <input class="shop-filter__input shop-checkbox" type="checkbox" id="sprite" name="sprite">
-                <label class="shop-filter__label" for="sprite">Sprite</label>
+                  <label class="shop-filter__label" for="pepsi">Pepsi</label>
+                </li>
 
-                <input class="shop-filter__input shop-checkbox" type="checkbox" id="fanta" name="fanta">
-                <label class="shop-filter__label" for="fanta">Fanta</label>
+                <li class="shop-filter__list-item">
+                  <input class="shop-filter__input shop-checkbox" type="checkbox" id="sprite" name="sprite">
 
-                <input class="shop-filter__input shop-checkbox" type="checkbox" id="redbull" name="redbull">
-                <label class="shop-filter__label" for="redbull">RedBull</label>
+                  <label class="shop-filter__label" for="sprite">Sprite</label>
+                </li>
 
-                <input class="shop-filter__input shop-checkbox" type="checkbox" id="drpepper" name="drpepper">
-                <label class="shop-filter__label" for="drpepper">Dr Pepper</label>
-              </form>
+                <li class="shop-filter__list-item">
+                  <input class="shop-filter__input shop-checkbox" type="checkbox" id="fanta" name="fanta">
+
+                  <label class="shop-filter__label" for="fanta">Fanta</label>
+                </li>
+
+                <li class="shop-filter__list-item">
+                  <input class="shop-filter__input shop-checkbox" type="checkbox" id="redbull" name="redbull">
+
+                  <label class="shop-filter__label" for="redbull">RedBull</label>
+                </li>
+
+                <li class="shop-filter__list-item">
+                  <input class="shop-filter__input shop-checkbox" type="checkbox" id="drpepper" name="drpepper">
+
+                  <label class="shop-filter__label" for="drpepper">Dr Pepper</label>
+                </li>
+              </ul>
             </li>
 
             <li class="shop-filter__item">
@@ -560,6 +603,7 @@
 
               <li class="content-filter__item content-filter__item--btn">
                 <button class="content-filter__button content-filter__button--mob" type="button">
+                  <span class="sr-only">открыть фильры товара</span>
                 </button>
               </li>
 
@@ -582,12 +626,14 @@
               </li>
 
               <li class="content-filter__item content-filter__item--btn">
-                <button class="content-filter__button content-filter__button--num6" type="button">
+                <button class="content-filter__button content-filter__button--list" type="button">
+                  <span class="sr-only">расположить товар списком</span>
                 </button>
               </li>
 
               <li class="content-filter__item content-filter__item--btn">
-                <button class="content-filter__button content-filter__button--num9 content-filter__button--active" type="button">
+                <button class="content-filter__button content-filter__button--grid content-filter__button--active" type="button">
+                  <span class="sr-only">расположить товар таблицей</span>
                 </button>
               </li>
             </ul>

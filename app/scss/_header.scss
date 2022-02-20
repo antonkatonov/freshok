@@ -230,7 +230,7 @@
     background-color: $white;
     width: 100%;
     display: none;
-    z-index: 3;
+    z-index: 17;
   }
 
   &__item {
@@ -474,7 +474,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 4;
+  z-index: 14;
   max-width: 475px;
   width: 100%;
   transform: translateX(100%);
