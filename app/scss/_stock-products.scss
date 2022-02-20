@@ -1,6 +1,6 @@
 .stock-products {
   background-color: #F5F5F5;
-  
+
   &__container {
     padding: 72px 15px;
 
@@ -45,6 +45,10 @@
     &__item {
       &:not(:last-child) {
         margin-right: 30px;
+
+        @include r($md4) {
+          margin-right: 0px;
+        }
       }
     }
   }
@@ -76,7 +80,7 @@
       color: $silver-600;
     }
 
-    &--on { 
+    &--on {
       display: inline-block;
     }
   }

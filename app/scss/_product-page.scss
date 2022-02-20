@@ -3,20 +3,39 @@
 
   &__inner {
     display: flex;
-    padding: 48px 0;
+    padding: 48px 0 58px;
+
+    @include r($md2) {
+      flex-direction: column;
+      padding: 30px 0 58px;
+      margin-bottom: 6px;
+    }
   }
 
   &__slider-inner {
     position: relative;
     max-width: 630px;
+    width: 100%;
     padding: 69px 105px;
     margin-right: 30px;
     border: 1px solid $silver-600;
     border-radius: 4px;
+
+    @include r($md1) {
+      padding: 30px 45px;
+      max-width: 550px;
+      margin-right: 0;
+    }
+
+    @include r($md2) {
+      max-width: 100%;
+      padding: 0;
+    }
   }
 
   &__slider {
     &--nodots {
+
       .slick-dots {
         display: none !important;
       }
@@ -25,6 +44,17 @@
 
   &__slider-img {
     margin: 0 auto;
+    object-fit: contain;
+
+    @include r($md1) {
+      width: 60%;
+    }
+
+    @include r($md2) {
+      width: 80%;
+      height: 304px;
+    }
+
   }
 
   &__slider-popap {
@@ -57,6 +87,12 @@
       height: 32px;
     }
 
+    &--smal {
+      @include r($md2) {
+        display: none;
+      }
+    }
+
     &--prew {
       left: 20px;
 
@@ -85,6 +121,21 @@
     line-height: 1.2;
     color: $dark-900;
     margin-bottom: 18px;
+    letter-spacing: 0.03em;
+
+    @include r($md2) {
+      display: none;
+    }
+
+    &--mob {
+      font-size: 26px;
+      display: none;
+      margin-bottom: 29px;
+
+      @include r($md2) {
+        display: block;
+      }
+    }
   }
 
   .badges {
@@ -97,6 +148,11 @@
       font-size: 18px;
       padding: 6px 9px;
       font-weight: 700;
+
+      @include r($md2) {
+        font-size: 16px;
+        margin-right: 3px;
+      }
     }
   }
 
@@ -104,7 +160,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+
+    @include r($md2) {
+      margin-bottom: 20px;
+    }
   }
 
   &__sku {
@@ -113,19 +174,32 @@
     border-radius: 3px;
     padding: 4px 5px 3px;
     color: $silver-600;
-    margin-right: 12px;
+    margin-right: 7px;
+
+    @include r($md2) {
+      margin-top: 5px;
+    }
   }
 
   &__rating {
     margin-right: auto;
     margin-left: 0;
+
+    @include r($md2) {
+      flex-basis: 40%;
+      height: 0;
+    }
   }
 
   .prices {
     display: flex;
     font-weight: 700;
     align-items: baseline;
-    margin-bottom: 59px;
+    margin-bottom: 53px;
+
+    @include r($md2) {
+      margin-bottom: 29px;
+    }
 
     &__item {
       font-size: 30px;
@@ -149,10 +223,28 @@
     position: relative;
     margin-bottom: 32px;
 
+    @include r($md1) {
+      flex-direction: column;
+    }
+
+    @include r($md2) {
+      flex-direction: row;
+    }
+
     .quantity {
+      @include r($md1) {
+        @include r($md1) {
+          margin-bottom: 20px;
+        }
+      }
+
       &__btn {
         width: 44px;
         height: 44px;
+
+        &--plus {
+          margin-right: 18px;
+        }
 
         &::after {
           height: 30px;
@@ -180,6 +272,13 @@
     position: relative;
     border-radius: 3px;
 
+    @include r($md2) {
+      font-size: 0;
+      padding: 0;
+      height: 44px;
+      width: 48px;
+    }
+
 
     &::after {
       content: '';
@@ -201,10 +300,18 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -2px;
+    right: -30px;
     outline: transparent;
     border-radius: 3px;
+
+    @include r($md1) {
+      left: 200px;
+    }
+
+    @include r($md2) {
+      right: 0;
+    }
 
     &::after {
       content: '';
@@ -213,8 +320,8 @@
       mask-repeat: no-repeat;
       mask-size: cover;
       background-color: $silver-600;
-      height: 28px;
-      width: 32px;
+      height: 38px;
+      width: 44px;
       transition: background-color 0.3s,
         opacity 0.3s;
     }
@@ -258,6 +365,25 @@
   &__info-link {
     line-height: 1.2;
     color: $green-900;
+  }
+
+  .status {
+    margin-right: -30px;
+
+    @include r($md1) {
+      margin-right: auto;
+      margin-left: 0;
+    }
+
+    @include r($md2) {
+      margin-top: 17px;
+    }
+
+    &__item {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1;
+    }
   }
 }
 
@@ -359,6 +485,7 @@
 
   &__content-item {
     display: none;
+    max-width: 690px;
 
     &--active {
       display: block;
@@ -366,7 +493,10 @@
 
     p {
       &:not(:last-child) {
-        margin-bottom: 35px;
+        margin-bottom: 29px;
+        line-height: 1.6;
+        letter-spacing: normal;
+        font-size: 16px;
       }
     }
   }
@@ -457,13 +587,14 @@
     span {
       display: inline-block;
       margin-bottom: 12px;
+      color: $dark-900;
     }
   }
 
   &__data {
     width: 100%;
 
-    & > label {
+    &>label {
       margin-bottom: 24px;
     }
   }
@@ -478,7 +609,110 @@
 
     &--textarea {
       height: 165px;
+      color: #C1C1C1;
     }
+
+    // не работает плейсхолдер для текст ареа, думаю это из-за стайлера может быть 
+
+    &::placeholder {
+      color: $silver-600;
+    }
+  }
+}
+
+.shop-label {
+  margin-bottom: 24px;
+
+  &::before {
+    align-self: flex-start;
+  }
+}
+
+.related-products {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__cart {
+    height: 410px;
+    width: 300px;
+  }
+
+  .product-card {
+    &__image-link {
+      padding-bottom: 67.03%;
+    }
+
+    &__status-inner {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__arrow {
+    height: 60px;
+    width: 60px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $silver-600;
+
+    &::before {
+      content: '';
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      width: 19px;
+      height: 32px;
+      background-color: $dark-500;
+    }
+
+    &--next {
+      &::before {
+        mask-image: url('../images/sprite.svg#icon-pag-r');
+      }
+    }
+
+    &--prew {
+      margin-right: 9px;
+
+      &::before {
+        mask-image: url('../images/sprite.svg#icon-pag-l');
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 46px;
+  }
+
+  &__item {
+
+    margin-right: 30px;
 
   }
 }
