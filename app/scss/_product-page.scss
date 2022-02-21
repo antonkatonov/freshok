@@ -454,7 +454,6 @@
   }
 
   .product-top {
-
     &__slider {
       @include r($md2) {
         margin-top: 50%;
@@ -564,6 +563,14 @@
         letter-spacing: normal;
         font-size: 16px;
       }
+    }
+  }
+
+  &__content-span {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
     }
   }
 
@@ -700,9 +707,9 @@
 
       &:last-child {
 
-       @include r($md2) {
-         margin-bottom: 0;
-       }
+        @include r($md2) {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -718,12 +725,10 @@
     &--textarea {
       height: 165px;
       color: #C1C1C1;
-    }
 
-    // не работает плейсхолдер для текст ареа, думаю это из-за стайлера может быть 
-
-    &::placeholder {
-      color: $silver-600;
+      &::placeholder {
+        color: $silver-600;
+      }
     }
   }
 }
