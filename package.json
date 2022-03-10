@@ -26,7 +26,7 @@
     "mixitup": "^3.3.1",
     "node-modules": "^1.0.1",
     "rateyo": "^2.3.2",
-    "sass": "^1.49.0",
+    "sass": "^1.49.9",
     "slick-carousel": "^1.8.1"
   }
 }
