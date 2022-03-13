@@ -130,8 +130,15 @@
     border-radius: 6px;
     position: relative;
     text-align: left;
-    padding: 18px;
+    padding: 17px;
     border: 1px solid $silver-600;
+    font-family: 'Ruda',
+      sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $dark-900;
+    width: 100%;
+    width: 100%;
 
     &::after {
       content: '';
@@ -156,14 +163,6 @@
     }
   }
 
-  &__title {
-    font-family: 'Ruda', sans-serif;
-    font-size: 24px;
-    line-height: 1.2;
-    color: $dark-900;
-    width: 100%;
-    width: 100%;
-  }
 
   &__list-item {
     &:not(:last-child) {
@@ -255,7 +254,7 @@
       border-radius: 50%;
       top: 2px;
 
-      & > i {
+      &>i {
         &:first-child {
           display: none;
         }
@@ -432,7 +431,7 @@
 .shop-products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px 28px;
+  gap: 30px 29px;
   margin-bottom: 48px;
 
   @include r($md3) {
@@ -442,6 +441,8 @@
   }
 
   .product-card {
+    padding-top: 56px;
+
     &__status-inner {
       display: flex;
       justify-content: space-between;
@@ -573,7 +574,7 @@
   align-items: center;
   color: $dark-500;
 
-  
+
 
   &__list {
     display: flex;

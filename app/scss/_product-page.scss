@@ -120,6 +120,7 @@
 
   &__content {
     padding: 22px 0 33px;
+    width: 100%;
 
     @include r($md2) {
       padding: 22px 0 23px;
@@ -169,7 +170,6 @@
       @include r($md2) {
         font-size: 16px;
         margin-right: 3px;
-
       }
     }
   }
@@ -319,7 +319,7 @@
     align-items: center;
     position: absolute;
     top: -2px;
-    right: -30px;
+    right: 0;
     outline: transparent;
     border-radius: 3px;
 
@@ -392,7 +392,6 @@
   }
 
   .status {
-    margin-right: -30px;
 
     @include r($md1) {
       margin-right: auto;
@@ -552,6 +551,11 @@
     display: none;
     max-width: 690px;
 
+     @include r($md4) {
+       max-width: 100%;
+     }
+
+
     &--active {
       display: block;
     }
@@ -669,6 +673,7 @@
 
   &__inner {
     display: flex;
+    justify-content: space-between;
 
     @include r($md2) {
       flex-direction: column;
@@ -702,7 +707,7 @@
   &__data {
     width: 100%;
 
-    &>label {
+    & > label {
       margin-bottom: 24px;
 
       &:last-child {
@@ -742,152 +747,5 @@
 
   &::before {
     align-self: flex-start;
-  }
-}
-
-.related-products {
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 48px;
-
-    @include r($md2) {
-      margin-bottom: 29px;
-    }
-  }
-
-  &__title {
-    font-family: 'Ruda', sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-
-    @include r($md4) {
-      max-width: 250px;
-      font-size: 24px;
-    }
-  }
-
-  &__cart {
-    height: 410px;
-    width: 300px;
-
-    @include r($md3) {
-      height: 344px;
-      width: 170px;
-    }
-  }
-
-  .product-card {
-    &__image-link {
-      padding-bottom: 67.03%;
-    }
-
-    &__status-inner {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 9px;
-    }
-
-    &__info {
-      @include r($md2) {
-        padding: 0px 12px 12px;
-        margin-top: -6px;
-        z-index: 3;
-      }
-    }
-
-    &__rating {
-      @include r($md2) {
-        margin-right: 15px;
-        margin-top: 5px;
-      }
-
-      &::after {
-        content: '';
-        background-image: url('../images/sprite.svg#icon-star');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        margin-left: 5px;
-
-        @include r($md2) {
-          width: 12px;
-          height: 12px;
-        }
-      }
-
-      @include r($md2) {
-        font-size: 10px;
-      }
-    }
-  }
-
-  &__buttons {
-    display: flex;
-  }
-
-  &__button {
-    @include r($md3) {
-      display: none;
-    }
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
-
-  &__arrow {
-    height: 60px;
-    width: 60px;
-    border-radius: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid $silver-600;
-
-    &::before {
-      content: '';
-      mask-size: cover;
-      mask-position: center;
-      mask-repeat: no-repeat;
-      width: 19px;
-      height: 32px;
-      background-color: $dark-500;
-    }
-
-    &--next {
-      &::before {
-        mask-image: url('../images/sprite.svg#icon-pag-r');
-      }
-    }
-
-    &--prew {
-      margin-right: 9px;
-
-      &::before {
-        mask-image: url('../images/sprite.svg#icon-pag-l');
-      }
-    }
-  }
-
-  &__list {
-    margin-bottom: 46px;
-    position: relative;
-  }
-
-  &__item {
-    margin-right: 30px;
-  }
-
-  .slick-dots {
-    position: absolute;
-    bottom: -35px;
   }
 }
