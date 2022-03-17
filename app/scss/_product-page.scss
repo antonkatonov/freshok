@@ -34,15 +34,6 @@
     }
   }
 
-  &__slider {
-    &--nodots {
-
-      .slick-dots {
-        display: none !important;
-      }
-    }
-  }
-
   &__slider-img {
     margin: 0 auto;
     object-fit: contain;
@@ -54,25 +45,6 @@
     @include r($md2) {
       width: 80%;
       height: 304px;
-    }
-
-  }
-
-  &__slider-popap {
-    background-color: white;
-    position: fixed;
-    top: 54px;
-    bottom: 54px;
-    left: 96px;
-    right: 96px;
-    z-index: 20;
-    border-radius: 15px;
-
-    @include r($md2) {
-      top: 32px;
-      bottom: 32px;
-      left: 0;
-      right: 0;
     }
   }
 
@@ -412,6 +384,27 @@
 
 .popap {
   display: none;
+  background-color: white;
+  position: fixed;
+  top: 54px;
+  bottom: 54px;
+  left: 96px;
+  right: 96px;
+  z-index: 20;
+  border-radius: 15px;
+
+  @include r($md2) {
+    top: 32px;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+  }
+  
+  &__slider-img {
+    margin: 0 auto;
+    object-fit: contain;
+    z-index: 21;
+  }
 
   &__close-btn {
     height: 44px;
@@ -551,9 +544,9 @@
     display: none;
     max-width: 690px;
 
-     @include r($md4) {
-       max-width: 100%;
-     }
+    @include r($md4) {
+      max-width: 100%;
+    }
 
 
     &--active {
@@ -707,7 +700,7 @@
   &__data {
     width: 100%;
 
-    & > label {
+    &>label {
       margin-bottom: 24px;
 
       &:last-child {

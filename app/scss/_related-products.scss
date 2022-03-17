@@ -126,6 +126,10 @@
     position: relative;
     margin-left: -15px;
     margin-right: -15px;
+    
+    @include r($md4) {
+      margin-bottom: 62px;
+    }
   }
 
   &__item {
