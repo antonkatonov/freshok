@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  be
 }
 
 *,
@@ -58,6 +57,8 @@ select {
   padding: 0;
   background-color: transparent;
   border: none;
+  letter-spacing: inherit;
+  border-radius: 0;
 }
 
 button {
@@ -74,19 +75,21 @@ cite {
   font-style: inherit;
 }
 
-blockquote {
-  font-style: italic;
+textarea {
+  resize: vertical;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+
+input:not([type=chekbox]):not([type=radio]),
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+textarea,
+select,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
+

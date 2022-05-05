@@ -1,0 +1,35 @@
+.social {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  &__link {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    transition: opacity 0.3s;
+    outline-color: transparent;
+
+    &:focus {
+      box-shadow: 0 0 0 3px #E0EDCF;
+      outline-color: #E0EDCF;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      filter: invert(2%) sepia(7%) saturate(731%) hue-rotate(27deg) brightness(96%) contrast(93%);
+      box-shadow: none;
+    }
+  }
+}

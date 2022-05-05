@@ -1,0 +1,117 @@
+.stock-card {
+  border: 1px solid $silver-600;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  position: relative;
+  background-color: $white;
+  transition: border-color 0.3s;
+  height: 100%;
+  max-height: 124px;
+  overflow: hidden;
+
+
+  &:hover {
+    border-color: $green-900;
+  }
+
+  &__badges {
+    position: absolute;
+    top: 13px;
+    left: 12px;
+  }
+
+  &__image-link {
+    margin-right: 12px;
+    max-width: 100px;
+    width: 100%;
+    min-width: 70px;
+    position: relative;
+    padding-bottom: 36.5%;
+  }
+
+  &__img {
+    max-width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // обрезает коряво заголовок в моб версии, если увидишь комент покажешь как решить)
+
+  &__title {
+    @include line-clamp(3);
+    font-weight: 600;
+    color: $dark-900;
+    margin-bottom: 7px;
+    flex-grow: 1;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .prices {
+      display: flex;
+      align-items: flex-end;
+      flex-grow: 1;
+
+      &__item {
+        color: $dark-500;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1;
+
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+
+        span {
+          font-size: 15px;
+          display: inline-block;
+        }
+
+        &--old {
+          font-size: 12px;
+          color: $silver-600;
+          margin-bottom: 0;
+
+          &::after {
+            width: 40px;
+            left: 0;
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__rating {
+    font-weight: 700;
+    line-height: 100%;
+    color: $dark-500;
+    padding-right: 22px;
+
+    &::after {
+      content: '';
+      background-image: url('../images/sprite.svg#icon-star');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.benefits {
+  background-color: $silver-100;
+  padding: 48px 0 29px 0;
+
+  @include r($md1) {
+    padding: 30px 0;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    margin-left: -50px;
+
+    @include r($md2) {
+      margin-left: 0;
+      display: grid;
+      row-gap: 30px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    display: flex;
+    letter-spacing: normal;
+
+    &::before {
+      content: '';
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-right: 24px;
+      height: 50px;
+      width: 50px;
+    }
+
+    &--scooter {
+      &::before {
+        background-image: url('../images/sprite.svg#icon-scooter');
+      }
+    }
+
+    &--return {
+      &::before {
+        background-image: url('../images/sprite.svg#icon-return');
+      }
+    }
+
+    &--24hours {
+      &::before {
+        background-image: url('../images/sprite.svg#icon-24hours');
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 65px;
+
+      @include r($md1) {
+        margin-right: 25px;
+      }
+
+      @include r($md2) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    color: $dark-900;
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    color: $dark-500;
+    max-width: 190px;
+
+    @include r($md2) {
+      max-width: 100%;
+    }
+  }
+}

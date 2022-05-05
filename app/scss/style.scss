@@ -1,6 +1,45 @@
-@import 'vars';
-@import 'reset';
-@import 'fonts';
-@import 'global';
+// подключение базовых стилей
+@import 'common/vars';
+@import 'common/fonts';
+@import 'common/reset';
+@import 'common/libs';
+@import 'common/mixin';
+@import 'common/global';
 
-@import 'media';
+// подключение компонентов
+@import 'components/menu';
+@import 'components/filters';
+@import 'components/product-card';
+@import 'components/badges';
+@import 'components/prices';
+@import 'components/quantity';
+@import 'components/social';
+@import 'components/stock-card';
+@import 'components/breadcrumbs';
+@import 'components/shop-checkbox';
+
+// подключение секций//**************
+
+// header
+@import 'header';
+
+// main
+@import 'slider-section';
+@import 'benefits';
+@import 'top-products';
+@import 'banners';
+@import 'stock-products';
+@import 'partners';
+@import 'our-news';
+
+// catalog
+@import 'catalog';
+
+// product-page
+@import 'product-page';
+@import 'related-products';
+
+
+// footer
+@import 'footer';
+

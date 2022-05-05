@@ -1,0 +1,149 @@
+.our-news {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    @include r($md2) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    @include r($md4) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $green-900;
+    align-self: flex-start;
+    margin-top: 8px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: normal;
+    padding-bottom: 2px;
+    border-bottom: 2px solid;
+    margin-right: 10px;
+    outline: transparent;
+    transition: border-color 0.3s, color 0.3s;
+
+    @include r($md4) {
+      margin-top: 0;
+      letter-spacing: 0.03em;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px #E0EDCF;
+      border-radius: 3px;
+      border-color: transparent;
+    }
+
+    &:hover {
+      color: #4D800C;
+    }
+
+    &:active {
+      border-color: $green-200;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 72px;
+
+    @include r($md2) {
+      gap: 15px;
+      margin-bottom: 48px;
+    }
+
+    @include r($md3) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.12fr 1.04fr 0fr;
+    }
+  }
+
+  &__item {
+    border-radius: 6px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    position: relative;
+    color: $dark-900;
+  }
+
+  &__link-wrapper {
+    display: block;
+    &:hover {
+      .our-news {
+        &__item-title {
+          color: $green-900;
+        }
+      }
+    }
+  }
+
+  &__data {
+    background-color: $white;
+    border-radius: 0 0 4px 4px;
+    padding-top: 17px;
+    height: 76px;
+    width: 65px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__month {
+    display: block;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+
+  &__day {
+    font-size: 30px;
+    line-height: 1;
+    font-family: 'Ruda', sans-serif;
+    font-weight: 600;
+  }
+
+  &__image {
+    object-fit: cover;
+
+    @include r($md2) {
+      width: 100%;
+      height: 200px;
+
+    }
+  }
+
+  &__item-title {
+    @include line-clamp(3);
+    padding: 18px 18px 0;
+    letter-spacing: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.3s;
+    border-bottom: 18px solid $white;
+
+
+    @include r($md2) {
+      padding: 15px 15px 0;
+      font-size: 14px;
+      line-height: 1.4;
+      border-bottom: 15px solid $white;
+    }
+  }
+}

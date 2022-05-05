@@ -1,0 +1,49 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  letter-spacing: 0.03em;
+  margin-left: -28px;
+
+  &__item {
+    margin-bottom: 11px;
+    margin-left: 28px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 15px;
+    color: $dark-500;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    border-radius: 3px;
+    outline: transparent;
+    transition: color 0.3s,
+      border-color 0.3s,
+      box-shadow 0.3s;
+
+    @include r($md2) {
+      font-size: 14px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px #E0EDCF;
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+  }
+}
+
+.mixitup-control-active {
+  border-color: rgba(99, 166, 14, 0.2);
+  box-shadow: none;
+  outline: transparent;
+  letter-spacing: 0.03em;
+
+  @include r($md2) {
+   margin-right: 8px;
+  }
+}

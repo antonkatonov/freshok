@@ -1,0 +1,50 @@
+.quantity {
+  display: flex;
+
+  &__btn {
+    padding: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 3px 0 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 12px;
+      width: 12px;
+      position: absolute;
+    }
+
+    &--minus {
+      &::after {
+        background-image: url('../images/sprite.svg#icon-minus');
+      }
+    }
+
+    &--plus {
+      border-radius: 0 3px 3px 0;
+      margin-right: 24px;
+
+      @include r($md1) {
+        margin-right: 0;
+      }
+
+      &::after {
+        background-image: url('../images/sprite.svg#icon-plus');
+      }
+    }
+  }
+
+  &__input {
+    background-color: $green-100;
+    text-align: center;
+    width: 36px;
+    height: 24px;
+  }
+}
